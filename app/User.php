@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'user_type', 'phone_number'
     ];
 
     /**
@@ -26,4 +26,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function userType() {
+        switch ($this->userType) {
+            case 1:
+                return "admin";
+            case 2:
+                return "ikhwan";
+            case 3:
+                return "akhwat";
+            default:
+                return null;
+        }
+    }
 }
