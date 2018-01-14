@@ -18,3 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('sendemail', function () {
+
+    $data = array(
+        'name' => "Learning Laravel",
+    );
+
+    Mail::send('emails.welcome', $data, function ($message) {
+
+        $message->from('yourEmail@domain.com', 'Learning Laravel');
+
+        $message->to('yourEmail@domain.com')->subject('Learning Laravel test email');
+
+    });
+
+    return "Your email has been sent successfully";
+
+});

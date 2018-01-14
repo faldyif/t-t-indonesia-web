@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Jrean\UserVerification\Traits\VerifiesUsers;
+use Jrean\UserVerification\Facades\UserVerification;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -22,6 +26,8 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+    use VerifiesUsers;
+
     /**
      * Where to redirect users after registration.
      *
@@ -36,7 +42,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest', ['except' => ['getVerification', 'getVerificationError']]);
     }
 
     /**
@@ -51,6 +57,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'phone_number' => 'required|regex:/(0)[0-9]{9}/',
         ]);
     }
 
@@ -65,7 +72,29 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone_number' => $data['phone_number'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param Request|\Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $user = $this->create($request->all());
+        event(new Registered($user));
+        $this->guard()->login($user);
+
+        UserVerification::generate($user);
+        UserVerification::send($user, 'Verifikasi T&T Indonesia');
+
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
     }
 }
