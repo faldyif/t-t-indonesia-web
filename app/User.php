@@ -28,7 +28,7 @@ class User extends Authenticatable
     ];
 
     public function userType() {
-        switch ($this->userType) {
+        switch ($this->user_type) {
             case 1:
                 return "admin";
             case 2:
