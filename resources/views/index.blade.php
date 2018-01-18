@@ -49,8 +49,8 @@
                     </li>
                     <li><a href="#testimonials">Testimoni</a></li>
                     <li><a href="#">|</a></li>
-                    <li><a href="daftar.html">Daftar</a></li>
-                    <li><a href="#contact">Masuk</a></li>
+                    <li><a href="{{ route('register') }}">Daftar</a></li>
+                    <li><a href="{{ route('login') }}">Masuk</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->
         </div>
