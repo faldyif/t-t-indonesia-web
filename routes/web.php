@@ -11,12 +11,20 @@
 |
 */
 
+// Home Route
 Route::get('/', function () {
     return view('index');
 });
 
+// Authentication Routes
 Auth::routes();
+Route::get('registration-success', function() {
+    return view('auth.registration-success');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('gender', 'EditUserController@indexChooseGender')->name('indexChooseGender');
-Route::get('gender/choose/{gender}', 'EditUserController@chooseGender')->name('chooseGender');
+// Verified User Only
+Route::group(['middleware' => ['isVerified']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('gender', 'EditUserController@indexChooseGender')->name('indexChooseGender');
+    Route::get('gender/choose/{gender}', 'EditUserController@chooseGender')->name('chooseGender');
+});
