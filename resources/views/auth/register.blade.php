@@ -82,60 +82,63 @@
                         </ul>
                     </div>
                 @endif
-                <div class="form-group form-md-line-input has-info form-md-floating-label">
-                    <div class="input-group left-addon">
-                <span class="input-group-addon">
-                    <i class="fa fa-user"></i>
-                </span>
-                        <input name="name" type="text" class="form-control" required>
-                        <label for="form_control_1">Nama Lengkap</label>
-                    </div>
-                </div>
-                <div class="form-group form-md-line-input has-info form-md-floating-label">
-                    <div class="input-group left-addon">
-                <span class="input-group-addon">
-                    <i class="fa fa-envelope"></i>
-                </span>
-                        <input name="email" type="email" class="form-control" required>
-                        <label for="form_control_1">E-mail</label>
-                    </div>
-                </div>
-                <div class="form-group form-md-line-input has-info form-md-floating-label">
-                    <div class="input-group left-addon">
-                <span class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                </span>
-                        <input name="phone_number" type="tel" class="form-control" required>
-                        <label for="form_control_1">No. Telepon</label>
-                    </div>
-                </div>
-                    <div class="form-group form-md-line-input has-info form-md-floating-label">
-                        <div class="input-group left-addon">
-              <span class="input-group-addon">
-                  <i class="fa fa-key"></i>
-              </span>
-                            <input name="password" type="password" class="form-control" required>
-                            <label for="form_control_1">Password</label>
-                        </div>
-                    </div>
-                    <div class="form-group form-md-line-input has-info form-md-floating-label">
-                        <div class="input-group left-addon">
-              <span class="input-group-addon">
-                  <i class="fa fa-key"></i>
-              </span>
-                            <input name="password_confirmation" type="password" class="form-control" required>
-                            <label for="form_control_1">Ulangi Password</label>
-                        </div>
-                    </div>
-                <input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan syarat dan ketentuan yang berlaku pada TnT Indonesia
-                <div>
-                    <span></span>
-                    <br/>
-                </div>
-                <!-- <input type="submit" class="btn green-sharp btn-outline  btn-block sbold uppercase" value="DAFTAR"> -->
-                <button type="submit" class="btn btn blue btn-block">
-                    Register
-                </button>
+                
+				<div class="form-body">
+					<div class="form-group">
+						<!-- <label>Nama Lengkap</label> -->
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-user"></i>
+							</span>
+							<input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required> 
+						</div>
+					</div>
+					<div class="form-group">
+						<!-- <label>Email</label> -->
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-envelope"></i>
+							</span>
+							<input type="text" class="form-control" placeholder="Alamat Email" name="email"> </div>
+					</div>
+					<div class="form-group">
+						<!-- <label>No. Telepon</label> -->
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-phone"></i>
+							</span>
+							<input type="text" name="phone_number" class="form-control" placeholder="No. Telepeon"> </div>
+					</div>
+					<div class="form-group">
+						<!-- <label>Password</label> -->
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-key"></i>
+							</span>
+							<input type="password" class="form-control" placeholder="Password" name="password"> </div>
+					</div>
+					
+					<div class="form-group">
+						<!-- <label>Ulangi Password</label> -->
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-key"></i>
+							</span>
+							<input type="password" class="form-control" placeholder="Ulangi Password" name="password_confirmation"> </div>
+							<br/>
+							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan syarat dan ketentuan yang berlaku pada TnT Indonesia
+							<div style="margin:5px";>
+								<span></span>
+								<br/>
+							</div>
+							<!-- <input type="submit" class="btn green-sharp btn-outline  btn-block sbold uppercase" value="DAFTAR"> -->
+							<button type="submit" class="btn btn blue btn-block">
+								Register
+							</button>
+					</div>
+					
+				</div>
+                
             </div>
 
         </div>

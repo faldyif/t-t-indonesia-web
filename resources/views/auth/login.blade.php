@@ -81,44 +81,45 @@
                     </ul>
                 </div>
             @endif
-            <div class="form-group form-md-line-input has-info form-md-floating-label">
-
-                <div class="form-group form-md-line-input has-info form-md-floating-label">
-                    <div class="input-group left-addon">
-                <span class="input-group-addon">
-                    <i class="fa fa-envelope"></i>
-                </span>
-                        <input id="form_control_1" name="email" type="email" class="form-control" required>
-                        <label for="form_control_1">E-mail</label>
-                    </div>
-                </div>
-
-                <div class="form-group form-md-line-input has-info form-md-floating-label">
-                    <div class="input-group left-addon">
-              <span class="input-group-addon">
-                  <i class="fa fa-key"></i>
-              </span>
-                        <input id="form_control_2" name="password" type="password" class="form-control" required>
-                        <label for="form_control_2">Password</label>
-                    </div>
-                </div>
-                <input name="remember" type="checkbox" /> Remember Me
-                <div>
-                    <span></span>
-                    <br/>
-                </div>
-                <button type="submit" class="btn btn blue btn-block">
-                    Login
-                </button>
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    Forgot Your Password?
-                </a>
-            </div>
+			<div class="form-body">
+				<div class="form-group">
+					<!-- <label>Email</label> -->
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-envelope"></i>
+						</span>
+						<input type="text" class="form-control" placeholder="Alamat Email" name="email" required> </div>
+				</div>
+				<div class="form-group">
+					<!-- <label>Password</label> -->
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-key"></i>
+						</span>
+						<input type="password" class="form-control" placeholder="Password" name="password" required> </div>
+				</div>
+				<div class="form-group">
+					 <input name="remember" type="checkbox" /> Remember Me
+					<div>
+						<span></span>
+						<br/>
+					</div>
+					<button type="submit" class="btn btn blue btn-block">
+						Login
+					</button>
+					<a class="btn btn-link" href="{{ route('password.request') }}">
+						Forgot Your Password?
+					</a>
+				</div>
+			</div>
+            
+               
+           
 
         </div>
         </form>
         <!-- </div> -->
-    </div>
+    <!-- </div> -->
     <div class="col-md-4"></div>
     </div>
     <!-- </div> -->
