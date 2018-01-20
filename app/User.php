@@ -39,4 +39,15 @@ class User extends Authenticatable
                 return null;
         }
     }
+
+    public function childUser() {
+        switch ($this->userType()) {
+            case 'ikhwan':
+                return $this->hasOne('App\UserIkhwan', 'linked_id');
+            case 'akhwat':
+                return $this->hasOne('App\UserAkhwat', 'linked_id');
+            default:
+                return null;
+        }
+    }
 }
