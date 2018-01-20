@@ -23,15 +23,15 @@ Route::get('registration-success', function() {
 });
 
 // Verified User Only
-Route::group(['middleware' => ['isVerified']], function () {
+Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('gender', 'EditUserController@indexChooseGender')->name('dashboard.user.gender');
     Route::get('gender/choose/{gender}', 'EditUserController@chooseGender')->name('dashboard.user.gender.update');
 
     // Has gender only
     Route::group(['middleware' => ['hasGender']], function () {
-        Route::get('dashboard', function () {
-            return view('index');
+        Route::get('/', function () {
+            return view('user.dashboard');
         })->name('dashboard.index');
     });
 });

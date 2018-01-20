@@ -15,7 +15,7 @@ class EditUserController extends Controller
             return "anda sudah memilih gender sebelumnya";
         }
 
-        return view('choose-gender');
+        return view('user.gender');
     }
 
     public function chooseGender($gender) {
@@ -38,6 +38,6 @@ class EditUserController extends Controller
 
         $user->touch();
 
-        return redirect('/home');
+        return redirect('/dashboard/');
     }
 }
