@@ -15,6 +15,12 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('home', function () {
+    if(\Illuminate\Support\Facades\Auth::user()->userType() == 'admin')
+        return redirect('admin');
+    else
+        return redirect('dashboard');
+})->middleware('auth');
 
 // Authentication Routes
 Auth::routes();
@@ -34,4 +40,28 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
             return view('user.dashboard');
         })->name('dashboard.index');
     });
+});
+
+// Admin User Only
+Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], function () {
+    // Has gender only
+    Route::group(['middleware' => ['hasGender']], function () {
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard.index');
+    });
+});
+
+// Testing routes
+Route::get('tes-create', function () {
+    $userIkhwan = new \App\UserAkhwat;
+    $userIkhwan->user_id = 1;
+    $userIkhwan->save();
+
+    return response()->json($userIkhwan);
+});
+Route::get('tes-fetch', function () {
+    $userIkhwan = \App\UserAkhwat::find(1);
+
+    return response()->json($userIkhwan->isDataLengkap());
 });

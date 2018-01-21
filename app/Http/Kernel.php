@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\HasGender;
+use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsVerified;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -61,5 +62,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'isVerified' => IsVerified::class,
         'hasGender' => HasGender::class,
+        'isAdmin' => IsAdmin::class,
     ];
 }
