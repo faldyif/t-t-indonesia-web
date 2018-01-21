@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class UserAkhwatController extends Controller
      */
     public function index()
     {
-        return view('admin.list-akhwat');
+        $userAkhwats = User::where('user_type', 3)->whereNotNull('linked_id')->get();
+        return view('admin.list-akhwat')->with('userAkhwats', $userAkhwats);
     }
 
     /**
