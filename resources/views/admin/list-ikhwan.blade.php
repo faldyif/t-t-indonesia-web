@@ -140,6 +140,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($userIkhwans as $userIkhwan)
                         <tr>
                             <td class="table-title">
                                 <img src="../assets/pages/media/profile/people19.png"
@@ -147,19 +148,22 @@
                             </td>
                             <td class="table-title font-blue">
                                 <h3>
-                                    <a href="javascript:;"> Bagus Cakra Buana </a>
+                                    <a href="javascript:;"> {{ $userIkhwan->name }} </a>
                                 </h3>
                             </td>
                             <td>
-                                email@mail.com
+                                {{ $userIkhwan->email }}
                             </td>
                             <td class="table-desc">
-                                Bandung
+                                {{ $userIkhwan->childUser['asal'] == null ? '-' : $userIkhwan->childUser['asal'] }}
                             </td>
                             <td class="table-date table-title font-blue">
-                                Bandung, 5 Juni 1990
+                                {{ $userIkhwan->childUser['tempat_lahir'] == null ? '-' : $userIkhwan->childUser['tempat_lahir'] }}, {{ $userIkhwan->childUser['tanggal_lahir'] == null ? '-' : $userIkhwan->childUser['tanggal_lahir'] }}
                             </td>
                             <td class="table-title actions">
+                                <a class="btn btn-circle btn-icon-only btn-warning" href="detaildataikhwan.html">
+                                    <i class="icon-pencil"></i>
+                                </a>
                                 <a class="btn btn-circle btn-icon-only btn-success" href="detaildataikhwan.html">
                                     <i class="icon-eye"></i>
                                 </a>
@@ -174,25 +178,26 @@
                                 </button>
                             </td>
                         </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="search-pagination pagination-rounded">
-                    <ul class="pagination">
-                        <li class="page-active">
-                            <a href="javascript:;"> 1 </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;"> 2 </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;"> 3 </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;"> 4 </a>
-                        </li>
-                    </ul>
-                </div>
+                {{--<div class="search-pagination pagination-rounded">--}}
+                    {{--<ul class="pagination">--}}
+                        {{--<li class="page-active">--}}
+                            {{--<a href="javascript:;"> 1 </a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="javascript:;"> 2 </a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="javascript:;"> 3 </a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="javascript:;"> 4 </a>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
             </div>
             <!-- END PAGE BASE CONTENT -->
         </div>

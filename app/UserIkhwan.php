@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserIkhwan extends Model
 {
     public function user() {
-        return $this->hasOne('App\User');
+        return $this->hasOne('App\User', 'linked_id');
     }
 
     public function isDataLengkap() {
