@@ -35,8 +35,11 @@
     <link href="{{ url('lib/animate-css/animate.min.css') }}" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="{{ url('css/style.css') }}" rel="stylesheet">
+    <link href="{{ url('css/style.css') }}" rel="stylesheet">	
+	<link rel="stylesheet" href="{{ url('css/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{ url('css/owl.theme.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.3/sweetalert2.all.min.js"></script>
+	
 
     <!-- =======================================================
       Theme Name: Imperial
@@ -62,7 +65,7 @@
                 <h1>Selemat Datang di Ta'aruf & Ta'adud</h1>
                 <h2>We create <span class="rotating">beautiful graphics, functional websites, working mobile apps</span></h2>
                 <div class="actions">
-                    <a href="#about" class="btn-get-started">Mulai</a>
+                    <a href="{{ url('register') }}" class="btn-get-started">Mulai</a>
                     <a href="#services" class="btn-services">Cara Kerja</a>
                 </div>
             </div>
@@ -282,33 +285,50 @@
     </section>
 
     <!--==========================
-      Testimonials Section
-    ============================-->
-    <section id="services">
-        <div class="container wow fadeInUp">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="section-title">Testimonials</h3>
-                    <div class="section-title-divider"></div>
-                    <p class="section-description">Berikut adalah testimoni orang yang mengikuti program ini</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="profile">
-                        <h4>Saul Goodman</h4>
-                        <span>Lawless Inc</span>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="quote">
-                        <p>Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-                    </div>
-                </div>
-            </div>
+  Testimonials Section
+  ============================-->
+  <section id="testimonials">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Testimonials</h3>
+          <div class="section-title-divider"></div>
+          <!-- <p class="section-description">Erdo lide, nora porodo filece, salvam esse se, quod concedimus ses haec dicturum fuisse</p> -->
         </div>
-    </section>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="profile">
+            <div class="pic"><img src="img/client-1.jpg" alt=""></div>
+            <h4>Saul Goodman</h4>
+            <span>Lawless Inc</span>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="quote">
+            <b><img src="img/quote_sign_left.png" alt=""></b> <span class="rotating">Aplikasi yang sangat bermanfaat dalam ikhtiar mencari jodoh, prosesnya mudah.</span><small><img src="img/quote_sign_right.png" alt=""></small>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-9">
+          <div class="quote">
+            <b><img src="img/quote_sign_left.png" alt=""></b> Alhamdulillah memudahkan dalam proses pernikahan<small><img src="img/quote_sign_right.png" alt=""></small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="profile">
+            <div class="pic"><img src="img/client-2.jpg" alt=""></div>
+            <h4>Sara Wilsson</h4>
+            <span>Odeo Inc</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
     <!--==========================
       Footer
     ============================-->
@@ -344,11 +364,24 @@
     <script src="{{ url('lib/wow/wow.min.js') }}"></script>
     <script src="{{ url('lib/stickyjs/sticky.js') }}"></script>
     <script src="{{ url('lib/easing/easing.js') }}"></script>
+	<script src="{{ url('lib/easing/easing.js') }}"></script>
+	
 
     <!-- Template Specisifc Custom Javascript File -->
     <script src="{{ url('js/custom.js') }}"></script>
+	<script src="{{ url('js/jquery.js') }}"></script>
+	<script src="{{ url('js/loader.js') }}"></script>
+	<script src="{{ url('js/owl.carousel.min.js') }}"></script>
 
     <script src="{{ url('contactform/contactform.js') }}"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#testimonies').owlCarousel({
+			singleItem : true,
+			autoPlay : true,
+			slideSpeed : 200
+		}) ;
+	}
 
 
 </body>
