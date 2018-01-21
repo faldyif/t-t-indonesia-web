@@ -43,13 +43,15 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
 });
 
 // Admin User Only
-Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], function () {
+Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     // Has gender only
     Route::group(['middleware' => ['hasGender']], function () {
         Route::get('/', function () {
             return view('admin.dashboard');
         })->name('admin.dashboard.index');
     });
+    Route::resource('ikhwan', 'UserIkhwanController');
+    Route::resource('akhwat', 'UserAkhwatController');
 });
 
 // Testing routes

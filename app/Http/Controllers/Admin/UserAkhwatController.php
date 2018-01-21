@@ -14,7 +14,7 @@ class UserAkhwatController extends Controller
      */
     public function index()
     {
-        return view('admin.list-ikhwan');
+        return view('admin.list-akhwat');
     }
 
     /**

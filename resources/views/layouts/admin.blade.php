@@ -43,6 +43,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ url('assets/global/css/components-md.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
     <link href="{{ url('assets/global/css/plugins-md.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="{{ url('assets/pages/css/search.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <link href="{{ url('assets/layouts/layout4/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('assets/layouts/layout4/css/themes/default.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
@@ -58,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="index.html">
+            <a href="{{ url('admin') }}">
                 <img src="{{ url('assets/layouts/layout4/img/logo-light.png') }}" alt="logo" class="logo-default" /> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -166,7 +169,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN SIDEBAR MENU -->
             <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                 <li class="nav-item start">
-                    <a href="{{ url('admin') }}" class="nav-link ">
+                    <a href="{{ route('admin.dashboard.index') }}" class="nav-link ">
                         <i class="icon-home"></i>
                         <span class="title">Beranda</span>
                         <span class="selected"></span>
@@ -180,13 +183,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item  ">
-                            <a href="dataikhwan.html" class="nav-link nav-toggle">
+                            <a href="{{ route('ikhwan.index') }}" class="nav-link nav-toggle">
                                 <i class="icon-user"></i>
                                 <span class="title">Data Ikhwan</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="dataakhwat.html" class="nav-link ">
+                            <a href="{{ route('akhwat.index') }}" class="nav-link ">
                                 <i class="icon-user-female"></i>
                                 <span class="title">Data Akhwat</span>
                             </a>
