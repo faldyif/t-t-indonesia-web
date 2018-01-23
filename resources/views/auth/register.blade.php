@@ -117,25 +117,34 @@
 							</span>
 							<input type="password" class="form-control" placeholder="Password" name="password"> </div>
 					</div>
-					
 					<div class="form-group">
 						<!-- <label>Ulangi Password</label> -->
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="fa fa-key"></i>
 							</span>
-							<input type="password" class="form-control" placeholder="Ulangi Password" name="password_confirmation"> </div>
-							<br/>
-							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan syarat dan ketentuan yang berlaku pada TnT Indonesia
-							<div style="margin:5px";>
-								<span></span>
-								<br/>
-							</div>
-							<!-- <input type="submit" class="btn green-sharp btn-outline  btn-block sbold uppercase" value="DAFTAR"> -->
-							<button type="submit" class="btn btn blue btn-block">
-								Register
-							</button>
+							<input type="password" class="form-control" placeholder="Ulangi Password" name="password_confirmation"> 
+						</div>					
 					</div>
+					<div class="form-group">
+						<label>Pilih Gender</label>
+						<div class="mt-radio-inline">
+							<label class="mt-radio">
+								<input type="radio" name="optionsRadios" id="optionsRadios4" value="option1" checked> Ikhwan
+								<span></span>
+							</label>
+							<label class="mt-radio">
+								<input type="radio" name="optionsRadios" id="optionsRadios5" value="option2"> Akhwat
+								<span></span>
+							</label>							
+						</div>
+						<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan syarat dan ketentuan yang berlaku pada TnT Indonesia						
+						<!-- <input type="submit" class="btn green-sharp btn-outline  btn-block sbold uppercase" value="DAFTAR"> -->
+						<button type="submit" class="btn btn blue btn-block">
+							Register
+						</button>
+					</div>
+					
 					
 				</div>
                 
