@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use App\UserAkhwat;
+use App\UserIkhwan;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -58,6 +60,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'phone_number' => 'required|regex:/(0)[0-9]{9}/',
+            'gender' => 'required|in:I,A',
             'syarat_ketentuan' => 'required',
         ]);
     }
@@ -70,12 +73,29 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'password' => bcrypt($data['password']),
         ]);
+        if($data['gender'] == 'I') {
+            $user->user_type = 2;
+            $user->save();
+
+            $userIkhwan = new UserIkhwan;
+            $userIkhwan->user_id = $user->id;
+            $userIkhwan->save();
+        } else {
+            $user->user_type = 3;
+            $user->save();
+
+            $userAkhwat = new UserAkhwat;
+            $userAkhwat->user_id = $user->id;
+            $userAkhwat->save();
+        }
+
+        return $user;
     }
 
     /**

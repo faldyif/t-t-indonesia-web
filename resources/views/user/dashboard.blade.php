@@ -96,4 +96,6 @@
                 <!-- END PAGE BASE CONTENT -->
                 <!-- END QUICK SIDEBAR -->
             </div>
+        </div>
+    </div>
 @endsection
