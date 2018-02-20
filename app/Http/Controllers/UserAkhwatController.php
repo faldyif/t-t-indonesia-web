@@ -88,6 +88,8 @@ class UserAkhwatController extends Controller
         $userAkhwat->harapan_pasangan = $request->harapan_pasangan;
         $userAkhwat->kriteria_lain = $request->kriteria_lain;
         $userAkhwat->kacamata = $request->kacamata;
+        $userAkhwat->anak_ke = $request->anak_ke;
+        $userAkhwat->saudara = $request->saudara;
         $userAkhwat->proses_terakhir = 0;
 
         $userAkhwat->save();
@@ -180,6 +182,8 @@ class UserAkhwatController extends Controller
         $userAkhwat->kriteria_domisili = $request->kriteria_domisili;
         $userAkhwat->harapan_pasangan = $request->harapan_pasangan;
         $userAkhwat->kriteria_lain = $request->kriteria_lain;
+        $userAkhwat->anak_ke = $request->anak_ke;
+        $userAkhwat->saudara = $request->saudara;
         $userAkhwat->kacamata = $request->kacamata;
 
         $userAkhwat->save();

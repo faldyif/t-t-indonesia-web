@@ -512,7 +512,22 @@ Editableform is linked with one of input types, e.g. 'text', 'select' etc.
                 return 'This field is required';
             }
         }
-        **/         
+        **/   
+        
+        /**
+        Function for client-side validation. If returns string - means validation not passed and string showed as error.
+
+        @property validate 
+        @type function
+        @default null
+        @example
+        validate: function(value) {
+            if($.trim(value) == '') {
+                return 'This field is required';
+            }
+        }
+        **/
+
         validate: null,
         /**
         Success callback. Called when value successfully sent on server and **response status = 200**.  
@@ -1949,6 +1964,7 @@ Makes editable any HTML element on the page. Applied as jQuery method.
         pk: 1
     });
     **/
+
     $.fn.editable = function (option) {
         //special API methods returning non-jquery object
         var result = {}, args = arguments, datakey = 'editable';

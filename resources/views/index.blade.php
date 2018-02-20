@@ -99,9 +99,8 @@
                     <li><a href="#testimonials">Testimoni</a></li>
                     <li><a href="#">|</a></li>
                     @auth
-                    <li><a href="{{ route('dashboard.index') }}">Dasbor</a></li>
-                    <li><a href="{{ url('login') }}"
-                           onclick="event.preventDefault();
+                    <li><a href="{{ url('home') }}">Dasbor</a></li>
+                    <li><a onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">Keluar</a></li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}

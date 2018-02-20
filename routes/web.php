@@ -15,6 +15,12 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('home', function () {
+    if(\Illuminate\Support\Facades\Auth::user()->userType() == 'admin')
+        return redirect('admin');
+    else
+        return redirect('dashboard');
+})->middleware('auth');
 
 // Authentication Routes
 Auth::routes();
@@ -23,15 +29,35 @@ Route::get('registration-success', function() {
 });
 
 // Verified User Only
-Route::group(['middleware' => ['isVerified']], function () {
+Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('gender', 'EditUserController@indexChooseGender')->name('dashboard.user.gender');
-    Route::get('gender/choose/{gender}', 'EditUserController@chooseGender')->name('dashboard.user.gender.update');
 
+    Route::get('/', function () {
+        return view('user.dashboard');
+    })->name('dashboard.index');
+});
+
+// Admin User Only
+Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     // Has gender only
-    Route::group(['middleware' => ['hasGender']], function () {
-        Route::get('dashboard', function () {
-            return view('index');
-        })->name('dashboard.index');
-    });
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard.index');
+
+    Route::resource('ikhwan', 'UserIkhwanController');
+    Route::resource('akhwat', 'UserAkhwatController');
+});
+
+// Testing routes
+Route::get('tes-create', function () {
+    $userIkhwan = new \App\UserAkhwat;
+    $userIkhwan->user_id = 1;
+    $userIkhwan->save();
+
+    return response()->json($userIkhwan);
+});
+Route::get('tes-fetch', function () {
+    $userIkhwan = \App\UserAkhwat::find(1);
+
+    return response()->json($userIkhwan->isDataLengkap());
 });

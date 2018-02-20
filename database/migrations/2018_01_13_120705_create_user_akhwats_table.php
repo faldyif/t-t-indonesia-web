@@ -59,6 +59,10 @@ class CreateUserAkhwatsTable extends Migration
             $table->string('harapan_pasangan')->nullable();
             $table->string('kriteria_lain')->nullable();
             $table->boolean('kacamata')->nullable();
+
+            $table->integer('anak_ke')->nullable();
+            $table->integer('saudara')->nullable();
+
             $table->integer('proses_terakhir')->nullable();
 
             $table->timestamps();
