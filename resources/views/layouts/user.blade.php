@@ -34,10 +34,12 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ url('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css') }}" />
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <link href="{{ url('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css') }}" rel="stylesheet" type="text/css') }}" />
-    <link href="{{ url('assets/global/plugins/morris/morris.css') }}" rel="stylesheet" type="text/css') }}" />
-    <link href="{{ url('assets/global/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css') }}" />
-    <link href="{{ url('assets/global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css') }}" />
+    <link href="{{ url('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/morris/morris.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="{{ url('assets/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css') }}" />
@@ -48,6 +50,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ url('assets/layouts/layout4/css/themes/default.min.css') }}" rel="stylesheet" type="text/css') }}" id="style_color" />
     <link href="{{ url('assets/layouts/layout4/css/custom.min.css') }}" rel="stylesheet" type="text/css') }}" />
     <!-- END THEME LAYOUT STYLES -->
+    @yield('top')
     <link rel="shortcut icon" href="favicon.ico" /> </head>
 <!-- END HEAD -->
 
@@ -160,6 +163,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="{{ url('assets/global/plugins/moment.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js') }}" type="text/javascript"></script>
+<script src="{{ url('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/global/plugins/counterup/jquery.waypoints.min.js') }}" type="text/javascript"></script>
@@ -201,6 +205,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ url('assets/layouts/global/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/layouts/global/scripts/quick-nav.min.js') }}" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
+@yield('bottom')
 </body>
 
 </html>

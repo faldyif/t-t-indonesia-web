@@ -48,7 +48,7 @@ class CreateUserIkhwansTable extends Migration
             $table->string('hobi')->nullable();
             $table->integer('pengalaman_taaruf_online')->nullable();
             $table->integer('pengalaman_taaruf_offilne')->nullable();
-            $table->date('target_menikah')->nullable();
+            $table->year('target_menikah')->nullable();
             $table->boolean('siap_nikah')->nullable();
             $table->boolean('sholat')->nullable();
             $table->boolean('merokok')->nullable();

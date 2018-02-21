@@ -36,6 +36,9 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
 
     // Has gender only
     Route::group(['middleware' => ['hasGender']], function () {
+        Route::get('lengkapi-data', function () {
+            return view('user.isi-data-awal');
+        });
         Route::get('/', function () {
             return view('user.dashboard');
         })->name('dashboard.index');
@@ -66,4 +69,8 @@ Route::get('tes-fetch', function () {
     $userIkhwan = \App\UserAkhwat::find(1);
 
     return response()->json($userIkhwan->isDataLengkap());
+});
+
+Route::get('tes-ting', function () {
+    return view('user.dashboard');
 });

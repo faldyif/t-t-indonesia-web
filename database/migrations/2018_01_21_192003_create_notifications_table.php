@@ -23,7 +23,7 @@ class CreateNotificationsTable extends Migration
             $table->boolean('status')->default(false);
             $table->string('title');
             $table->string('photo_path')->nullable();
-            $table->text('content');
+            $table->text('content');c
 
             $table->timestamps();
         });
