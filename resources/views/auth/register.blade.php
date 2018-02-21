@@ -107,7 +107,7 @@
 							<span class="input-group-addon">
 								<i class="fa fa-phone"></i>
 							</span>
-							<input type="text" name="phone_number" class="form-control" placeholder="No. Telepeon"> </div>
+							<input type="text" name="phone_number" class="form-control" placeholder="No. Telepon"> </div>
 					</div>
 					<div class="form-group">
 						<!-- <label>Password</label> -->
@@ -124,9 +124,26 @@
 							<span class="input-group-addon">
 								<i class="fa fa-key"></i>
 							</span>
-							<input type="password" class="form-control" placeholder="Ulangi Password" name="password_confirmation"> </div>
+							<input type="password" class="form-control" placeholder="Ulangi Password" name="password_confirmation">
+						</div>
+					</div>
+
+						<div class="form-group">
+							<!-- <label>No. Telepon</label> -->
+							<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-venus-mars"></i>
+							</span>
+								<select name="gender" id="gender" class="form-control">
+									<option value="" disabled selected>Pilih jenis kelamin...</option>
+									<option value="I">Ikhwan</option>
+									<option value="A">Akhwat</option>
+								</select>
+							</div>
+						</div>
+
 							<br/>
-							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan syarat dan ketentuan yang berlaku pada TnT Indonesia
+							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan <a href="#">syarat dan ketentuan</a> yang berlaku pada TnT Indonesia
 							<div style="margin:5px";>
 								<span></span>
 								<br/>

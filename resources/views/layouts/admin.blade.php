@@ -45,6 +45,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN PAGE LEVEL STYLES -->
     <link href="{{ url('assets/pages/css/search.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/pages/css/profile.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <link href="{{ url('assets/layouts/layout4/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
@@ -197,7 +199,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a href="kegiatan.html" class="nav-link ">
+                    <a href="" class="nav-link ">
                         <i class="icon-refresh"></i>
                         <span class="title">Kegiatan Terkini</span>
                         <span class="selected"></span>
@@ -280,6 +282,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="{{ url('assets/global/plugins/moment.min.js') }}" type="text/javascript"></script>
         <script src="{{ url('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js') }}" type="text/javascript"></script>
+        <script src="{{ url('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js') }}" type="text/javascript"></script>
         <script src="{{ url('assets/global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
         <script src="{{ url('assets/global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
         <script src="{{ url('assets/global/plugins/counterup/jquery.waypoints.min.js') }}" type="text/javascript"></script>
