@@ -39,10 +39,10 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
 
 // Admin User Only
 Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
-    // Has gender only
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard.index');
+    Route::get('/botman/register', 'AdminBotManController@registerTelegram')->name('admin.telegram.register');
 
     Route::resource('ikhwan', 'UserIkhwanController');
     Route::resource('akhwat', 'UserAkhwatController');
@@ -62,6 +62,10 @@ Route::get('tes-fetch', function () {
     return response()->json($userIkhwan->isDataLengkap());
 });
 
+Route::get('/say', function() {
+    $botman = resolve('botman');
+    $botman->say('sorry spam ti', '-287124341', \BotMan\Drivers\Telegram\TelegramDriver::class);
+});
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 Route::get('/botman/tinker', 'BotManController@tinker');
 

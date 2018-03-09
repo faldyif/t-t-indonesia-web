@@ -254,6 +254,13 @@ License: You must have a valid license purchased only from themeforest(the above
                         <span class="selected"></span>
                     </a>
                 </li>
+                <li class="nav-item ">
+                    <a href="{{ route('admin.telegram.register') }}" class="nav-link ">
+                        <i class="icon-settings"></i>
+                        <span class="title">Hubungkan Telegram</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
             </ul>
             </li>
             </ul>
