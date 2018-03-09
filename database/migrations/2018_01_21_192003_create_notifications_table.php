@@ -16,11 +16,10 @@ class CreateNotificationsTable extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('dari_user_id')->unsigned();
-            $table->foreign('dari_user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('ke_user_id')->unsigned();
-            $table->foreign('ke_user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->boolean('status')->default(false);
+            $table->integer('user_types')->unsigned();
+            $table->foreign('user_types')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('linked_user_id')->unsigned();
+            $table->foreign('linked_user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('title');
             $table->string('photo_path')->nullable();
             $table->text('content');

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJenjangPendidikansTable extends Migration
+class CreateGroupChatLogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateJenjangPendidikansTable extends Migration
      */
     public function up()
     {
-        Schema::create('jenjang_pendidikans', function (Blueprint $table) {
+        Schema::create('group_chat_logs', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('nama_jenjang');
+            $table->integer('taaruf_group_id')->unsigned();
+            $table->foreign('taaruf_group_id')->references('id')->on('taaruf_groups')->onDelete('cascade');
 
+            $table->text('message_json');
+            
             $table->timestamps();
         });
     }
@@ -29,8 +32,6 @@ class CreateJenjangPendidikansTable extends Migration
      */
     public function down()
     {
-        Schema::table('jenjang_pendidikans', function (Blueprint $table) {
-            // $table->engine = ‘InnoDB’;
-        });
+        Schema::dropIfExists('group_chat_logs');
     }
 }

@@ -21,7 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone_number')->unique();
+            $table->string('telegram_chat_id')->nullable();
             $table->rememberToken();
+            $table->smallInteger('verified');
+            $table->string('verification_token')->nullable();
             $table->timestamps();
         });
     }

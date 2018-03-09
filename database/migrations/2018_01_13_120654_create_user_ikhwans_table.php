@@ -19,7 +19,7 @@ class CreateUserIkhwansTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->char('goldar')->nullable();
+            $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
             $table->string('kebiasaan_baik')->nullable();
             $table->string('kebiasaan_buruk')->nullable();
@@ -34,8 +34,8 @@ class CreateUserIkhwansTable extends Migration
             $table->string('kegiatan')->nullable();
             $table->string('status')->nullable();
             $table->string('tempat_lahir')->nullable();
-            $table->date('tanggal_lahir')->nullable();
-            $table->string('pendidikan')->nullable();
+            $table->date('tanggal_lahir')->nullable();            
+            $table->string('ket_pendidikan_terakhir')->nullable();
             $table->double('tinggi_badan')->nullable();
             $table->double('berat_badan')->nullable();
             $table->boolean('ngaji_sunnah')->nullable();
@@ -47,12 +47,12 @@ class CreateUserIkhwansTable extends Migration
             $table->string('pakaian_harian')->nullable();
             $table->string('hobi')->nullable();
             $table->integer('pengalaman_taaruf_online')->nullable();
-            $table->integer('pengalaman_taaruf_offilne')->nullable();
-            $table->date('target_menikah')->nullable();
+            $table->integer('pengalaman_taaruf_offline')->nullable();
+            $table->year('target_menikah')->nullable();
             $table->boolean('siap_nikah')->nullable();
             $table->boolean('sholat')->nullable();
             $table->boolean('merokok')->nullable();
-            $table->string('kriteria_pendidikan')->nullable();
+            $table->string('ket_kriteria_pendidikan')->nullable();
             $table->integer('kriteria_usia_from')->nullable();
             $table->integer('kriteria_usia_to')->nullable();
             $table->string('kriteria_domisili')->nullable();
@@ -64,7 +64,11 @@ class CreateUserIkhwansTable extends Migration
             $table->integer('saudara')->nullable();
 
             $table->integer('proses_terakhir')->nullable();
-
+            
+            $table->string('foto_terakhir_path')->nullable();
+            $table->string('foto_ktp_path')->nullable();
+            $table->boolean('is_approved');
+            $table->boolean('is_data_locked');
             $table->timestamps();
         });
     }
