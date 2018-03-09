@@ -179,6 +179,14 @@ return [
 
         Jrean\UserVerification\UserVerificationServiceProvider::class,
 
+        /*
+         * BotMan Service Providers...
+         */
+        BotMan\Tinker\TinkerServiceProvider::class,
+        App\Providers\BotMan\DriverServiceProvider::class,
+        BotMan\BotMan\BotManServiceProvider::class,
+        BotMan\Studio\Providers\StudioServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +236,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
+        'BotMan' => \BotMan\BotMan\Facades\BotMan::class,
 
     ],
 

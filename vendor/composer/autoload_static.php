@@ -9,13 +9,15 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '6b06ce8ccf69c43a60a1e48495a034c9' => __DIR__ . '/..' . '/react/promise-timer/src/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -38,6 +40,7 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'TheCodingMachine\\Discovery\\' => 27,
             'Tests\\' => 6,
         ),
         'S' => 
@@ -56,9 +59,17 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Macroable\\' => 17,
         ),
         'R' => 
         array (
+            'React\\Stream\\' => 13,
+            'React\\Socket\\' => 13,
+            'React\\Promise\\Timer\\' => 20,
+            'React\\Promise\\' => 14,
+            'React\\EventLoop\\' => 16,
+            'React\\Dns\\' => 10,
+            'React\\Cache\\' => 12,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -70,8 +81,13 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
         ),
+        'O' => 
+        array (
+            'Opis\\Closure\\' => 13,
+        ),
         'M' => 
         array (
+            'Mpociot\\Pipeline\\' => 17,
             'Monolog\\' => 8,
         ),
         'L' => 
@@ -116,7 +132,18 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'C' => 
         array (
             'Cron\\' => 5,
+            'Clue\\React\\Utf8\\' => 16,
+            'Clue\\React\\Term\\' => 16,
+            'Clue\\React\\Stdio\\' => 17,
             'Carbon\\' => 7,
+        ),
+        'B' => 
+        array (
+            'BotMan\\Tinker\\' => 14,
+            'BotMan\\Studio\\' => 14,
+            'BotMan\\Drivers\\Web\\' => 19,
+            'BotMan\\Drivers\\Telegram\\' => 24,
+            'BotMan\\BotMan\\' => 14,
         ),
         'A' => 
         array (
@@ -146,6 +173,10 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
+        ),
+        'TheCodingMachine\\Discovery\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thecodingmachine/discovery/src',
         ),
         'Tests\\' => 
         array (
@@ -207,6 +238,38 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Macroable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/macroable/src',
+        ),
+        'React\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/stream/src',
+        ),
+        'React\\Socket\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/socket/src',
+        ),
+        'React\\Promise\\Timer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise-timer/src',
+        ),
+        'React\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise/src',
+        ),
+        'React\\EventLoop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/event-loop/src',
+        ),
+        'React\\Dns\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/dns/src',
+        ),
+        'React\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/cache/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -234,6 +297,14 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Opis\\Closure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/opis/closure/lib',
+        ),
+        'Mpociot\\Pipeline\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpociot/pipeline/src',
         ),
         'Monolog\\' => 
         array (
@@ -315,9 +386,41 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
+        'Clue\\React\\Utf8\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clue/utf8-react/src',
+        ),
+        'Clue\\React\\Term\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clue/term-react/src',
+        ),
+        'Clue\\React\\Stdio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clue/stdio-react/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'BotMan\\Tinker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/botman/tinker/src',
+        ),
+        'BotMan\\Studio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/botman/studio-addons/src',
+        ),
+        'BotMan\\Drivers\\Web\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/botman/driver-web/src',
+        ),
+        'BotMan\\Drivers\\Telegram\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/botman/driver-telegram/src',
+        ),
+        'BotMan\\BotMan\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/botman/botman/src',
         ),
         'App\\' => 
         array (
@@ -355,6 +458,13 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
             ),
         ),
+        'E' => 
+        array (
+            'Evenement' => 
+            array (
+                0 => __DIR__ . '/..' . '/evenement/evenement/src',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\DBAL\\' => 
@@ -376,6 +486,7 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
         'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Conversations\\ExampleConversation' => __DIR__ . '/../..' . '/app/Conversations/ExampleConversation.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Feedback' => __DIR__ . '/../..' . '/app/Feedback.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
@@ -385,6 +496,7 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\BotManController' => __DIR__ . '/../..' . '/app/Http/Controllers/BotManController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EditUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditUserController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
@@ -402,6 +514,7 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'App\\Notification' => __DIR__ . '/../..' . '/app/Notification.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
+        'App\\Providers\\BotMan\\DriverServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BotMan/DriverServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
@@ -411,9 +524,110 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'App\\UserIkhwan' => __DIR__ . '/../..' . '/app/UserIkhwan.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'BotMan\\BotMan\\BotMan' => __DIR__ . '/..' . '/botman/botman/src/BotMan.php',
+        'BotMan\\BotMan\\BotManFactory' => __DIR__ . '/..' . '/botman/botman/src/BotManFactory.php',
+        'BotMan\\BotMan\\BotManServiceProvider' => __DIR__ . '/..' . '/botman/botman/src/BotManServiceProvider.php',
+        'BotMan\\BotMan\\Cache\\ArrayCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/ArrayCache.php',
+        'BotMan\\BotMan\\Cache\\CodeIgniterCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/CodeIgniterCache.php',
+        'BotMan\\BotMan\\Cache\\DoctrineCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/DoctrineCache.php',
+        'BotMan\\BotMan\\Cache\\LaravelCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/LaravelCache.php',
+        'BotMan\\BotMan\\Cache\\Psr6Cache' => __DIR__ . '/..' . '/botman/botman/src/Cache/Psr6Cache.php',
+        'BotMan\\BotMan\\Cache\\RedisCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/RedisCache.php',
+        'BotMan\\BotMan\\Cache\\SymfonyCache' => __DIR__ . '/..' . '/botman/botman/src/Cache/SymfonyCache.php',
+        'BotMan\\BotMan\\Commands\\Command' => __DIR__ . '/..' . '/botman/botman/src/Commands/Command.php',
+        'BotMan\\BotMan\\Commands\\ConversationManager' => __DIR__ . '/..' . '/botman/botman/src/Commands/ConversationManager.php',
+        'BotMan\\BotMan\\Container\\LaravelContainer' => __DIR__ . '/..' . '/botman/botman/src/Container/LaravelContainer.php',
+        'BotMan\\BotMan\\Drivers\\DriverManager' => __DIR__ . '/..' . '/botman/botman/src/Drivers/DriverManager.php',
+        'BotMan\\BotMan\\Drivers\\Events\\GenericEvent' => __DIR__ . '/..' . '/botman/botman/src/Drivers/Events/GenericEvent.php',
+        'BotMan\\BotMan\\Drivers\\HttpDriver' => __DIR__ . '/..' . '/botman/botman/src/Drivers/HttpDriver.php',
+        'BotMan\\BotMan\\Drivers\\NullDriver' => __DIR__ . '/..' . '/botman/botman/src/Drivers/NullDriver.php',
+        'BotMan\\BotMan\\Drivers\\Tests\\FakeDriver' => __DIR__ . '/..' . '/botman/botman/src/Drivers/Tests/FakeDriver.php',
+        'BotMan\\BotMan\\Drivers\\Tests\\ProxyDriver' => __DIR__ . '/..' . '/botman/botman/src/Drivers/Tests/ProxyDriver.php',
+        'BotMan\\BotMan\\Exceptions\\Base\\BotManException' => __DIR__ . '/..' . '/botman/botman/src/Exceptions/Base/BotManException.php',
+        'BotMan\\BotMan\\Exceptions\\Base\\DriverAttachmentException' => __DIR__ . '/..' . '/botman/botman/src/Exceptions/Base/DriverAttachmentException.php',
+        'BotMan\\BotMan\\Exceptions\\Base\\DriverException' => __DIR__ . '/..' . '/botman/botman/src/Exceptions/Base/DriverException.php',
+        'BotMan\\BotMan\\Exceptions\\Core\\BadMethodCallException' => __DIR__ . '/..' . '/botman/botman/src/Exceptions/Core/BadMethodCallException.php',
+        'BotMan\\BotMan\\Exceptions\\Core\\UnexpectedValueException' => __DIR__ . '/..' . '/botman/botman/src/Exceptions/Core/UnexpectedValueException.php',
+        'BotMan\\BotMan\\Facades\\BotMan' => __DIR__ . '/..' . '/botman/botman/src/Facades/BotMan.php',
+        'BotMan\\BotMan\\Handlers\\ExceptionHandler' => __DIR__ . '/..' . '/botman/botman/src/Handlers/ExceptionHandler.php',
+        'BotMan\\BotMan\\Http\\Curl' => __DIR__ . '/..' . '/botman/botman/src/Http/Curl.php',
+        'BotMan\\BotMan\\Interfaces\\CacheInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/CacheInterface.php',
+        'BotMan\\BotMan\\Interfaces\\DriverEventInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/DriverEventInterface.php',
+        'BotMan\\BotMan\\Interfaces\\DriverInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/DriverInterface.php',
+        'BotMan\\BotMan\\Interfaces\\ExceptionHandlerInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/ExceptionHandlerInterface.php',
+        'BotMan\\BotMan\\Interfaces\\HttpInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/HttpInterface.php',
+        'BotMan\\BotMan\\Interfaces\\MiddlewareInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/MiddlewareInterface.php',
+        'BotMan\\BotMan\\Interfaces\\Middleware\\Captured' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/Middleware/Captured.php',
+        'BotMan\\BotMan\\Interfaces\\Middleware\\Heard' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/Middleware/Heard.php',
+        'BotMan\\BotMan\\Interfaces\\Middleware\\Matching' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/Middleware/Matching.php',
+        'BotMan\\BotMan\\Interfaces\\Middleware\\Received' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/Middleware/Received.php',
+        'BotMan\\BotMan\\Interfaces\\Middleware\\Sending' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/Middleware/Sending.php',
+        'BotMan\\BotMan\\Interfaces\\QuestionActionInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/QuestionActionInterface.php',
+        'BotMan\\BotMan\\Interfaces\\ShouldQueue' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/ShouldQueue.php',
+        'BotMan\\BotMan\\Interfaces\\StorageInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/StorageInterface.php',
+        'BotMan\\BotMan\\Interfaces\\UserInterface' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/UserInterface.php',
+        'BotMan\\BotMan\\Interfaces\\VerifiesService' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/VerifiesService.php',
+        'BotMan\\BotMan\\Interfaces\\WebAccess' => __DIR__ . '/..' . '/botman/botman/src/Interfaces/WebAccess.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\Attachment' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/Attachment.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\Audio' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/Audio.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\File' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/File.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\Image' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/Image.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\Location' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/Location.php',
+        'BotMan\\BotMan\\Messages\\Attachments\\Video' => __DIR__ . '/..' . '/botman/botman/src/Messages/Attachments/Video.php',
+        'BotMan\\BotMan\\Messages\\Conversations\\Conversation' => __DIR__ . '/..' . '/botman/botman/src/Messages/Conversations/Conversation.php',
+        'BotMan\\BotMan\\Messages\\Conversations\\InlineConversation' => __DIR__ . '/..' . '/botman/botman/src/Messages/Conversations/InlineConversation.php',
+        'BotMan\\BotMan\\Messages\\Incoming\\Answer' => __DIR__ . '/..' . '/botman/botman/src/Messages/Incoming/Answer.php',
+        'BotMan\\BotMan\\Messages\\Incoming\\IncomingMessage' => __DIR__ . '/..' . '/botman/botman/src/Messages/Incoming/IncomingMessage.php',
+        'BotMan\\BotMan\\Messages\\Matcher' => __DIR__ . '/..' . '/botman/botman/src/Messages/Matcher.php',
+        'BotMan\\BotMan\\Messages\\Matching\\MatchingMessage' => __DIR__ . '/..' . '/botman/botman/src/Messages/Matching/MatchingMessage.php',
+        'BotMan\\BotMan\\Messages\\Outgoing\\Actions\\Button' => __DIR__ . '/..' . '/botman/botman/src/Messages/Outgoing/Actions/Button.php',
+        'BotMan\\BotMan\\Messages\\Outgoing\\OutgoingMessage' => __DIR__ . '/..' . '/botman/botman/src/Messages/Outgoing/OutgoingMessage.php',
+        'BotMan\\BotMan\\Messages\\Outgoing\\Question' => __DIR__ . '/..' . '/botman/botman/src/Messages/Outgoing/Question.php',
+        'BotMan\\BotMan\\Middleware\\ApiAi' => __DIR__ . '/..' . '/botman/botman/src/Middleware/ApiAi.php',
+        'BotMan\\BotMan\\Middleware\\Dialogflow' => __DIR__ . '/..' . '/botman/botman/src/Middleware/Dialogflow.php',
+        'BotMan\\BotMan\\Middleware\\MiddlewareManager' => __DIR__ . '/..' . '/botman/botman/src/Middleware/MiddlewareManager.php',
+        'BotMan\\BotMan\\Middleware\\Wit' => __DIR__ . '/..' . '/botman/botman/src/Middleware/Wit.php',
+        'BotMan\\BotMan\\Storages\\Drivers\\FileStorage' => __DIR__ . '/..' . '/botman/botman/src/Storages/Drivers/FileStorage.php',
+        'BotMan\\BotMan\\Storages\\Drivers\\RedisStorage' => __DIR__ . '/..' . '/botman/botman/src/Storages/Drivers/RedisStorage.php',
+        'BotMan\\BotMan\\Storages\\Storage' => __DIR__ . '/..' . '/botman/botman/src/Storages/Storage.php',
+        'BotMan\\BotMan\\Traits\\HandlesConversations' => __DIR__ . '/..' . '/botman/botman/src/Traits/HandlesConversations.php',
+        'BotMan\\BotMan\\Traits\\HandlesExceptions' => __DIR__ . '/..' . '/botman/botman/src/Traits/HandlesExceptions.php',
+        'BotMan\\BotMan\\Traits\\ProvidesStorage' => __DIR__ . '/..' . '/botman/botman/src/Traits/ProvidesStorage.php',
+        'BotMan\\BotMan\\Users\\User' => __DIR__ . '/..' . '/botman/botman/src/Users/User.php',
+        'BotMan\\Drivers\\Telegram\\Console\\Commands\\TelegramRegisterCommand' => __DIR__ . '/..' . '/botman/driver-telegram/src/Console/Commands/TelegramRegisterCommand.php',
+        'BotMan\\Drivers\\Telegram\\Exceptions\\TelegramAttachmentException' => __DIR__ . '/..' . '/botman/driver-telegram/src/Exceptions/TelegramAttachmentException.php',
+        'BotMan\\Drivers\\Telegram\\Exceptions\\TelegramException' => __DIR__ . '/..' . '/botman/driver-telegram/src/Exceptions/TelegramException.php',
+        'BotMan\\Drivers\\Telegram\\Extensions\\Keyboard' => __DIR__ . '/..' . '/botman/driver-telegram/src/Extensions/Keyboard.php',
+        'BotMan\\Drivers\\Telegram\\Extensions\\KeyboardButton' => __DIR__ . '/..' . '/botman/driver-telegram/src/Extensions/KeyboardButton.php',
+        'BotMan\\Drivers\\Telegram\\Extensions\\User' => __DIR__ . '/..' . '/botman/driver-telegram/src/Extensions/User.php',
+        'BotMan\\Drivers\\Telegram\\Providers\\TelegramServiceProvider' => __DIR__ . '/..' . '/botman/driver-telegram/src/Providers/TelegramServiceProvider.php',
+        'BotMan\\Drivers\\Telegram\\TelegramAudioDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramAudioDriver.php',
+        'BotMan\\Drivers\\Telegram\\TelegramDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramDriver.php',
+        'BotMan\\Drivers\\Telegram\\TelegramFileDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramFileDriver.php',
+        'BotMan\\Drivers\\Telegram\\TelegramLocationDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramLocationDriver.php',
+        'BotMan\\Drivers\\Telegram\\TelegramPhotoDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramPhotoDriver.php',
+        'BotMan\\Drivers\\Telegram\\TelegramVideoDriver' => __DIR__ . '/..' . '/botman/driver-telegram/src/TelegramVideoDriver.php',
+        'BotMan\\Drivers\\Web\\Providers\\WebServiceProvider' => __DIR__ . '/..' . '/botman/driver-web/src/Providers/WebServiceProvider.php',
+        'BotMan\\Drivers\\Web\\WebDriver' => __DIR__ . '/..' . '/botman/driver-web/src/WebDriver.php',
+        'BotMan\\Studio\\Composer' => __DIR__ . '/..' . '/botman/studio-addons/src/Composer.php',
+        'BotMan\\Studio\\Console\\Commands\\BotManInstallDriver' => __DIR__ . '/..' . '/botman/studio-addons/src/Console/Commands/BotManInstallDriver.php',
+        'BotMan\\Studio\\Console\\Commands\\BotManListDrivers' => __DIR__ . '/..' . '/botman/studio-addons/src/Console/Commands/BotManListDrivers.php',
+        'BotMan\\Studio\\Console\\Commands\\BotManMakeConversation' => __DIR__ . '/..' . '/botman/studio-addons/src/Console/Commands/BotManMakeConversation.php',
+        'BotMan\\Studio\\Console\\Commands\\BotManMakeMiddleware' => __DIR__ . '/..' . '/botman/studio-addons/src/Console/Commands/BotManMakeMiddleware.php',
+        'BotMan\\Studio\\Providers\\DriverServiceProvider' => __DIR__ . '/..' . '/botman/studio-addons/src/Providers/DriverServiceProvider.php',
+        'BotMan\\Studio\\Providers\\RouteServiceProvider' => __DIR__ . '/..' . '/botman/studio-addons/src/Providers/RouteServiceProvider.php',
+        'BotMan\\Studio\\Providers\\StudioServiceProvider' => __DIR__ . '/..' . '/botman/studio-addons/src/Providers/StudioServiceProvider.php',
+        'BotMan\\Studio\\Testing\\BotManTester' => __DIR__ . '/..' . '/botman/studio-addons/src/Testing/BotManTester.php',
+        'BotMan\\Tinker\\Commands\\Tinker' => __DIR__ . '/..' . '/botman/tinker/src/Commands/Tinker.php',
+        'BotMan\\Tinker\\Drivers\\ConsoleDriver' => __DIR__ . '/..' . '/botman/tinker/src/Drivers/ConsoleDriver.php',
+        'BotMan\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/botman/tinker/src/TinkerServiceProvider.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Clue\\React\\Stdio\\Readline' => __DIR__ . '/..' . '/clue/stdio-react/src/Readline.php',
+        'Clue\\React\\Stdio\\Stdio' => __DIR__ . '/..' . '/clue/stdio-react/src/Stdio.php',
+        'Clue\\React\\Term\\ControlCodeParser' => __DIR__ . '/..' . '/clue/term-react/src/ControlCodeParser.php',
+        'Clue\\React\\Utf8\\Sequencer' => __DIR__ . '/..' . '/clue/utf8-react/src/Sequencer.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
@@ -882,6 +1096,9 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'Evenement\\EventEmitter' => __DIR__ . '/..' . '/evenement/evenement/src/Evenement/EventEmitter.php',
+        'Evenement\\EventEmitterInterface' => __DIR__ . '/..' . '/evenement/evenement/src/Evenement/EventEmitterInterface.php',
+        'Evenement\\EventEmitterTrait' => __DIR__ . '/..' . '/evenement/evenement/src/Evenement/EventEmitterTrait.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
         'Faker\\Calculator\\Luhn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
@@ -2563,6 +2780,20 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'Mpociot\\Pipeline\\Pipeline' => __DIR__ . '/..' . '/mpociot/pipeline/src/Pipeline.php',
+        'Opis\\Closure\\Analyzer' => __DIR__ . '/..' . '/opis/closure/lib/Analyzer.php',
+        'Opis\\Closure\\ClosureContext' => __DIR__ . '/..' . '/opis/closure/lib/ClosureContext.php',
+        'Opis\\Closure\\ClosureScope' => __DIR__ . '/..' . '/opis/closure/lib/ClosureScope.php',
+        'Opis\\Closure\\ClosureStream' => __DIR__ . '/..' . '/opis/closure/lib/ClosureStream.php',
+        'Opis\\Closure\\DefaultSecurityProvider' => __DIR__ . '/..' . '/opis/closure/lib/DefaultSecurityProvider.php',
+        'Opis\\Closure\\ISecurityProvider' => __DIR__ . '/..' . '/opis/closure/lib/ISecurityProvider.php',
+        'Opis\\Closure\\ReflectionClosure' => __DIR__ . '/..' . '/opis/closure/lib/ReflectionClosure.php',
+        'Opis\\Closure\\SecureClosure' => __DIR__ . '/..' . '/opis/closure/lib/SecureClosure.php',
+        'Opis\\Closure\\SecurityException' => __DIR__ . '/..' . '/opis/closure/lib/SecurityException.php',
+        'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/lib/SecurityProvider.php',
+        'Opis\\Closure\\SecurityProviderInterface' => __DIR__ . '/..' . '/opis/closure/lib/SecurityProviderInterface.php',
+        'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/lib/SelfReference.php',
+        'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/lib/SerializableClosure.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
@@ -3492,6 +3723,81 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'React\\Cache\\ArrayCache' => __DIR__ . '/..' . '/react/cache/src/ArrayCache.php',
+        'React\\Cache\\CacheInterface' => __DIR__ . '/..' . '/react/cache/src/CacheInterface.php',
+        'React\\Dns\\BadServerException' => __DIR__ . '/..' . '/react/dns/src/BadServerException.php',
+        'React\\Dns\\Config\\Config' => __DIR__ . '/..' . '/react/dns/src/Config/Config.php',
+        'React\\Dns\\Config\\FilesystemFactory' => __DIR__ . '/..' . '/react/dns/src/Config/FilesystemFactory.php',
+        'React\\Dns\\Config\\HostsFile' => __DIR__ . '/..' . '/react/dns/src/Config/HostsFile.php',
+        'React\\Dns\\Model\\HeaderBag' => __DIR__ . '/..' . '/react/dns/src/Model/HeaderBag.php',
+        'React\\Dns\\Model\\Message' => __DIR__ . '/..' . '/react/dns/src/Model/Message.php',
+        'React\\Dns\\Model\\Record' => __DIR__ . '/..' . '/react/dns/src/Model/Record.php',
+        'React\\Dns\\Protocol\\BinaryDumper' => __DIR__ . '/..' . '/react/dns/src/Protocol/BinaryDumper.php',
+        'React\\Dns\\Protocol\\Parser' => __DIR__ . '/..' . '/react/dns/src/Protocol/Parser.php',
+        'React\\Dns\\Query\\CachedExecutor' => __DIR__ . '/..' . '/react/dns/src/Query/CachedExecutor.php',
+        'React\\Dns\\Query\\CancellationException' => __DIR__ . '/..' . '/react/dns/src/Query/CancellationException.php',
+        'React\\Dns\\Query\\Executor' => __DIR__ . '/..' . '/react/dns/src/Query/Executor.php',
+        'React\\Dns\\Query\\ExecutorInterface' => __DIR__ . '/..' . '/react/dns/src/Query/ExecutorInterface.php',
+        'React\\Dns\\Query\\HostsFileExecutor' => __DIR__ . '/..' . '/react/dns/src/Query/HostsFileExecutor.php',
+        'React\\Dns\\Query\\Query' => __DIR__ . '/..' . '/react/dns/src/Query/Query.php',
+        'React\\Dns\\Query\\RecordBag' => __DIR__ . '/..' . '/react/dns/src/Query/RecordBag.php',
+        'React\\Dns\\Query\\RecordCache' => __DIR__ . '/..' . '/react/dns/src/Query/RecordCache.php',
+        'React\\Dns\\Query\\RetryExecutor' => __DIR__ . '/..' . '/react/dns/src/Query/RetryExecutor.php',
+        'React\\Dns\\Query\\TimeoutException' => __DIR__ . '/..' . '/react/dns/src/Query/TimeoutException.php',
+        'React\\Dns\\Query\\TimeoutExecutor' => __DIR__ . '/..' . '/react/dns/src/Query/TimeoutExecutor.php',
+        'React\\Dns\\RecordNotFoundException' => __DIR__ . '/..' . '/react/dns/src/RecordNotFoundException.php',
+        'React\\Dns\\Resolver\\Factory' => __DIR__ . '/..' . '/react/dns/src/Resolver/Factory.php',
+        'React\\Dns\\Resolver\\Resolver' => __DIR__ . '/..' . '/react/dns/src/Resolver/Resolver.php',
+        'React\\EventLoop\\ExtEventLoop' => __DIR__ . '/..' . '/react/event-loop/src/ExtEventLoop.php',
+        'React\\EventLoop\\Factory' => __DIR__ . '/..' . '/react/event-loop/src/Factory.php',
+        'React\\EventLoop\\LibEvLoop' => __DIR__ . '/..' . '/react/event-loop/src/LibEvLoop.php',
+        'React\\EventLoop\\LibEventLoop' => __DIR__ . '/..' . '/react/event-loop/src/LibEventLoop.php',
+        'React\\EventLoop\\LoopInterface' => __DIR__ . '/..' . '/react/event-loop/src/LoopInterface.php',
+        'React\\EventLoop\\StreamSelectLoop' => __DIR__ . '/..' . '/react/event-loop/src/StreamSelectLoop.php',
+        'React\\EventLoop\\Tick\\FutureTickQueue' => __DIR__ . '/..' . '/react/event-loop/src/Tick/FutureTickQueue.php',
+        'React\\EventLoop\\Tick\\NextTickQueue' => __DIR__ . '/..' . '/react/event-loop/src/Tick/NextTickQueue.php',
+        'React\\EventLoop\\Timer\\Timer' => __DIR__ . '/..' . '/react/event-loop/src/Timer/Timer.php',
+        'React\\EventLoop\\Timer\\TimerInterface' => __DIR__ . '/..' . '/react/event-loop/src/Timer/TimerInterface.php',
+        'React\\EventLoop\\Timer\\Timers' => __DIR__ . '/..' . '/react/event-loop/src/Timer/Timers.php',
+        'React\\Promise\\CancellablePromiseInterface' => __DIR__ . '/..' . '/react/promise/src/CancellablePromiseInterface.php',
+        'React\\Promise\\CancellationQueue' => __DIR__ . '/..' . '/react/promise/src/CancellationQueue.php',
+        'React\\Promise\\Deferred' => __DIR__ . '/..' . '/react/promise/src/Deferred.php',
+        'React\\Promise\\Exception\\LengthException' => __DIR__ . '/..' . '/react/promise/src/Exception/LengthException.php',
+        'React\\Promise\\ExtendedPromiseInterface' => __DIR__ . '/..' . '/react/promise/src/ExtendedPromiseInterface.php',
+        'React\\Promise\\FulfilledPromise' => __DIR__ . '/..' . '/react/promise/src/FulfilledPromise.php',
+        'React\\Promise\\LazyPromise' => __DIR__ . '/..' . '/react/promise/src/LazyPromise.php',
+        'React\\Promise\\Promise' => __DIR__ . '/..' . '/react/promise/src/Promise.php',
+        'React\\Promise\\PromiseInterface' => __DIR__ . '/..' . '/react/promise/src/PromiseInterface.php',
+        'React\\Promise\\PromisorInterface' => __DIR__ . '/..' . '/react/promise/src/PromisorInterface.php',
+        'React\\Promise\\RejectedPromise' => __DIR__ . '/..' . '/react/promise/src/RejectedPromise.php',
+        'React\\Promise\\Timer\\TimeoutException' => __DIR__ . '/..' . '/react/promise-timer/src/TimeoutException.php',
+        'React\\Promise\\UnhandledRejectionException' => __DIR__ . '/..' . '/react/promise/src/UnhandledRejectionException.php',
+        'React\\Socket\\Connection' => __DIR__ . '/..' . '/react/socket/src/Connection.php',
+        'React\\Socket\\ConnectionInterface' => __DIR__ . '/..' . '/react/socket/src/ConnectionInterface.php',
+        'React\\Socket\\Connector' => __DIR__ . '/..' . '/react/socket/src/Connector.php',
+        'React\\Socket\\ConnectorInterface' => __DIR__ . '/..' . '/react/socket/src/ConnectorInterface.php',
+        'React\\Socket\\DnsConnector' => __DIR__ . '/..' . '/react/socket/src/DnsConnector.php',
+        'React\\Socket\\FixedUriConnector' => __DIR__ . '/..' . '/react/socket/src/FixedUriConnector.php',
+        'React\\Socket\\LimitingServer' => __DIR__ . '/..' . '/react/socket/src/LimitingServer.php',
+        'React\\Socket\\SecureConnector' => __DIR__ . '/..' . '/react/socket/src/SecureConnector.php',
+        'React\\Socket\\SecureServer' => __DIR__ . '/..' . '/react/socket/src/SecureServer.php',
+        'React\\Socket\\Server' => __DIR__ . '/..' . '/react/socket/src/Server.php',
+        'React\\Socket\\ServerInterface' => __DIR__ . '/..' . '/react/socket/src/ServerInterface.php',
+        'React\\Socket\\StreamEncryption' => __DIR__ . '/..' . '/react/socket/src/StreamEncryption.php',
+        'React\\Socket\\TcpConnector' => __DIR__ . '/..' . '/react/socket/src/TcpConnector.php',
+        'React\\Socket\\TcpServer' => __DIR__ . '/..' . '/react/socket/src/TcpServer.php',
+        'React\\Socket\\TimeoutConnector' => __DIR__ . '/..' . '/react/socket/src/TimeoutConnector.php',
+        'React\\Socket\\UnixConnector' => __DIR__ . '/..' . '/react/socket/src/UnixConnector.php',
+        'React\\Socket\\UnixServer' => __DIR__ . '/..' . '/react/socket/src/UnixServer.php',
+        'React\\Stream\\CompositeStream' => __DIR__ . '/..' . '/react/stream/src/CompositeStream.php',
+        'React\\Stream\\DuplexResourceStream' => __DIR__ . '/..' . '/react/stream/src/DuplexResourceStream.php',
+        'React\\Stream\\DuplexStreamInterface' => __DIR__ . '/..' . '/react/stream/src/DuplexStreamInterface.php',
+        'React\\Stream\\ReadableResourceStream' => __DIR__ . '/..' . '/react/stream/src/ReadableResourceStream.php',
+        'React\\Stream\\ReadableStreamInterface' => __DIR__ . '/..' . '/react/stream/src/ReadableStreamInterface.php',
+        'React\\Stream\\ThroughStream' => __DIR__ . '/..' . '/react/stream/src/ThroughStream.php',
+        'React\\Stream\\Util' => __DIR__ . '/..' . '/react/stream/src/Util.php',
+        'React\\Stream\\WritableResourceStream' => __DIR__ . '/..' . '/react/stream/src/WritableResourceStream.php',
+        'React\\Stream\\WritableStreamInterface' => __DIR__ . '/..' . '/react/stream/src/WritableStreamInterface.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -3585,6 +3891,7 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Spatie\\Macroable\\Macroable' => __DIR__ . '/..' . '/spatie/macroable/src/Macroable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
@@ -4142,11 +4449,33 @@ class ComposerStaticInitc6796dcb852aa6e8eaba11074b5a0ce7
         'Symfony\\Polyfill\\Php70\\Php70' => __DIR__ . '/..' . '/symfony/polyfill-php70/Php70.php',
         'Symfony\\Thanks\\Command\\ThanksCommand' => __DIR__ . '/..' . '/symfony/thanks/src/Command/ThanksCommand.php',
         'Symfony\\Thanks\\Thanks' => __DIR__ . '/..' . '/symfony/thanks/src/Thanks.php',
+        'Tests\\BotMan\\ExampleTest' => __DIR__ . '/../..' . '/tests/BotMan/ExampleTest.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'TheCodingMachine\\Discovery\\Asset' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Asset.php',
+        'TheCodingMachine\\Discovery\\AssetOperation' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/AssetOperation.php',
+        'TheCodingMachine\\Discovery\\AssetType' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/AssetType.php',
+        'TheCodingMachine\\Discovery\\AssetTypeInterface' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/AssetTypeInterface.php',
+        'TheCodingMachine\\Discovery\\AssetsBuilder' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/AssetsBuilder.php',
+        'TheCodingMachine\\Discovery\\Commands\\AbstractDiscoveryCommand' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/AbstractDiscoveryCommand.php',
+        'TheCodingMachine\\Discovery\\Commands\\AddAssetCommand' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/AddAssetCommand.php',
+        'TheCodingMachine\\Discovery\\Commands\\CommandProvider' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/CommandProvider.php',
+        'TheCodingMachine\\Discovery\\Commands\\DumpCommand' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/DumpCommand.php',
+        'TheCodingMachine\\Discovery\\Commands\\ListAssetTypesCommand' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/ListAssetTypesCommand.php',
+        'TheCodingMachine\\Discovery\\Commands\\RemoveAssetCommand' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Commands/RemoveAssetCommand.php',
+        'TheCodingMachine\\Discovery\\Discovery' => __DIR__ . '/../..' . '/.discovery/Discovery.php',
+        'TheCodingMachine\\Discovery\\DiscoveryFileLoader' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/DiscoveryFileLoader.php',
+        'TheCodingMachine\\Discovery\\DiscoveryInterface' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/DiscoveryInterface.php',
+        'TheCodingMachine\\Discovery\\DiscoveryPlugin' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/DiscoveryPlugin.php',
+        'TheCodingMachine\\Discovery\\Dumper' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Dumper.php',
+        'TheCodingMachine\\Discovery\\ImmutableAssetType' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/ImmutableAssetType.php',
+        'TheCodingMachine\\Discovery\\InvalidArgumentException' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/InvalidArgumentException.php',
+        'TheCodingMachine\\Discovery\\PackagesOrderer' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/PackagesOrderer.php',
+        'TheCodingMachine\\Discovery\\Utils\\IOException' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Utils/IOException.php',
+        'TheCodingMachine\\Discovery\\Utils\\JsonException' => __DIR__ . '/..' . '/thecodingmachine/discovery/src/Utils/JsonException.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
         'TheSeer\\Tokenizer\\NamespaceUriException' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUriException.php',

@@ -6,6 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "botman/botman": "^2.3",
+        "botman/driver-telegram": "^1.4",
+        "botman/driver-web": "^1.5",
+        "botman/studio-addons": "^1.2",
+        "botman/tinker": "^1.0",
         "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~3.3",
         "jrean/laravel-user-verification": "^5.0",

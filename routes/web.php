@@ -61,3 +61,7 @@ Route::get('tes-fetch', function () {
 
     return response()->json($userIkhwan->isDataLengkap());
 });
+
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
+Route::get('/botman/tinker', 'BotManController@tinker');
+
