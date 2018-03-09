@@ -22,7 +22,7 @@ class CreateNotificationsTable extends Migration
             $table->foreign('linked_user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('title');
             $table->string('photo_path')->nullable();
-            $table->text('content');c
+            $table->text('content');
 
             $table->timestamps();
         });
