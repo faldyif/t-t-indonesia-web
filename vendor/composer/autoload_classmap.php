@@ -25,7 +25,6 @@ return array(
     'App\\Http\\Controllers\\UserIkhwanController' => $baseDir . '/app/Http/Controllers/UserIkhwanController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
-    'App\\Http\\Middleware\\HasGender' => $baseDir . '/app/Http/Middleware/HasGender.php',
     'App\\Http\\Middleware\\IsAdmin' => $baseDir . '/app/Http/Middleware/IsAdmin.php',
     'App\\Http\\Middleware\\IsCalon' => $baseDir . '/app/Http/Middleware/IsCalon.php',
     'App\\Http\\Middleware\\IsVerified' => $baseDir . '/app/Http/Middleware/IsVerified.php',
