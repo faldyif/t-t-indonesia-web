@@ -20,3 +20,6 @@ Route::group([
     Route::get('email-verification/check/{token}', 'App\Http\Controllers\Auth\RegisterController@getVerification')
         ->name('email-verification.check');
 });
+
+
+// tes
