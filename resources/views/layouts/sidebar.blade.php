@@ -13,7 +13,9 @@
 <div class="page-sidebar-wrapper">
     
 <div class="page-sidebar navbar-collapse collapse">
-
+    <sidebar>
+        @include('includes.sidebar')
+    </sidebar>
 </div>
 
 </div>
