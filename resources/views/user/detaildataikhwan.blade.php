@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.sidebar')
 
 @section('content')
             <!-- BEGIN CONTENT -->
@@ -9,7 +9,7 @@
                     <div class="page-head">
                         <!-- BEGIN PAGE TITLE -->
                         <div class="page-title">
-                            <h1>Data Detail Ikhwan
+                            <h1>Profil
                             </h1>
                         </div>
                         <!-- END PAGE TITLE -->
@@ -23,7 +23,7 @@
                             <i class="fa fa-circle"></i>
                         </li>
                         <li>
-                            <span class="active">Data Ikhwan</span>
+                            <span class="active">Profil</span>
                         </li>
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
@@ -35,6 +35,7 @@
                             </a>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BEGIN PROFILE SIDEBAR -->
