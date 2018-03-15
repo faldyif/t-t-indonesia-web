@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserAkhwat extends Model
 {
+    protected $guarded = [];
+
     public function user() {
         return $this->hasOne('App\User', 'linked_id');
     }

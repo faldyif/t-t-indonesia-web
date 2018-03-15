@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\UserIkhwan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Session;
 
 class UserIkhwanController extends Controller
@@ -15,7 +16,8 @@ class UserIkhwanController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user()->join('user_ikhwans', 'users.id', '=', 'user_ikhwans.user_id')->get()[0];
+        return view('user.detaildataikhwan')->with('user', $user);
     }
 
     /**

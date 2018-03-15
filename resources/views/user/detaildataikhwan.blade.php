@@ -19,7 +19,7 @@
                     <!-- BEGIN PAGE BREADCRUMB -->
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ url('dashboard') }}">Home</a>
                             <i class="fa fa-circle"></i>
                         </li>
                         <li>
@@ -28,7 +28,7 @@
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
                     <!-- BEGIN PAGE BASE CONTENT -->
-                    <div class="row">
+                    <div class="row" style="padding-bottom: 10px">
                         <div class="col-md-12">
                             <a class="btn green" href="editdataikhwan.blade.php">
                                 <i class="icon-pencil"></i> Edit Data
@@ -49,27 +49,27 @@
                                     <!-- END SIDEBAR USERPIC -->
                                     <!-- SIDEBAR USER TITLE -->
                                     <div class="profile-usertitle">
-                                        <div class="profile-usertitle-name"> Bagus Cakra Buana </div>
+                                        <div class="profile-usertitle-name"> {{ $user->name ?? '-' }} </div>
                                     </div>
                                     <!-- END SIDEBAR USER TITLE -->
                                     <div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-map-marker"></i>Jakarta Selatan
+                                            <i class="fa fa-map-marker"></i>{{ $user->domisili ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-calendar"></i>Jakarta, 5 Juni 1992
+                                            <i class="fa fa-calendar"></i>{{ $user->tempat_lahir ?? '-' }}, {{ isset($user->tanggal_lahir) ? \Carbon\Carbon::parse($user->tanggal_lahir)->formatLocalized('%d %B %Y') : '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-graduation-cap"></i>S1 Teknik Informatika
+                                            <i class="fa fa-graduation-cap"></i>{{ \App\JenjangPendidikan::find($user->pendidikan_terakhir_id)->nama_jenjang ?? '-' }} ({{ $user->ket_pendidikan_terakhir ?? '-' }})
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-heart"></i>Fotografi
+                                            <i class="fa fa-heart"></i>{{ $user->status ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-star"></i>Belum Menikah
+                                            <i class="fa fa-star"></i>{{ $user->hobi ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-diamond"></i>Sudah siap Menikah
+                                            <i class="fa fa-diamond"></i>{{ $user->siap_nikah ? 'Sudah siap Menikah' : !isset($user->siap_nikah) ? '-' : 'Belum siap Menikah' }}
                                         </div>
                                     </div>
                                 </div>
@@ -104,47 +104,47 @@
                                                             <div class="col-md-12 col-xs-offset-3">
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Golongan Darah</dt>
-                                                                    <dd>O</dd>
+                                                                    <dd>{{ $user->goldar ?? '-' }}</dd>
                                                                 </dl>   
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Riwayat Kesehatan</dt>
-                                                                    <dd>Magh</dd>
+                                                                    <dd>{{ $user->riwayat_kesehatan ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Status</dt>
-                                                                    <dd>Belum Menikah</dd>
+                                                                    <dd>{{ $user->status ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kebiasaan Baik</dt>
-                                                                    <dd>Membantu sesama</dd>
+                                                                    <dd>{{ $user->kebiasaan_baik ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kebiasaan Buruk</dt>
-                                                                    <dd>Suka sensitif</dd>
+                                                                    <dd>{{ $user->kebiasaan_buruk ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Hal yang disukai</dt>
-                                                                    <dd>Rihlah</dd>
+                                                                    <dd>{{ $user->hal_disukai ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Hal yang tidak disukai</dt>
-                                                                    <dd>Marah</dd>
+                                                                    <dd>{{ $user->hal_taksuka ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Tinggi badan</dt>
-                                                                    <dd>162 cm</dd>
+                                                                    <dd>{{ $user->tinggi_badan ?? '-' }} cm</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Berat Badan</dt>
-                                                                    <dd>50 kg</dd>
+                                                                    <dd>{{ $user->berat_badan ?? '-' }} kg</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Pakaian harian</dt>
-                                                                    <dd>Kaos Oblong</dd>
+                                                                    <dd>{{ $user->pakaian_harian ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kacamata</dt>
-                                                                    <dd>Ya</dd>
+                                                                    <dd>{{ $user->kacamata ? 'Ya' : (!isset($user->kacamata) ? '-' : 'Tidak') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Pengalaman Ta'aruf</dt>
@@ -152,31 +152,31 @@
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Online</dt>
-                                                                    <dd>Belum Pernah</dd>
+                                                                    <dd>{{ $user->pengalaman_taaruf_online == 0 ? 'Belum pernah' : (!isset($user->pengalaman_taaruf_online) ? '-' : $user->pengalaman_taaruf_online . ' kali') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Offline</dt>
-                                                                    <dd>Belum Pernah</dd>
+                                                                    <dd>{{ $user->pengalaman_taaruf_online == 0 ? 'Belum pernah' : (!isset($user->pengalaman_taaruf_offline) ? '-' : $user->pengalaman_taaruf_offline . ' kali') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Celana</dt>
-                                                                    <dd>Biasa</dd>
+                                                                    <dd>{{ $user->celana ? 'Cingkrang' : (!isset($user->celana) ? '-' : 'Biasa') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Sholat</dt>
-                                                                    <dd>Belum</dd>
+                                                                    <dd>{{ $user->sholat ? 'Ya' : (!isset($user->sholat) ? '-' : 'Belum') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Merokok</dt>
-                                                                    <dd>Tidak</dd>
+                                                                    <dd>{{ $user->merokok ? 'Ya' : (!isset($user->merokok) ? '-' : 'Tidak') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Siap menikah</dt>
-                                                                    <dd>Sudah</dd>
+                                                                    <dd>{{ $user->siap_nikah ? 'Sudah' : !isset($user->siap_nikah) ? '-' : 'Belum' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Target menikah</dt>
-                                                                    <dd>2018</dd>
+                                                                    <dd>{{ $user->target_menikah ?? '-' }}</dd>
                                                                 </dl>
                                                                 <!--end row-->
                                                             </div>
@@ -194,23 +194,23 @@
                                                                 </div>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Anak ke-</dt>
-                                                                    <dd>2</dd>
+                                                                    <dd>{{ $user->anak_ke ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Asal</dt>
-                                                                    <dd>Tangerang</dd>
+                                                                    <dd>{{ $user->asal ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Suku</dt>
-                                                                    <dd>Jawa</dd>
+                                                                    <dd>{{ $user->suku ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Suku Ayah</dt>
-                                                                    <dd>Jawa</dd>
+                                                                    <dd>{{ $user->suku_ayah ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Suku Ibu</dt>
-                                                                    <dd>Jawa</dd>
+                                                                    <dd>{{ $user->suku_ibu ?? '-' }}</dd>
                                                                 </dl>
                                                             </div>
                                                         </div>
@@ -224,23 +224,23 @@
                                                                 </div>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Pendidikan</dt>
-                                                                    <dd>S1</dd>
+                                                                    <dd>{{ \App\JenjangPendidikan::find($user->kriteria_pendidikan_id)->nama_jenjang ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Usia</dt>
-                                                                    <dd>20 - 25 tahun</dd>
+                                                                    <dd>{{ $user->kriteria_usia_from ?? '-' }} ~ {{ $user->kriteria_usia_to ?? '-' }} tahun</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Domisili</dt>
-                                                                    <dd>Yogyakarta</dd>
+                                                                    <dd>{{ $user->kriteria_domisili ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Harapan Pasangan</dt>
-                                                                    <dd>Apa ya?</dd>
+                                                                    <dd>{{ $user->harapan_pasangan ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kriteria lain</dt>
-                                                                    <dd>Ngaji sunnah, mampu menjadi pendamping hidup</dd>
+                                                                    <dd>{{ $user->kriteria_lain ?? '-' }}</dd>
                                                                 </dl>
                                                             </div>
                                                         </div>
@@ -253,20 +253,24 @@
                                                                     </span>
                                                                 </div>
                                                                 <dl class="dl-horizontal">
+                                                                    <dt>Ngaji Sunnah</dt>
+                                                                    <dd>{{ $user->ngaji_sunnah ? 'Ya' : (!isset($user->ngaji_sunnah) ? '-' : 'Tidak') }}</dd>
+                                                                </dl>
+                                                                <dl class="dl-horizontal">
                                                                     <dt>Ustad</dt>
-                                                                    <dd>ust. Adi Hidayat</dd>
+                                                                    <dd>{{ $user->ustadz ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kajian rutin</dt>
-                                                                    <dd>kajian di masjid istiqlal</dd>
+                                                                    <dd>{{ $user->kajian_rutin ? 'Ya' : (!isset($user->kajian_rutin) ? '-' : 'Tidak') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Tentang Kajian</dt>
-                                                                    <dd>Tauhid</dd>
+                                                                    <dd>{{ $user->tentang_ngaji ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Tempat</dt>
-                                                                    <dd>Jakarta</dd>
+                                                                    <dd>{{ $user->tempat_ngaji ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt></dt>

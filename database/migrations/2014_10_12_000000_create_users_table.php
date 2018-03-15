@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('telegram_chat_id')->nullable();
             $table->rememberToken();
             $table->smallInteger('verified');
+            $table->boolean('firstLogin')->default(0);
             $table->string('verification_token')->nullable();
             $table->timestamps();
         });

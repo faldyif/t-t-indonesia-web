@@ -1,14 +1,14 @@
     <div class="page-sidebar navbar-collapse collapse">
     <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
         <li class="nav-item start active open">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('home') }}" class="nav-link ">
                 <i class="icon-home"></i>
                 <span class="title">Beranda</span>
                 <span class="selected"></span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('user.profile') }}" class="nav-link ">
                 <i class="icon-user"></i>
                 <span class="title">Profil</span>
                 <span class="selected"></span>
