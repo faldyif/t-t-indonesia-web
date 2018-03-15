@@ -44,7 +44,8 @@
                                 <div class="portlet light bordered">
                                     <!-- SIDEBAR USERPIC -->
                                     <div class="profile-userpic">
-                                        <img src="../assets/pages/media/profile/people19.png" class="img-responsive" alt=""> </div>
+                                        <img src="{{ url('img/ikhwan.png') }}" class="img-responsive"  alt="" title="" />
+                                    </div>
                                     <!-- END SIDEBAR USERPIC -->
                                     <!-- SIDEBAR USER TITLE -->
                                     <div class="profile-usertitle">

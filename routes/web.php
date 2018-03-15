@@ -54,5 +54,5 @@ Route::get('tes-fetch', function () {
 
 Route::get('profil', function()
 {
-    return View::make('user.detaildataikhwan');
+    return View::make('user.detaildataakhwat');
 });

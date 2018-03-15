@@ -62,11 +62,11 @@
                     <img class="" src="{{ url('img/logo.png') }}" alt="Imperial">
                 </div>
 
-                <h1>Selemat Datang di Ta'aruf & Ta'adud</h1>
-                <h2>We create <span class="rotating">beautiful graphics, functional websites, working mobile apps</span></h2>
+                <h1>Selamat Datang di Ta'aruf & Ta'adud Indonesia</h1>
+                <h2>Ta'aruf sesuai <span class="rotating">Al-Qur'an, As-Sunnah</span></h2>
                 <div class="actions">
                     <a href="{{ url('register') }}" class="btn-get-started">Mulai</a>
-                    <a href="#services" class="btn-services">Cara Kerja</a>
+                    <a href="#services" class="btn-services">Tata Cara Ta'aruf</a>
                 </div>
             </div>
         </div>
@@ -123,22 +123,21 @@
                 <div class="col-md-12">
                     <h3 class="section-title">Tentang Kami</h3>
                     <div class="section-title-divider"></div>
-                    <p class="section-description">sebuah program ta'aruf(perkenalan) sesuai sariat islam</p>
+                    <p class="section-description">Program Ta'aruf dan Ta'adud sesuai syariat Islam</p>
                 </div>
             </div>
         </div>
         <div class="container about-container wow fadeInUp">
             <div class="row">
                 <div class="col-md-6 col-md-push-6 about-content">
-                    <h2 class="about-title">ta'aruf digital, terpercaya dan fleksibel</h2>
                     <p class="about-text">
-                        Ta'aruf dan ta'adud indonesia adalah sebuah program untuk melakukan perkenalan yang syari berbasis digital. di awasi langsung oleh ustad Abu Zayyan Mansur.
+                        Ta'aruf dan Ta'adud indonesia merupakan program perkenalan yang syar'i berbasis digital dan dengan pengawasan langsung oleh Ustadz Abu Zayyan Mansur.
                     </p>
                     <p class="about-text">
-                        Program ini sebelumya telah berjalan di aplikasi Telegram, dengan ribuan user yang bergabung di grup utama. serta ratusan orang yang sudah terdaftar sebagai orang yang siap menikah.
+                        Kami mengupayakan untuk selalu menjadikan program ini aman, rahasia, dan jauh dari fitnah.
                     </p>
                     <p class="about-text">
-                        Alhamdulillah selama berjalan di telegram sudah ada puluhan pasangan yang berhasil menikah dengan cara ta'aruf digital ini.
+                        TnT Indonesia dapat menjadi tempat bagi para ikhwan dan akhwat yang serius dalam menjalin pernikahan dan membangun keluarga sesuai Al-Qur'an dan As-Sunnah. Insya Allah.
                     </p>
                 </div>
             </div>
@@ -152,9 +151,9 @@
         <div class="container wow fadeInUp">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="section-title">Cara Kerja</h3>
+                    <h3 class="section-title">Tata Cara Ta'aruf</h3>
                     <div class="section-title-divider"></div>
-                    <p class="section-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                    <p class="section-description">Pahami tata cara ta'aruf di TnT Indonesia</p>
                 </div>
             </div>
 
@@ -291,7 +290,7 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Testimonials</h3>
+          <h3 class="section-title">Testimoni</h3>
           <div class="section-title-divider"></div>
           <!-- <p class="section-description">Erdo lide, nora porodo filece, salvam esse se, quod concedimus ses haec dicturum fuisse</p> -->
         </div>
@@ -300,7 +299,9 @@
       <div class="row">
         <div class="col-md-3">
           <div class="profile">
-            <div class="pic"><img src="img/client-1.jpg" alt=""></div>
+            <div class="pic">
+                <img src="{{ url('img/akhwat.png') }}" class="img-responsive"  alt="" title="" />
+            </div>
             <h4>Saul Goodman</h4>
             <span>Lawless Inc</span>
           </div>
@@ -320,7 +321,9 @@
         </div>
         <div class="col-md-3">
           <div class="profile">
-            <div class="pic"><img src="img/client-2.jpg" alt=""></div>
+            <div class="pic">
+            <img src="{{ url('img/ikhwan.png') }}" class="img-responsive"  alt="" title="" />
+            </div>
             <h4>Sara Wilsson</h4>
             <span>Odeo Inc</span>
           </div>
