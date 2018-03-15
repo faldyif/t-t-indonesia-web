@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\UserAkhwat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Session;
 
 class UserAkhwatController extends Controller
@@ -15,7 +16,8 @@ class UserAkhwatController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user()->join('user_akhwats', 'users.id', '=', 'user_akhwats.user_id')->get();
+        return response()->json($user);
     }
 
     /**

@@ -27,6 +27,7 @@ Route::get('registration-success', function() {
 // Verified User Only
 Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/profile', 'UserController@index')->name('user.profile');
     Route::get('/', function () {
         return view('user.dashboard');
     })->name('dashboard.index');
@@ -54,5 +55,6 @@ Route::get('tes-fetch', function () {
 
 Route::get('profil', function()
 {
-    return View::make('user.form_isi_data');
+    return View::make('auth.passwords.reset')->with('token', 123);
 });
+Route::get('tes', 'UserIkhwanController@index');
