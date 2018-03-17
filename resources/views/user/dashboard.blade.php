@@ -1,3 +1,5 @@
+<?php $active ='home'; ?>
+
 @extends('layouts.sidebar')
 
 @section('content')

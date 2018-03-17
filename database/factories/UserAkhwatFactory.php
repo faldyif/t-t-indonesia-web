@@ -3,7 +3,7 @@
 use Faker\Generator as Faker;
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\UserIkhwan::class, function (Faker $faker) {
+$factory->define(App\UserAkhwat::class, function (Faker $faker) {
     $tglLahir = $faker->dateTimeBetween($startDate = '-50 years', $endDate = '-18 years', $timezone = null);
     $usia = $tglLahir->diff(\Carbon\Carbon::now())->y;
     $bersaudara = $faker->numberBetween($min = 1, $max = 9);
@@ -40,15 +40,15 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
         'tentang_ngaji' => ucwords($faker->words($nb = 1, $asText = true)),
         'ustadz' => 'Ustadz ' . $faker->name,
         'kajian_rutin' => $faker->boolean,
-        'celana' => $faker->boolean,
+        'hijab_syari' => $faker->boolean,
+        'niqob' => $faker->boolean,
         'pakaian_harian' => ucwords($faker->words($nb = 2, $asText = true)),
         'hobi' => ucwords($faker->words($nb = 1, $asText = true)),
         'pengalaman_taaruf_online' => $faker->numberBetween($min = 0, $max = 5),
         'pengalaman_taaruf_offline' => $faker->numberBetween($min = 0, $max = 5),
         'target_menikah' => $faker->numberBetween($min = 2018, $max = 2022),
         'siap_nikah' => $faker->boolean,
-        'sholat' => $faker->boolean,
-        'merokok' => $faker->boolean,
+        'izin_ortu' => $faker->boolean,
         'kriteria_pendidikan_id' => $faker->numberBetween($min = 1, $max = 9),
         'ket_kriteria_pendidikan' => ucwords($faker->words($nb = 2, $asText = true)),
         'kriteria_usia_from' => $faker->numberBetween($min = 17, $max = 20),
@@ -59,6 +59,7 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
         'kacamata' => $faker->boolean,
         'anak_ke' => $anakKe,
         'saudara' => $bersaudara,
+        'siap_dipoligami' => $faker->boolean,
         'proses_terakhir' => null,
         'proses_terakhir_user_id' => null,
         'foto_terakhir_path' => null,
