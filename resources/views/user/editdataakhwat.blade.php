@@ -36,6 +36,7 @@
                             </button>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BEGIN PROFILE SIDEBAR -->
@@ -68,10 +69,34 @@
                                         <input type="text" class="form-control" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" /> </div>
+                                        <!-- <div class="col-md-8"> -->
+                                        <div class="input-group date date-picker" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn default" type="button">
+                                                    <i class="fa fa-calendar"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <!-- /input-group -->
+                                        <span class="help-block"> Pilih tanggal </span>
+                                        <!-- </div> -->
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Pendidikan terakhir</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                        <option value="1"> SD </option>
+                                        <option value="2"> SMP </option>
+                                        <option value="3"> SMA </option>
+                                        <option value="4"> D1 </option>
+                                        <option value="5"> D3 </option>
+                                        <option value="6"> D4 </option>
+                                        <option value="7"> S1 </option>
+                                        <option value="8"> S2 </option>
+                                        <option value="9"> S3 </option>
+                                        <option value="10"> Lain - lain </option>
+                                      </select>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
                                         <input type="text" class="form-control" /> </div>
@@ -149,33 +174,34 @@
                                                 <div class="tab-content">
                                                     <div class="tab-pane active" id="tab_1_1">
                                                     <!-- BEGIN PAGE ACTIONS -->
-                                                    <div class="form-group">
+                                                        <form action="#">
+                                                        <div class="form-group">
                                                             <label class="control-label">Golongan Darah</label>
                                                             <div class="md-radio-inline">
                                                                 <div class="md-radio">
-                                                                    <input type="radio" id="a" name="radio3" value="1" class="md-radiobtn">
-                                                                    <label for="a">
+                                                                    <input type="radio" id="A" name="goldar" value="1" class="md-radiobtn" checked="">
+                                                                    <label for="A">
                                                                         <span></span>
                                                                         <span class="check"></span>
                                                                         <span class="box"></span> A </label>
                                                                 </div>
                                                                 <div class="md-radio">
-                                                                    <input type="radio" id="b" name="radio3" value="2" class="md-radiobtn">
-                                                                    <label for="b">
+                                                                    <input type="radio" id="B" name="goldar" value="2" class="md-radiobtn">
+                                                                    <label for="B">
                                                                         <span></span>
                                                                         <span class="check"></span>
                                                                         <span class="box"></span> B </label>
                                                                 </div>
                                                                 <div class="md-radio">
-                                                                    <input type="radio" id="ab" name="radio3" value="3" class="md-radiobtn">
-                                                                    <label for="ab">
+                                                                    <input type="radio" id="AB" name="goldar" value="3" class="md-radiobtn">
+                                                                    <label for="AB">
                                                                         <span></span>
                                                                         <span class="check"></span>
                                                                         <span class="box"></span> AB </label>
                                                                 </div>
                                                                 <div class="md-radio">
-                                                                    <input type="radio" id="o" name="radio3" value="4" class="md-radiobtn" checked="">
-                                                                    <label for="o">
+                                                                    <input type="radio" id="O" name="goldar" value="4" class="md-radiobtn">
+                                                                    <label for="O">
                                                                         <span></span>
                                                                         <span class="check"></span>
                                                                         <span class="box"></span> O </label>
@@ -183,7 +209,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">Riwayat Kesehatan</label>
+                                                            <label class="control-label">Riwayat Penyakit</label>
                                                             <input type="text" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Kebiasaan baik</label>
@@ -265,16 +291,72 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Hijab Syar'i</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="hijab1" name="hijabsyari" value="1" class="md-radiobtn" checked="">
+                                                                    <label for="hijab1">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="hijab2" name="hijabsyari" value="2" class="md-radiobtn">
+                                                                    <label for="hijab2">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Niqob</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn" checked="">
+                                                                    <label for="niqob1">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="niqob2" name="niqob" value="2" class="md-radiobtn">
+                                                                    <label for="niqob2">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Izin Ortu</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="izin1" name="izinortu" value="1" class="md-radiobtn" checked="">
+                                                                    <label for="izin1">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="izin2" name="izinortu" value="2" class="md-radiobtn">
+                                                                    <label for="izin2">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Target Menikah</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <div class="input-group input-medium date date-picker" data-date="10/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months">
+                                                                <input type="text" class="form-control" readonly>
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn default" type="button">
+                                                                        <i class="fa fa-calendar"></i>
+                                                                    </button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
                                                     </form>
                                                 <!-- END PAGE ACTIONS -->
                                                 </div>                    
@@ -296,9 +378,6 @@
                                                             <div class="form-group">
                                                                 <label class="control-label">Suku Ibu</label>
                                                                 <input type="text" class="form-control" /> </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Pendidikan</label>
-                                                                <input type="number" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Usia</label>
                                                                 <input type="number" class="form-control" /> </div>

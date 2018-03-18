@@ -58,3 +58,8 @@ Route::get('profil', function()
     return View::make('auth.passwords.reset')->with('token', 123);
 });
 Route::get('tes', 'UserIkhwanController@index');
+
+Route::get('detail', function()
+{
+    return View::make('user.form_isi_data');
+});

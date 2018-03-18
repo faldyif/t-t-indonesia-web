@@ -57,7 +57,16 @@
     <link href="{{ url('assets/layouts/layout4/css/themes/default.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
     <link href="{{ url('assets/layouts/layout4/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="{{ url('favicon.ico') }}" /> </head>
+    <link rel="shortcut icon" href="{{ url('favicon.ico') }}" /> 
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    </style>
+    </head>
 <!-- END HEAD -->
 <!-- End CSS Themeforest -->
 

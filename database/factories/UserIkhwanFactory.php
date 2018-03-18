@@ -60,6 +60,7 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
         'anak_ke' => $anakKe,
         'saudara' => $bersaudara,
         'proses_terakhir' => null,
+        'proses_terakhir_user_id' => null,
         'foto_terakhir_path' => null,
         'foto_ktp_path' => null,
         'is_approved' => true,

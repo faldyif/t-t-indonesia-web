@@ -36,6 +36,7 @@
                             </button>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BEGIN PROFILE SIDEBAR -->
@@ -68,10 +69,34 @@
                                         <input type="text" class="form-control" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" /> </div>
+                                        <!-- <div class="col-md-8"> -->
+                                        <div class="input-group date date-picker" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn default" type="button">
+                                                    <i class="fa fa-calendar"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <!-- /input-group -->
+                                        <span class="help-block"> Pilih tanggal </span>
+                                        <!-- </div> -->
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Pendidikan terakhir</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                        <option value="1"> SD </option>
+                                        <option value="2"> SMP </option>
+                                        <option value="3"> SMA </option>
+                                        <option value="4"> D1 </option>
+                                        <option value="5"> D3 </option>
+                                        <option value="6"> D4 </option>
+                                        <option value="7"> S1 </option>
+                                        <option value="8"> S2 </option>
+                                        <option value="9"> S3 </option>
+                                        <option value="10"> Lain - lain </option>
+                                      </select>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
                                         <input type="text" class="form-control" /> </div>
@@ -183,7 +208,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label">Riwayat Kesehatan</label>
+                                                        <label class="control-label">Riwayat Penyakit</label>
                                                         <input type="text" class="form-control" /> </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Kebiasaan baik</label>
@@ -329,7 +354,15 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Target Menikah</label>
-                                                        <input type="text" class="form-control" /> </div>
+                                                        <div class="input-group input-medium date date-picker" data-date="10/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months">
+                                                            <input type="text" class="form-control" readonly>
+                                                            <span class="input-group-btn">
+                                                                <button class="btn default" type="button">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </form>
                                                 <!-- END PAGE ACTIONS -->
                                                 </div>                    
@@ -352,11 +385,8 @@
                                                                 <label class="control-label">Suku Ibu</label>
                                                                 <input type="text" class="form-control" /> </div>
                                                             <div class="form-group">
-                                                                <label class="control-label">Pendidikan</label>
-                                                                <input type="number" class="form-control" /> </div>
-                                                            <div class="form-group">
                                                                 <label class="control-label">Usia</label>
-                                                                <input type="number" class="form-control" /> </div>
+                                                                <input type="number" class="form-control"/> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Domisili</label>
                                                                 <input type="text" class="form-control" /> </div>

@@ -1,3 +1,5 @@
+<?php $active ='profile'; ?>
+
 @extends('layouts.sidebar')
 
 @section('content')
@@ -35,6 +37,7 @@
                             </a>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BEGIN PROFILE SIDEBAR -->
@@ -43,7 +46,8 @@
                                 <div class="portlet light bordered">
                                     <!-- SIDEBAR USERPIC -->
                                     <div class="profile-userpic">
-                                        <img src="../assets/pages/media/profile/people19.png" class="img-responsive" alt=""> </div>
+                                        <img src="{{ url('img/ikhwan.png') }}" class="img-responsive"  alt="" title="" />
+                                    </div>
                                     <!-- END SIDEBAR USERPIC -->
                                     <!-- SIDEBAR USER TITLE -->
                                     <div class="profile-usertitle">
@@ -61,10 +65,10 @@
                                             <i class="fa fa-graduation-cap"></i>{{ \App\JenjangPendidikan::find($user->pendidikan_terakhir_id)->nama_jenjang ?? '-' }} ({{ $user->ket_pendidikan_terakhir ?? '-' }})
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-heart"></i>{{ $user->status ?? '-' }}
+                                            <i class="fa fa-heart"></i>{{ $user->hobi ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-star"></i>{{ $user->hobi ?? '-' }}
+                                            <i class="fa fa-star"></i>{{ $user->status ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
                                             <i class="fa fa-diamond"></i>{{ $user->siap_nikah ? 'Sudah siap Menikah' : !isset($user->siap_nikah) ? '-' : 'Belum siap Menikah' }}
@@ -107,10 +111,6 @@
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Riwayat Kesehatan</dt>
                                                                     <dd>{{ $user->riwayat_kesehatan ?? '-' }}</dd>
-                                                                </dl>
-                                                                <dl class="dl-horizontal">
-                                                                    <dt>Status</dt>
-                                                                    <dd>{{ $user->status ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kebiasaan Baik</dt>
@@ -269,10 +269,6 @@
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Tempat</dt>
                                                                     <dd>{{ $user->tempat_ngaji ?? '-' }}</dd>
-                                                                </dl>
-                                                                <dl class="dl-horizontal">
-                                                                    <dt></dt>
-                                                                    <dd></dd>
                                                                 </dl>
                                                                 <!--end row-->
                                                             </div>

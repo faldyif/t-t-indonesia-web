@@ -1,3 +1,5 @@
+<?php $active ='home'; ?>
+
 @extends('layouts.sidebar')
 
 @section('content')
@@ -39,6 +41,9 @@
                         <a href="detaildatapermintaanakhwat.html"> Detail data </a>
                     </p>
                 </div>
+
+                <div class="profile-userpic">
+                    <img src="../assets/pages/media/profile/akhwat.png" class="img-responsive" alt=""> </div>
                 <!-- END PAGE BASE CONTENT -->
                 <!-- END QUICK SIDEBAR -->
             </div>

@@ -170,27 +170,27 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
             <!-- BEGIN SIDEBAR MENU -->
             <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-                <li class="nav-item start">
+                <li class="{{ set_active('admin.dashboard.index') }}">
                     <a href="{{ route('admin.dashboard.index') }}" class="nav-link ">
                         <i class="icon-home"></i>
                         <span class="title">Beranda</span>
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item {{ set_active(['ikhwan.index','akhwat.index']) }}">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i class="icon-users"></i>
                         <span class="title">Manajemen Peserta</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub-menu">
-                        <li class="nav-item  ">
+                        <li class="{{ set_active('ikhwan.index') }}">
                             <a href="{{ route('ikhwan.index') }}" class="nav-link nav-toggle">
                                 <i class="icon-user"></i>
                                 <span class="title">Data Ikhwan</span>
                             </a>
                         </li>
-                        <li class="nav-item  ">
+                        <li class="{{ set_active('akhwat.index') }}">
                             <a href="{{ route('akhwat.index') }}" class="nav-link ">
                                 <i class="icon-user-female"></i>
                                 <span class="title">Data Akhwat</span>
