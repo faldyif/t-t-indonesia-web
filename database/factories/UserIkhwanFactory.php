@@ -10,7 +10,7 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
     $anakKe = $faker->numberBetween($min = 1, $max = $bersaudara);
 
     return [
-        'user_id' => function ($nama) {
+        'user_id' => function () {
             return factory(App\User::class)->create([
                 'user_type' => 2,
             ])->id;

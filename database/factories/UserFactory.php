@@ -16,6 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\User::class, function (Faker $faker) {
     return [
         'user_type' => 1,
+        'first_login' => 1,
         'verified' => $faker->boolean,
 
         'name' => $faker->firstName . ' ' . $faker->lastName,
