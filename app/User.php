@@ -40,6 +40,21 @@ class User extends Authenticatable
         }
     }
 
+    public function status() {
+        switch ($this->status) {
+            case 1:
+                return "Belum Menikah";
+            case 2:
+                return "Sudah Menikah";
+            case 3:
+                return "Janda";
+            case 4:
+                return "Duda";
+            default:
+                return null;
+        }
+    }
+
     public function childUser() {
         switch ($this->userType()) {
             case 'ikhwan':

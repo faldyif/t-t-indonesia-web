@@ -68,7 +68,7 @@
                                             <i class="fa fa-heart"></i>{{ $user->hobi ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-star"></i>{{ $user->status ?? '-' }}
+                                            <i class="fa fa-star"></i>{{ $user->status() ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
                                             <i class="fa fa-diamond"></i>{{ $user->siap_nikah ? 'Sudah siap Menikah' : !isset($user->siap_nikah) ? '-' : 'Belum siap Menikah' }}
@@ -170,7 +170,7 @@
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Siap menikah</dt>
-                                                                    <dd>{{ $user->siap_nikah ? 'Sudah' : !isset($user->siap_nikah) ? '-' : 'Belum' }}</dd>
+                                                                    <dd>{{ $user->siap_nikah ? 'Sudah' : (!isset($user->siap_nikah) ? '-' : 'Belum') }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Target menikah</dt>

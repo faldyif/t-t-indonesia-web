@@ -68,10 +68,10 @@
                                             <i class="fa fa-heart"></i>{{ $user->hobi ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-star"></i>{{ $user->status ?? '-' }}
+                                            <i class="fa fa-star"></i>{{ $user->status() ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-diamond"></i>{{ $user->siap_nikah ? 'Sudah siap Menikah' : !isset($user->siap_nikah) ? '-' : 'Belum siap Menikah' }}
+                                            <i class="fa fa-diamond"></i>{{ $user->siap_nikah ? 'Sudah siap Menikah' : (!isset($user->siap_nikah) ? '-' : 'Belum siap Menikah') }}
                                         </div>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
                                                             </dl>
                                                             <dl class="dl-horizontal">
                                                                 <dt>Kacamata</dt>
-                                                                <dd>{{ $user->kacamata ?? '-' }}</dd>
+                                                                <dd>{{ $user->kacamata ? 'Ya' : (!isset($user->kacamata) ? '-' : 'Tidak') }}</dd>
                                                             </dl>
                                                             <dl class="dl-horizontal">
                                                                 <dt>Pengalaman Ta'aruf</dt>
@@ -161,16 +161,16 @@
                                                                 <dd>{{ $user->pengalaman_taaruf_online == 0 ? 'Belum pernah' : (!isset($user->pengalaman_taaruf_offline) ? '-' : $user->pengalaman_taaruf_offline . ' kali') }}</dd>
                                                             </dl>
                                                             <dl class="dl-horizontal">
-                                                                <dt>Hijab Syar'i</dt>
-                                                                <dd>{{ $user->hijab_syari ?? '-' }}</dd>
+                                                                <dt>Hijab Syar'i {{ isset($user->hijab_syari) }}</dt>
+                                                                <dd>{{ $user->hijab_syari ? 'Ya' : (!isset($user->hijab_syari) ? '-' : 'Tidak') }}</dd>
                                                             </dl>
                                                             <dl class="dl-horizontal">
                                                                 <dt>Niqob</dt>
-                                                                <dd>{{ $user->niqob ?? '-' }}</dd>
+                                                                <dd>{{ $user->niqob ? 'Ya' : (!isset($user->niqob) ? '-' : 'Tidak') }}</dd>
                                                             </dl>
                                                             <dl class="dl-horizontal">
                                                                 <dt>Izin Ortu</dt>
-                                                                <dd>{{ $user->izin_ortu ?? '-' }}</dd>
+                                                                <dd>{{ $user->izin_ortu ? 'Ya' : (!isset($user->izin_ortu) ? '-' : 'Tidak') }}</dd>
                                                             </dl>
                                                             <dl class="dl-horizontal">
                                                                 <dt>Target menikah</dt>

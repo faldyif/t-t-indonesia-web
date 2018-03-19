@@ -18,7 +18,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'user_type' => 1,
         'verified' => $faker->boolean,
 
-        'name' => $faker->name,
+        'name' => $faker->firstName . ' ' . $faker->lastName,
         'email' => $faker->unique()->safeEmail,
         'phone_number' => '08' . $faker->randomNumber($nbDigits = 9, $strict = false),
         'password' => bcrypt('secret'), // secret

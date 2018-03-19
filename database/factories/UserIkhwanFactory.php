@@ -10,7 +10,7 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
     $anakKe = $faker->numberBetween($min = 1, $max = $bersaudara);
 
     return [
-        'user_id' => function () {
+        'user_id' => function ($nama) {
             return factory(App\User::class)->create([
                 'user_type' => 2,
             ])->id;
@@ -28,7 +28,7 @@ $factory->define(App\UserIkhwan::class, function (Faker $faker) {
         'suku_ayah' => $faker->randomElement($array = array ('Jawa','Sunda','Batak','Padang','Cina','Arab')),
         'suku_ibu' => $faker->randomElement($array = array ('Jawa','Sunda','Batak','Padang','Cina','Arab')),
         'kegiatan' => ucwords($faker->words($nb = 1, $asText = true)),
-        'status' => $faker->randomElement($array = array ('Belum Menikah','Sudah Menikah','Duda')),
+        'status' => $faker->randomElement($array = array (1,2,4)),
         'tempat_lahir' => $faker->city,
         'tanggal_lahir' => $tglLahir,
         'pendidikan_terakhir_id' => $faker->numberBetween($min = 1, $max = 9),

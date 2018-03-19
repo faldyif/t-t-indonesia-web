@@ -32,7 +32,7 @@ class CreateUserIkhwansTable extends Migration
             $table->string('suku_ayah')->nullable();
             $table->string('suku_ibu')->nullable();
             $table->string('kegiatan')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();            
             $table->string('ket_pendidikan_terakhir')->nullable();
