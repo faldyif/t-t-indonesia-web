@@ -24,14 +24,22 @@ Auth::routes();
 Route::get('registration-success', function() {
     return view('auth.registration-success');
 });
-// Verified User Only
+
+// Verified User that logged in Only
 Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/profile', 'UserController@index')->name('user.profile');
-    Route::get('/', function () {
-        return view('user.dashboard');
-    })->name('dashboard.index');
+    Route::get('/welcome', 'UserController@welcome')->name('user.welcome'); // Pengisian profil pertama
+
+    // Khusus untuk yang sudah mengisi profil pertama kali
+    Route::group(['middleware' => ['firstLoginChecker']], function () {
+        Route::get('/', function () {
+            return view('user.dashboard');
+        })->name('dashboard.index'); // Home page
+        Route::get('/home', 'HomeController@index')->name('home'); // Home page
+        Route::get('/profile', 'UserController@index')->name('user.profile'); // Halaman profil pribadi
+    });
+
 });
+
 // Admin User Only
 Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     // Has gender only

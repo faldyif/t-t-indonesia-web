@@ -9,6 +9,19 @@ use Auth;
 class UserController extends Controller
 {
     /**
+     * Menampilkan halaman edit profil awal
+     */
+    public function welcome()
+    {
+        if(Auth::user()->userType() == 'ikhwan') {
+            return view('user.welcome_ikhwan');
+        } else if(Auth::user()->userType() == 'akhwat') {
+            return view('user.welcome_akhwat');
+        }
+    }
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

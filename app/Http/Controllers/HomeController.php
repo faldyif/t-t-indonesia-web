@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         if(Auth::user()->verified) {
             if(Auth::user()->firstLogin) {
-                return redirect('fill-profile');
+                return redirect('welcome');
             } else {
                 return redirect('dashboard');
             }
