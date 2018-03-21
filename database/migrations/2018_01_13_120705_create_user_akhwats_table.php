@@ -67,8 +67,8 @@ class CreateUserAkhwatsTable extends Migration
             $table->integer('proses_terakhir')->nullable();
             $table->string('foto_terakhir_path')->nullable();
             $table->string('foto_ktp_path')->nullable();
-            $table->boolean('is_approved');
-            $table->boolean('is_data_locked');
+            $table->boolean('is_approved')->default(0);
+            $table->boolean('is_data_locked')->default(0);
 
             $table->timestamps();
         });

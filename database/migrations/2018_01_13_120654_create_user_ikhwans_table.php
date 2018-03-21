@@ -32,7 +32,7 @@ class CreateUserIkhwansTable extends Migration
             $table->string('suku_ayah')->nullable();
             $table->string('suku_ibu')->nullable();
             $table->string('kegiatan')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();            
             $table->string('ket_pendidikan_terakhir')->nullable();
@@ -67,8 +67,8 @@ class CreateUserIkhwansTable extends Migration
             
             $table->string('foto_terakhir_path')->nullable();
             $table->string('foto_ktp_path')->nullable();
-            $table->boolean('is_approved');
-            $table->boolean('is_data_locked');
+            $table->boolean('is_approved')->default(0);
+            $table->boolean('is_data_locked')->default(0);
             $table->timestamps();
         });
     }

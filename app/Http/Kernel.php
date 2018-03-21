@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\FirstLoginChecker;
 use App\Http\Middleware\HasGender;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsVerified;
@@ -63,5 +64,6 @@ class Kernel extends HttpKernel
         'isVerified' => IsVerified::class,
         'hasGender' => HasGender::class,
         'isAdmin' => IsAdmin::class,
+        'firstLoginChecker' => FirstLoginChecker::class,
     ];
 }
