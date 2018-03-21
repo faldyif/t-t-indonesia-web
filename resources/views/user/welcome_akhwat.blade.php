@@ -6,7 +6,7 @@
 
               <!-- BEGIN CONTENT -->
               <div class="page-content-wrapper">
-                <!-- BEGIN CONTENT BODY -->-
+                <!-- BEGIN CONTENT BODY -->
                 <!-- BEGIN PAGE HEAD-->
                 <div class="page-head">
 
