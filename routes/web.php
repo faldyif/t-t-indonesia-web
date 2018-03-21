@@ -19,11 +19,10 @@ Route::get('home', function () {
     else
         return redirect('dashboard');
 })->middleware('auth');
+
 // Authentication Routes
 Auth::routes();
-Route::get('registration-success', function() {
-    return view('auth.registration-success');
-});
+Route::get('registration-success', 'UserController@registrationSuccess');
 
 // Verified User that logged in Only
 Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
@@ -69,5 +68,5 @@ Route::get('tes', 'UserIkhwanController@index');
 
 Route::get('detail', function()
 {
-    return View::make('user.form_isi_data');
+    return View::make('user.editdataikhwan');
 });

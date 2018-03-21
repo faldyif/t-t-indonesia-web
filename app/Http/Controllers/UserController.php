@@ -20,6 +20,17 @@ class UserController extends Controller
         }
     }
 
+    /**
+     * Menampilkan halaman edit profil awal
+     */
+    public function registrationSuccess()
+    {
+        if(!Auth::user()->verified) {
+            return view('auth.registration-success');
+        }
+        return redirect('dashboard');
+    }
+
 
     /**
      * Display a listing of the resource.
