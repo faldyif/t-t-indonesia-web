@@ -32,9 +32,10 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
     Route::group(['middleware' => ['firstLoginChecker']], function () {
         Route::get('/', function () {
             return view('user.dashboard');
-        })->name('dashboard.index'); // Home page
+        })->name('user.dashboard'); // Home page
         Route::get('/home', 'HomeController@index')->name('home'); // Home page
         Route::get('/profile', 'UserController@index')->name('user.profile'); // Halaman profil pribadi
+        Route::get('/profile/edit', 'UserController@editProfile')->name('user.profile.edit'); // Halaman profil pribadi
     });
 
 });

@@ -50,6 +50,21 @@ class UserController extends Controller
     }
 
     /**
+     * Menampilkan halaman edit profil
+     */
+    public function editProfile()
+    {
+        if(Auth::user()->userType() == 'ikhwan') {
+            $user = User::where('users.id', Auth::user()->id)->join('user_ikhwans', 'users.id', '=', 'user_ikhwans.user_id')->get()[0];
+            return view('user.editdataikhwan')->with('user', $user);
+
+        } else if(Auth::user()->userType() == 'akhwat') {
+            $user = User::where('users.id', Auth::user()->id)->join('user_akhwats', 'users.id', '=', 'user_akhwats.user_id')->get()[0];
+            return view('user.editdataakhwat')->with('user', $user);
+        }
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
