@@ -43,7 +43,7 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="active">
-                                <a href="#tab_1" data-toggle="tab">Data Diri</a>
+                                <a href="#tab_1" data-toggle="tab">Data Diriku</a>
                             </li>
                             <li>
                                 <a href="#tab_2" data-toggle="tab">Gambaran pribadi</a>
