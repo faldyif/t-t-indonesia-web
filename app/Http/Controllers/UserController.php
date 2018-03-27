@@ -23,6 +23,19 @@ class UserController extends Controller
     /**
      * Menampilkan halaman edit profil awal
      */
+    public function welcomeStore(Request $request)
+    {
+        if(Auth::user()->userType() == 'ikhwan') {
+            return view('user.welcome_ikhwan');
+        } else if(Auth::user()->userType() == 'akhwat') {
+            dd($request);
+            return response()->json($request);
+        }
+    }
+
+    /**
+     * Menampilkan halaman edit profil awal
+     */
     public function registrationSuccess()
     {
         if(!Auth::user()->verified) {

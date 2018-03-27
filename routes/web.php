@@ -27,6 +27,7 @@ Route::get('registration-success', 'UserController@registrationSuccess');
 // Verified User that logged in Only
 Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], function () {
     Route::get('/welcome', 'UserController@welcome')->name('user.welcome'); // Pengisian profil pertama
+    Route::post('/welcome', 'UserController@welcomeStore')->name('user.welcome.store'); // Pengisian profil pertama
 
     // Khusus untuk yang sudah mengisi profil pertama kali
     Route::group(['middleware' => ['firstLoginChecker']], function () {

@@ -29,7 +29,7 @@
                     <li><a href="{{ url('/') }}#testimonials">Testimoni</a></li>
                     <li><a href="#">|</a></li>
                     @auth
-                        <li><a href="{{ route('dashboard.index') }}">Dasbor</a></li>
+                        <li><a href="{{ route('user.dashboard') }}">Dasbor</a></li>
                         <li><a href="{{ url('login') }}"
                                onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">Keluar</a></li>
