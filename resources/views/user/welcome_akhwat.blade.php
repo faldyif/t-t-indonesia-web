@@ -143,8 +143,9 @@
                               </div>
                                 <br>
                                 <div class="form-group">
-                                  <label class="control-label">Pekerjaan</label>
-                                  <input name="pekerjaan" type="text" class="form-control" placeholder="contoh : akuntan" /> </div>
+                                    <label class="control-label">Kegiatan / Aktivitas</label>
+                                    <textarea class="form-control input-sm" id="fm-kegiatan" name="kegiatan" placeholder="Deskripsikan kegiatan/aktivitas sehari-harimu..."></textarea>
+                                </div>
                                 <div class="form-group">
                                   <label class="control-label">Pendidikan</label>
                                   <select class="form-control" id="fm-pendidikan" name="pendidikan">
@@ -162,7 +163,7 @@
                                 </select></div>
                                 <div class="form-group">
                                     <label class="control-label">Keterangan Pendidikan</label>
-                                    <input name="pekerjaan" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
+                                    <input name="ket_pendidikan_terakhir" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Riwayat Penyakit</label>
                                 <input type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
@@ -359,25 +360,6 @@
                           <div class="row">
                             <div class="row col-md-10 col-md-offset-1">
                               <div class="form-group">
-                              <label class="control-label">Sholat 5 Waktu</label>
-                                <div class="md-radio-inline">
-                                    <div class="md-radio">
-                                        <input type="radio" id="sholat1" name="sholat" value="1" class="md-radiobtn">
-                                        <label for="sholat1">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Ya </label>
-                                    </div>
-                                    <div class="md-radio">
-                                        <input type="radio" id="sholat2" name="sholat" value="0" class="md-radiobtn">
-                                        <label for="sholat2">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Tidak </label>
-                                    </div>
-                                </div>
-                              </div>     
-                              <div class="form-group">
                               <label class="control-label">Kajian Sunnah</label>
                                 <div class="md-radio-inline">
                                     <div class="md-radio">
@@ -405,10 +387,6 @@
                               <div class="form-group">
                                 <label class="control-label">Ustadz</label>
                                 <input name="ustadz" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
-                              <div class="form-group">
-                                <label class="control-label">Kegiatan Sehari-hari</label>
-                                <textarea class="form-control input-sm" id="fm-kegiatan_harian" name="kegiatan_harian" placeholder="Deskripsikan kegiatan harianmu..."></textarea>
-                              </div>
 
                               <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                               <div class="row">
