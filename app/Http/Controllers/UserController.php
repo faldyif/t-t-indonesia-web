@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\UserAkhwat;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -49,6 +50,7 @@ class UserController extends Controller
                 'saudara' => '',
                 'suku_ayah' => '',
                 'suku_ibu' => '',
+                'kajian' => '',
                 'tempat_kajian' => '',
                 'tema_kajian' => '',
                 'ustadz' => '',
@@ -66,8 +68,9 @@ class UserController extends Controller
             $userAkhwat = UserAkhwat::find($userAkhwatID);
             $userAkhwat->domisili = $request->domisili;
             $userAkhwat->asal = $request->asal;
+            $userAkhwat->riwayat_kesehatan = $request->riwayat_kesehatan;
             $userAkhwat->tempat_lahir = $request->tempat_lahir;
-            $userAkhwat->tanggal_lahir = $request->tanggal_lahir;
+            $userAkhwat->tanggal_lahir = Carbon::parse($request->tanggal_lahir);
 //            $userAkhwat->pekerjaan = $request->pekerjaan;
             $userAkhwat->pendidikan_terakhir_id = $request->pendidikan;
             $userAkhwat->ket_pendidikan_terakhir = $request->pendidikan;
@@ -101,7 +104,16 @@ class UserController extends Controller
             $userAkhwat->niqob = $request->niqob;
             $userAkhwat->kacamata = $request->kacamata;
 //            $userAkhwat->sholat = $request->sholat;
-            $userAkhwat->kajian_rutin = $request->kajian;
+            $userAkhwat->ngaji_sunnah = $request->kajian;
+            $userAkhwat->status = $request->status_hubungan;
+
+            if($request->hasFile('foto_ktp') && $request->file('foto_ktp')->isValid()) {
+                $destinationPath = 'public/uploads/ktp_akhwat';
+                $extension = $request->foto_ktp->extension();
+                $fileName = date('YmdHms').'_'.Auth::user()->id.'.'.$extension;
+                $request->foto_ktp->storeAs($destinationPath, $fileName);
+                $userAkhwat->foto_ktp_path = $fileName;
+            }
 
             $userAkhwat->save();
 

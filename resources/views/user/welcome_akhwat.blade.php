@@ -38,13 +38,13 @@
                       </ul>                                    
                     </div>
 
-                    <div class="portlet light">
-                      <div class="tab-content">
-                        {!! Form::open(array('route' => 'user.welcome.store', 'enctype' => 'multipart/form-data')) !!}
+                    {!! Form::open(array('route' => 'user.welcome.store', 'enctype' => 'multipart/form-data')) !!}
+                      <div class="portlet light">
+                        <div class="tab-content">
 
                         <div class="tab-pane active" id="tab_1">
                           <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                             <center>
                             <label class="control-label">Harap masukkan foto KTP</label>
                               <div class="form-group">
@@ -63,25 +63,6 @@
                             </div>
                             </center>
                             </div>
-                            <div class="col-sm-6">
-                              <center>
-                              <label class="control-label">Harap masukkan foto diri</label>
-                            <div class="form-group">
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
-                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
-                                    <div>
-                                        <span class="btn green btn-file">
-                                            <span class="fileinput-new"> Pilih foto </span>
-                                            <span class="fileinput-exists"> Ubah </span>
-                                            <input type="file" name="foto_diri"> </span>
-                                        <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Hapus </a>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            </center>
                             <div class="row col-md-10 col-md-offset-1">
                               <div class="form-group">
                                   <label class="control-label">Domisili</label>
@@ -166,7 +147,7 @@
                                     <input name="ket_pendidikan_terakhir" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Riwayat Penyakit</label>
-                                <input type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
+                                <input name="riwayat_kesehatan" type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
 
 
                                 <div class="form-group">
@@ -215,6 +196,27 @@
                                       </div>
                                   </div>
                               </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Siap Menikah</label>
+                                    <div class="md-radio-inline">
+                                        <div class="md-radio">
+                                            <input type="radio" id="siap1" name="siap_nikah" value="1" class="md-radiobtn">
+                                            <label for="siap1">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Sudah </label>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="siap2" name="siap_nikah" value="0" class="md-radiobtn">
+                                            <label for="siap2">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Belum </label>
+                                        </div>
+                                    </div>
+                                </div>
+
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Tinggi badan (dalam cm)</label>
@@ -271,25 +273,45 @@
                                 </div>
                                 <!-- AKHWAT -->
                                 <div class="form-group">
-                                  <label class="control-label">Niqob</label>
-                                  <div class="md-radio-inline">
-                                      <div class="md-radio">
-                                          <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn">
-                                          <label for="niqob1">
-                                              <span></span>
-                                              <span class="check"></span>
-                                              <span class="box"></span> Ya </label>
-                                      </div>
-                                      <div class="md-radio">
-                                          <input type="radio" id="niqob2" name="niqob" value="0" class="md-radiobtn">
-                                          <label for="niqob2">
-                                              <span></span>
-                                              <span class="check"></span>
-                                              <span class="box"></span> Tidak </label>
-                                      </div>
-                                  </div>
-                                  <span class="help-block"><font size="1.5sp"> Niqob merupakan jilbab yang menutupi kepala, leher dan muka namun tetap memperlihatkan mata. </font></span>
-                              </div>
+                                    <label class="control-label">Niqob</label>
+                                    <div class="md-radio-inline">
+                                        <div class="md-radio">
+                                            <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn">
+                                            <label for="niqob1">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Ya </label>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="niqob2" name="niqob" value="0" class="md-radiobtn">
+                                            <label for="niqob2">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Tidak </label>
+                                        </div>
+                                    </div>
+                                    <span class="help-block"><font size="1.5sp"> Niqob merupakan jilbab yang menutupi kepala, leher dan muka namun tetap memperlihatkan mata. </font></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Hijab Syari</label>
+                                    <div class="md-radio-inline">
+                                        <div class="md-radio">
+                                            <input type="radio" id="hijab1" name="hijab_syari" value="1" class="md-radiobtn">
+                                            <label for="hijab1">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Ya </label>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="hijab2" name="hijab_syari" value="0" class="md-radiobtn">
+                                            <label for="hijab2">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Tidak </label>
+                                        </div>
+                                    </div>
+                                    <span class="help-block"><font size="1.5sp"> Niqob merupakan jilbab yang menutupi kepala, leher dan muka namun tetap memperlihatkan mata. </font></span>
+                                </div>
                               <div class="form-group">
                                 <label class="control-label">Kacamata</label>
                                 <div class="md-radio-inline">
@@ -351,10 +373,10 @@
                               <br>
                                 <div class="form-group">
                                   <label class="control-label">Suku Ayah</label>
-                                  <input name="suku_ayah" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                  <input name="suku_ayah" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                                 <div class="form-group">
                                   <label class="control-label">Suku Ibu</label>
-                                  <input name="suku_ibu" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                  <input name="suku_ibu" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                               </div>  
                             </div>
                           <br/>
@@ -390,10 +412,10 @@
                                 <input name="tempat_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Tema Kajian</label>
-                                <input name="tema_kajian" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                <input name="tema_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                               <div class="form-group">
                                 <label class="control-label">Ustadz</label>
-                                <input name="ustadz" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                <input name="ustadz" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
 
                               <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                               <div class="row">
@@ -450,7 +472,8 @@
                             </div>
                           </div>
                         </div>
-                        <div class="form-actions">
+
+                          <div class="form-actions">
                               <div class="row">
                                   <div class="col-md-offset-7 col-md-10">
                                       <button type="button" class="btn default">Simpan & Lewati</button>
@@ -459,9 +482,9 @@
                               </div>
                           </div>
 
-                        {!! Form::close() !!}
                       </div>
-                    </div>                                      
+                    </div>
+                    {!! Form::close() !!}
 
                     <!--end tab-pane-->
                   </div>

@@ -31,7 +31,6 @@ class CreateUserAkhwatsTable extends Migration
             $table->string('riwayat_kesehatan')->nullable();
             $table->string('asal')->nullable();
             $table->string('domisili')->nullable();
-            $table->string('suku')->nullable();
             $table->string('suku_ayah')->nullable();
             $table->string('suku_ibu')->nullable();
             $table->string('kegiatan')->nullable();
@@ -55,7 +54,6 @@ class CreateUserAkhwatsTable extends Migration
             $table->year('target_menikah')->nullable();
             $table->boolean('siap_nikah')->nullable();
             $table->boolean('izin_ortu')->nullable();
-            $table->string('ket_kriteria_pendidikan')->nullable();
             $table->integer('kriteria_usia_from')->nullable();
             $table->integer('kriteria_usia_to')->nullable();
             $table->string('kriteria_domisili')->nullable();
