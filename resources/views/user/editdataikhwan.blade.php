@@ -9,7 +9,7 @@
                     <div class="page-head">
                         <!-- BEGIN PAGE TITLE -->
                         <div class="page-title">
-                            <h1>Profil
+                            <h1>Edit Profil
                             </h1>
                         </div>
                         <!-- END PAGE TITLE -->
@@ -19,18 +19,22 @@
                     <!-- BEGIN PAGE BREADCRUMB -->
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ route('user.dashboard') }}">Home</a>
                             <i class="fa fa-circle"></i>
                         </li>
                         <li>
-                            <span class="active">Profil</span>
+                            <a href="{{ route('user.profile') }}">Profil</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span class="active">Edit Profil</span>
                         </li>
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
                     <!-- BEGIN PAGE BASE CONTENT -->
                     <div class="row">
                         <div class="col-md-12">
-                            <button name=" " class="btn dark btn-outline">Batal</button>
+                            <a href="{{ route('user.profile') }}" class="btn dark btn-outline">Batal</a>
                             <button name=" " class="btn green">
                                 Simpan Perubahan
                             </button>
@@ -45,33 +49,35 @@
                                 <div class="portlet light bordered">
                                     <!-- BEGIN PAGE ACTIONS -->
                                     <div class="form-group">
-                                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                                                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
-                                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 100px; max-height: 100px;"> </div>
-                                            <div>
-                                                <span class="btn green btn-file">
-                                                    <span class="fileinput-new"> Pilih foto </span>
-                                                    <span class="fileinput-exists"> Ubah </span>
-                                                    <input type="file" name="..."> </span>
-                                                <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Hapus </a>
+                                        <center>
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                    <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 100px; max-height: 100px;"> </div>
+                                                <div>
+                                                    <span class="btn green btn-file">
+                                                        <span class="fileinput-new"> Pilih foto </span>
+                                                        <span class="fileinput-exists"> Ubah </span>
+                                                        <input type="file" name="foto"> </span>
+                                                    <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Hapus </a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </center>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Nama</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" class="form-control" name="nama" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Domisili</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" class="form-control" name="domisili" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tempat lahir</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" class="form-control" name="tempat_lahir" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal Lahir</label>
                                         <!-- <div class="col-md-8"> -->
                                         <div class="input-group date date-picker" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="tanggal_lahir">
                                             <span class="input-group-btn">
                                                 <button class="btn default" type="button">
                                                     <i class="fa fa-calendar"></i>
@@ -84,41 +90,46 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Pendidikan terakhir</label>
-                                        <select class="form-control" id="fm-pendidikan" name="pendidikan">
-                                        <option value="1"> SD </option>
-                                        <option value="2"> SMP </option>
-                                        <option value="3"> SMA </option>
-                                        <option value="4"> D1 </option>
-                                        <option value="5"> D3 </option>
-                                        <option value="6"> D4 </option>
-                                        <option value="7"> S1 </option>
-                                        <option value="8"> S2 </option>
-                                        <option value="9"> S3 </option>
-                                        <option value="10"> Lain - lain </option>
-                                      </select>
+                                        <select class="form-control" id="fm-pendidikan" name="pendidikan_terakhir">
+                                            <option value="1"> SD </option>
+                                            <option value="2"> SMP </option>
+                                            <option value="3"> SMA </option>
+                                            <option value="4"> D1 </option>
+                                            <option value="5"> D3 </option>
+                                            <option value="6"> D4 </option>
+                                            <option value="7"> S1 </option>
+                                            <option value="8"> S2 </option>
+                                            <option value="9"> S3 </option>
+                                            <option value="10"> Lain - lain </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan Pendidikan Terakhir</label>
+                                        <input type="text" class="form-control" name="ket_pendidikan_terakhir" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" class="form-control" name="hobi" />
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Status</label>
                                         <div class="md-radio-inline">
                                             <div class="md-radio">
-                                                <input type="radio" id="lajang" name="radio1" value="1" class="md-radiobtn" checked="">
+                                                <input type="radio" id="lajang" name="radio1" value="1" class="md-radiobtn" name="status_lajang">
                                                 <label for="lajang">
                                                     <span></span>
                                                     <span class="check"></span>
                                                     <span class="box"></span> Lajang </label>
                                             </div>
                                             <div class="md-radio">
-                                                <input type="radio" id="jandaduda" name="radio1" value="2" class="md-radiobtn">
+                                                <input type="radio" id="jandaduda" name="radio1" value="2" class="md-radiobtn" name="status_janda_duda">
                                                 <label for="jandaduda">
                                                     <span></span>
                                                     <span class="check"></span>
                                                     <span class="box"></span> Janda/Duda </label>
                                             </div>
                                             <div class="md-radio">
-                                                <input type="radio" id="menikah" name="radio1" value="2" class="md-radiobtn">
+                                                <input type="radio" id="menikah" name="radio1" value="3" class="md-radiobtn" name="status_menikah">
                                                 <label for="menikah">
                                                     <span></span>
                                                     <span class="check"></span>
@@ -130,14 +141,14 @@
                                         <label class="control-label">Siap menikah</label>
                                         <div class="md-radio-inline">
                                             <div class="md-radio">
-                                                <input type="radio" id="siapmenikah" name="radio2" value="1" class="md-radiobtn" checked="">
+                                                <input type="radio" id="siapmenikah" name="radio2" value="1" class="md-radiobtn" name="siap_menikah_true">
                                                 <label for="siapmenikah">
                                                     <span></span>
                                                     <span class="check"></span>
                                                     <span class="box"></span> Sudah </label>
                                             </div>
                                             <div class="md-radio">
-                                                <input type="radio" id="belum" name="radio2" value="2" class="md-radiobtn">
+                                                <input type="radio" id="belum" name="radio2" value="2" class="md-radiobtn" name="siap_menikah_false">
                                                 <label for="belum">
                                                     <span></span>
                                                     <span class="check"></span>

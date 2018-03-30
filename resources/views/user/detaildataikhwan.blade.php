@@ -32,7 +32,7 @@
                     <!-- BEGIN PAGE BASE CONTENT -->
                     <div class="row" style="padding-bottom: 10px">
                         <div class="col-md-12">
-                            <a class="btn green" href="editdataikhwan.blade.php">
+                            <a class="btn green" href="{{ route('user.profile.edit') }}">
                                 <i class="icon-pencil"></i> Edit Data
                             </a>
                         </div>

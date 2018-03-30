@@ -40,6 +40,8 @@
 
                     <div class="portlet light">
                       <div class="tab-content">
+                        {!! Form::open(array('route' => 'user.welcome.store', 'enctype' => 'multipart/form-data')) !!}
+
                         <div class="tab-pane active" id="tab_1">
                           <div class="row">
                             <div class="col-sm-6">
@@ -54,7 +56,7 @@
                                         <span class="btn green btn-file">
                                             <span class="fileinput-new"> Pilih foto </span>
                                             <span class="fileinput-exists"> Ubah </span>
-                                            <input type="file" name="..."> </span>
+                                            <input type="file" name="foto_ktp"> </span>
                                         <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Hapus </a>
                                     </div>
                                 </div>
@@ -73,7 +75,7 @@
                                         <span class="btn green btn-file">
                                             <span class="fileinput-new"> Pilih foto </span>
                                             <span class="fileinput-exists"> Ubah </span>
-                                            <input type="file" name="..."> </span>
+                                            <input type="file" name="foto_diri"> </span>
                                         <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Hapus </a>
                                     </div>
                                 </div>
@@ -83,19 +85,19 @@
                             <div class="row col-md-10 col-md-offset-1">
                               <div class="form-group">
                                   <label class="control-label">Domisili</label>
-                                  <input type="text" class="form-control" /> </div>
+                                  <input name="domisili" type="text" class="form-control" /> </div>
                               <div class="form-group">
                                   <label class="control-label">Asal</label>
-                                  <input type="text" class="form-control" /> </div>
+                                  <input name="asal" type="text" class="form-control" /> </div>
                               <div class="row">
                                 <div class="col-sm-6">
                                   <label class="control-label">Tempat Lahir</label>
-                                  <input type="text" class="form-control" /> </div>
+                                  <input name="tempat_lahir" type="text" class="form-control" /> </div>
                                 <div class="col-sm-6">
                                   <label class="control-label">Tanggal Lahir</label>
                                   <!-- <div class="col-md-8"> -->
                                   <div class="input-group date date-picker" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-                                      <input type="text" class="form-control">
+                                      <input name="tanggal_lahir" type="text" class="form-control">
                                       <span class="input-group-btn">
                                           <button class="btn default" type="button">
                                               <i class="fa fa-calendar"></i>
@@ -110,28 +112,28 @@
                                 <label class="control-label">Golongan Darah</label>
                                 <div class="md-radio-inline">
                                     <div class="md-radio">
-                                        <input type="radio" id="A" name="goldar" value="1" class="md-radiobtn" checked="">
+                                        <input type="radio" id="A" name="goldar" value="A" class="md-radiobtn">
                                         <label for="A">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> A </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="B" name="goldar" value="2" class="md-radiobtn">
+                                        <input type="radio" id="B" name="goldar" value="B" class="md-radiobtn">
                                         <label for="B">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> B </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="AB" name="goldar" value="3" class="md-radiobtn">
+                                        <input type="radio" id="AB" name="goldar" value="AB" class="md-radiobtn">
                                         <label for="AB">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> AB </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="O" name="goldar" value="4" class="md-radiobtn">
+                                        <input type="radio" id="O" name="goldar" value="O" class="md-radiobtn">
                                         <label for="O">
                                             <span></span>
                                             <span class="check"></span>
@@ -141,11 +143,13 @@
                               </div>
                                 <br>
                                 <div class="form-group">
-                                  <label class="control-label">Pekerjaan</label>
-                                  <input type="text" class="form-control" placeholder="contoh : akuntan" /> </div>
+                                    <label class="control-label">Kegiatan / Aktivitas</label>
+                                    <textarea class="form-control input-sm" id="fm-kegiatan" name="kegiatan" placeholder="Deskripsikan kegiatan/aktivitas sehari-harimu..."></textarea>
+                                </div>
                                 <div class="form-group">
                                   <label class="control-label">Pendidikan</label>
                                   <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                  <option value=""> Pilih salah satu... </option>
                                   <option value="1"> SD </option>
                                   <option value="2"> SMP </option>
                                   <option value="3"> SMA </option>
@@ -157,33 +161,53 @@
                                   <option value="9"> S3 </option>
                                   <option value="10"> Lain - lain </option>
                                 </select></div>
+                                <div class="form-group">
+                                    <label class="control-label">Keterangan Pendidikan</label>
+                                    <input name="ket_pendidikan_terakhir" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Riwayat Penyakit</label>
                                 <input type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
+
+
                                 <div class="form-group">
-                                <label class="control-label">Status</label>
-                                <select class="form-control" id="fm-status" name="status">
-                                  <option value="0">-- Pilih Status</option>
-                                  <option value="1">Belum Menikah</option>
-                                  <option value="2">Menikah</option>
-                                  <option value="3">Janda/Duda</option>
-                                </select>
-                                <span class="help-block"><font size="1.5sp"> 
-                                  Pilih status anda saat ini
-                                </font></span>
+                                    <label class="control-label">Status</label>
+                                    <div class="md-radio-inline">
+                                        <div class="md-radio">
+                                            <input type="radio" id="status_bm" name="status_hubungan" value="1" class="md-radiobtn">
+                                            <label for="status_bm">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Belum Menikah </label>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="status_sm" name="status_hubungan" value="2" class="md-radiobtn">
+                                            <label for="status_sm">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Sudah Menikah </label>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="status_j" name="status_hubungan" value="3" class="md-radiobtn">
+                                            <label for="status_j">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span> Janda </label>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="form-group">
                                   <label class="control-label">Izin Ortu</label>
                                   <div class="md-radio-inline">
                                       <div class="md-radio">
-                                          <input type="radio" id="izin1" name="izinortu" value="1" class="md-radiobtn" checked="">
+                                          <input type="radio" id="izin1" name="izinortu" value="1" class="md-radiobtn">
                                           <label for="izin1">
                                               <span></span>
                                               <span class="check"></span>
                                               <span class="box"></span> Sudah </label>
                                       </div>
                                       <div class="md-radio">
-                                          <input type="radio" id="izin2" name="izinortu" value="2" class="md-radiobtn">
+                                          <input type="radio" id="izin2" name="izinortu" value="0" class="md-radiobtn">
                                           <label for="izin2">
                                               <span></span>
                                               <span class="check"></span>
@@ -194,21 +218,14 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Tinggi badan (dalam cm)</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="tinggi_badan" type="number" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Berat badan (dalam kg)</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="berat_badan" type="number" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>                                
-                            <div class="form-actions">
-                              <div class="row">
-                                <div class="col-md-offset-7 col-md-10"><br>
-                                  <button type="button" class="btn default">Simpan & Lewati</button>
-                                  <a href="#" id="lanj_1" class="btn green">Lanjutkan</a>
-                                </div>
-                              </div>
-                            </div> 
+
                           </div>            
                         </div>                         
                         <!--tab_2-->
@@ -217,7 +234,7 @@
                             <div class="row col-md-10 col-md-offset-1">
                               <div class="form-group">
                                 <label class="control-label">Hobi</label>
-                                <input type="text" class="form-control" placeholder="Deskripsikan hobimu..." />
+                                <input name="hobi" type="text" class="form-control" placeholder="Deskripsikan hobimu..." />
                                 <span class="help-block"><font size="1.5sp"> Hobi apa yang anda miliki? </font></span>
                                 </div>
                                 <div class="form-group">
@@ -232,46 +249,32 @@
                                 </div>
                                 <div class="form-group">
                                   <label class="control-label">Hal yang disukai</label>
-                                  <textarea class="form-control input-sm" id="fm-hal_suka" name="kebiasaan_buruk" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
+                                  <textarea class="form-control input-sm" id="fm-hal_suka" name="hal_disuka" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
                                   <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "hal yang kamu sukai". Jelaskan dengan lugas dan mudah dimengerti. </font></span>
                                 </div>
 
                                 <div class="form-group">
                                   <label class="control-label">Hal yang tidak disukai</label>
-                                  <textarea class="form-control input-sm" id="fm-kebiasaan_baik" name="kebiasaan_buruk" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
+                                  <textarea class="form-control input-sm" id="fm-kebiasaan_baik" name="hal_taksuka" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
                                   <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "hal yang tidak kamu sukai". Jelaskan dengan lugas dan mudah dimengerti. </font></span>
                                 </div>
                                 <div class="form-group">
                                   <label class="control-label">Pakaian Sehari-hari</label>
-                                  <input type="text" class="form-control" name="" placeholder="contoh : gamis"/>
-                                </div>
-                                <div class="form-group">
-                                  <label class="control-label">Ciri Fisik</label>
-                                  <input type="text" class="form-control" name="" placeholder="contoh : mata coklat, warna kulit sawo matang"/>
-                                </div>
-                                <!-- TODO: jika ikhwan inputan celana, jika akhwat inputan niqob -->
-                                <!-- IKHWAN -->
-                                <div class="form-group">
-                                  <label class="control-label">Jenis Celana</label>
-                                  <select class="form-control" id="fm-status" name="status">
-                                    <option value="0">-- Pilih Jenis Celana</option>
-                                    <option value="1">Celana Cingkrang</option>
-                                    <option value="2">Celana Panjang</option>
-                                  </select>
+                                  <input type="text" class="form-control" name="pakaian_harian" placeholder="contoh : gamis"/>
                                 </div>
                                 <!-- AKHWAT -->
                                 <div class="form-group">
                                   <label class="control-label">Niqob</label>
                                   <div class="md-radio-inline">
                                       <div class="md-radio">
-                                          <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn" checked="">
+                                          <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn">
                                           <label for="niqob1">
                                               <span></span>
                                               <span class="check"></span>
                                               <span class="box"></span> Ya </label>
                                       </div>
                                       <div class="md-radio">
-                                          <input type="radio" id="niqob2" name="niqob" value="2" class="md-radiobtn">
+                                          <input type="radio" id="niqob2" name="niqob" value="0" class="md-radiobtn">
                                           <label for="niqob2">
                                               <span></span>
                                               <span class="check"></span>
@@ -284,14 +287,14 @@
                                 <label class="control-label">Kacamata</label>
                                 <div class="md-radio-inline">
                                     <div class="md-radio">
-                                        <input type="radio" id="kacamata1" name="kacamata" value="1" class="md-radiobtn" checked="">
+                                        <input type="radio" id="kacamata1" name="kacamata" value="1" class="md-radiobtn">
                                         <label for="kacamata1">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> Ya </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="kacamata2" name="kacamata" value="2" class="md-radiobtn">
+                                        <input type="radio" id="kacamata2" name="kacamata" value="0" class="md-radiobtn">
                                         <label for="kacamata2">
                                             <span></span>
                                             <span class="check"></span>
@@ -304,14 +307,14 @@
                               <label class="control-label">Merokok</label>
                                 <div class="md-radio-inline">
                                     <div class="md-radio">
-                                        <input type="radio" id="merokok1" name="merokok" value="1" class="md-radiobtn" checked="">
+                                        <input type="radio" id="merokok1" name="merokok" value="1" class="md-radiobtn">
                                         <label for="merokok1">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> Ya </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="merokok2" name="merokok" value="2" class="md-radiobtn">
+                                        <input type="radio" id="merokok2" name="merokok" value="0" class="md-radiobtn">
                                         <label for="merokok2">
                                             <span></span>
                                             <span class="check"></span>
@@ -321,14 +324,7 @@
                               </div>
                               <!-- END merokok IKHWAN -->
                              </div>                                
-                            <div class="form-actions">
-                              <div class="row">
-                                <div class="col-md-offset-7 col-md-10">
-                                  <button type="button" class="btn default">Simpan & Lewati</button>
-                                  <a href="#" id="lanj_1" class="btn green">Lanjutkan</a>
-                                </div>
-                              </div>
-                            </div> 
+
                           </div>            
                         </div>  
                         <!--end tab-pane-->
@@ -340,32 +336,22 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Anak ke-</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="anak_ke" type="number" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Dari saudara </label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="saudara" type="number" class="form-control" /> </div>
                               </div>
                               <br>
                                 <div class="form-group">
-                                  <label class="control-label">Suku</label>
-                                  <input type="number" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
-                                <div class="form-group">
                                   <label class="control-label">Suku Ayah</label>
-                                  <input type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                  <input name="suku_ayah" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                                 <div class="form-group">
                                   <label class="control-label">Suku Ibu</label>
-                                  <input type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                  <input name="suku_ibu" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                               </div>  
                             </div>
                           <br/>
-                          <div class="form-actions">
-                            <div class="row">
-                              <div class="col-md-offset-7 col-md-10">
-                                <button type="button" class="btn default">Simpan & Lewati</button>
-                                <a href="#" id="lanj_3" class="btn green">Lanjutkan</a>
-                              </div>
-                            </div>
-                          </div> 
+
                         </div>                                      
 
                         <!--end tab-pane-->
@@ -374,36 +360,17 @@
                           <div class="row">
                             <div class="row col-md-10 col-md-offset-1">
                               <div class="form-group">
-                              <label class="control-label">Sholat 5 Waktu</label>
-                                <div class="md-radio-inline">
-                                    <div class="md-radio">
-                                        <input type="radio" id="sholat1" name="sholat" value="1" class="md-radiobtn" checked="">
-                                        <label for="sholat1">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Ya </label>
-                                    </div>
-                                    <div class="md-radio">
-                                        <input type="radio" id="sholat2" name="sholat" value="2" class="md-radiobtn">
-                                        <label for="sholat2">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Tidak </label>
-                                    </div>
-                                </div>
-                              </div>     
-                              <div class="form-group">
                               <label class="control-label">Kajian Sunnah</label>
                                 <div class="md-radio-inline">
                                     <div class="md-radio">
-                                        <input type="radio" id="kajian1" name="kajian" value="1" class="md-radiobtn" checked="">
+                                        <input type="radio" id="kajian1" name="kajian" value="1" class="md-radiobtn">
                                         <label for="kajian1">
                                             <span></span>
                                             <span class="check"></span>
                                             <span class="box"></span> Ya </label>
                                     </div>
                                     <div class="md-radio">
-                                        <input type="radio" id="kajian2" name="kajian" value="2" class="md-radiobtn">
+                                        <input type="radio" id="kajian2" name="kajian" value="0" class="md-radiobtn">
                                         <label for="kajian2">
                                             <span></span>
                                             <span class="check"></span>
@@ -413,37 +380,26 @@
                               </div>    
                               <div class="form-group">
                                 <label class="control-label">Tempat Kajian</label>
-                                <input type="number" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
+                                <input name="tempat_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Tema Kajian</label>
-                                <input type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                <input name="tema_kajian" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                               <div class="form-group">
                                 <label class="control-label">Ustadz</label>
-                                <input type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
-                              <div class="form-group">
-                                <label class="control-label">Kegiatan Sehari-hari</label>
-                                <textarea class="form-control input-sm" id="fm-kegiatan_harian" name="kegiatan_harian" placeholder="Deskripsikan kegiatan harianmu..."></textarea>
-                              </div>
+                                <input name="ustadz" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
 
                               <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Offline</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="pengalaman_taaruf_offline" type="number" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Online</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="pengalaman_taaruf_online" type="number" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>
-                            <div class="form-actions">
-                              <div class="row">
-                                <div class="col-md-offset-7 col-md-10">
-                                  <button type="button" class="btn default">Simpan & Lewati</button>
-                                  <a href="#" id="lanj_4" class="btn green">Lanjutkan</a>
-                                </div>
-                              </div>
-                            </div> 
+
                           </div>
                         </div>                                      
 
@@ -454,7 +410,8 @@
                             <div class="row col-md-10 col-md-offset-1">                                        
                                 <div class="form-group">
                                   <label class="control-label">Pendidikan</label>
-                                  <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                  <select class="form-control" id="fm-pendidikan" name="kriteria_pendidikan">
+                                  <option value=""> Pilih salah satu... </option>
                                   <option value="1"> SD </option>
                                   <option value="2"> SMP </option>
                                   <option value="3"> SMA </option>
@@ -468,32 +425,34 @@
                                 </select></div>
                               <div class="form-group">
                                   <label class="control-label">Domisili</label>
-                                  <input type="text" class="form-control"/> </div>
+                                  <input name="kriteria_domisili" type="text" class="form-control"/> </div>
                               <div class="form-group">
                                 <label class="control-label">Lainnya</label>
-                                <textarea class="form-control input-sm" id="fm-kegiatan_harian" name="kegiatan_harian" placeholder="Deskripsikan kriteria yang kamu inginkan..."></textarea>
+                                <textarea class="form-control input-sm" id="fm-kegiatan_harian" name="kriteria_lainnya" placeholder="Deskripsikan kriteria yang kamu inginkan..."></textarea>
                               </div>
                               <label class="row col-md-12" for="fm-pengalaman_taaruf">Usia</label>
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Usia dari</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="kriteria_usia_from" type="number" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Usia sampai</label>
-                                  <input type="number" class="form-control" /> </div>
+                                  <input name="kriteria_usia_to" type="number" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>
-                            <div class="form-actions">
-                              <div class="row">
-                                <div class="col-md-offset-7 col-md-10">
-                                  <button type="button" class="btn default">Simpan & Lewati</button>
-                                  <a href="#" id="lanj_4" class="btn green">Lanjutkan</a>
-                                </div>
-                              </div>
-                            </div> 
-                          </div>                                                                
+                          </div>
                         </div>
+                        <div class="form-actions">
+                              <div class="row">
+                                  <div class="col-md-offset-7 col-md-10">
+                                      <button type="button" class="btn default">Simpan & Lewati</button>
+                                      <button type="submit" id="lanj_4" class="btn green">Lanjutkan</button>
+                                  </div>
+                              </div>
+                          </div>
+
+                        {!! Form::close() !!}
                       </div>
                     </div>                                      
 

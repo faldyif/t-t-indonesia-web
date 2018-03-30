@@ -24,11 +24,7 @@
                 <!-- BEGIN PAGE BREADCRUMB -->
                 <ul class="page-breadcrumb breadcrumb">
                     <li>
-                        <a href="index.html">Home</a>
-                        <i class="fa fa-circle"></i>
-                    </li>
-                    <li>
-                        <span class="active">Beranda</span>
+                        <span class="active">Home</span>
                     </li>
                 </ul>
                 <!-- END PAGE BREADCRUMB -->
