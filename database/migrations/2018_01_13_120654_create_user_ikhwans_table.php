@@ -21,8 +21,11 @@ class CreateUserIkhwansTable extends Migration
 
             $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
-            $table->string('kebiasaan_baik')->nullable();
-            $table->string('kebiasaan_buruk')->nullable();
+            $table->integer('kebiasaan_baik')->unsigned()->nullable();
+            $table->integer('kebiasaan_buruk')->unsigned()->nullable();
+             $table->foreign('kebiasaan_baik')->references('id')->on('det_keb_baik')->onDelete('cascade');
+
+            $table->foreign('kebiasaan_buruk')->references('id')->on('det_keb_buruk')->onDelete('cascade');
             $table->string('hal_disukai')->nullable();
             $table->string('hal_taksuka')->nullable();
             $table->string('riwayat_kesehatan')->nullable();
@@ -45,7 +48,6 @@ class CreateUserIkhwansTable extends Migration
             $table->string('kajian_rutin')->nullable();
             $table->string('celana')->nullable();
             $table->string('pakaian_harian')->nullable();
-            $table->string('hobi')->nullable();
             $table->integer('pengalaman_taaruf_online')->nullable();
             $table->integer('pengalaman_taaruf_offline')->nullable();
             $table->year('target_menikah')->nullable();
@@ -64,7 +66,6 @@ class CreateUserIkhwansTable extends Migration
             $table->integer('saudara')->nullable();
 
             $table->integer('proses_terakhir')->nullable();
-            
             $table->string('foto_terakhir_path')->nullable();
             $table->string('foto_ktp_path')->nullable();
             $table->boolean('is_approved')->default(0);

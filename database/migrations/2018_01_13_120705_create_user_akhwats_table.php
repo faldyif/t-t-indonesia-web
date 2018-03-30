@@ -21,8 +21,11 @@ class CreateUserAkhwatsTable extends Migration
 
             $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
-            $table->string('kebiasaan_baik')->nullable();
-            $table->string('kebiasaan_buruk')->nullable();
+            $table->integer('kebiasaan_baik')->unsigned()->nullable();
+            $table->integer('kebiasaan_buruk')->unsigned()->nullable();
+             $table->foreign('kebiasaan_baik')->references('id')->on('det_keb_baik')->onDelete('cascade');
+
+            $table->foreign('kebiasaan_buruk')->references('id')->on('det_keb_buruk')->onDelete('cascade');
             $table->string('hal_disukai')->nullable();
             $table->string('hal_taksuka')->nullable();
             $table->string('riwayat_kesehatan')->nullable();
@@ -64,6 +67,8 @@ class CreateUserAkhwatsTable extends Migration
             $table->integer('saudara')->nullable();
 
             $table->boolean('siap_dipoligami')->nullable();
+            $table->string('motivasi_menikah')->nullable();
+            $table->boolean('siap_ikut_suami')->nullable();
             $table->integer('proses_terakhir')->nullable();
             $table->string('foto_terakhir_path')->nullable();
             $table->string('foto_ktp_path')->nullable();
