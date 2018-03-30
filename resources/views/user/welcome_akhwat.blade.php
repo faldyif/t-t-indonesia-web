@@ -224,10 +224,17 @@
                                   <input name="berat_badan" type="number" class="form-control" /> </div>
                               </div>
                               <br>
-                            </div>                                
-
-                          </div>            
-                        </div>                         
+                            </div>
+                            <div class="form-actions">
+                                  <div class="row">
+                                      <div class="col-md-offset-7 col-md-10">
+                                          <button type="button" class="btn default">Simpan & Lewati</button>
+                                          <button type="submit" id="lanj_4" class="btn green">Lanjutkan</button>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>                  
                         <!--tab_2-->
                         <div class="tab-pane" id="tab_2">
                           <div class="row">
