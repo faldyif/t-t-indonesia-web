@@ -220,21 +220,13 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Tinggi badan (dalam cm)</label>
-                                  <input name="tinggi_badan" type="number" class="form-control" /> </div>
+                                  <input name="tinggi_badan" type="number" min="50" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Berat badan (dalam kg)</label>
-                                  <input name="berat_badan" type="number" class="form-control" /> </div>
+                                  <input name="berat_badan" type="number" min="10" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>
-                            <div class="form-actions">
-                                  <div class="row">
-                                      <div class="col-md-offset-7 col-md-10">
-                                          <button type="button" class="btn default">Simpan & Lewati</button>
-                                          <button type="submit" id="lanj_4" class="btn green">Lanjutkan</button>
-                                      </div>
-                                  </div>
-                              </div>
                             </div>
                           </div>                  
                         <!--tab_2-->
@@ -310,7 +302,7 @@
                                                 <span class="box"></span> Tidak </label>
                                         </div>
                                     </div>
-                                    <span class="help-block"><font size="1.5sp"> Niqob merupakan jilbab yang menutupi kepala, leher dan muka namun tetap memperlihatkan mata. </font></span>
+                                    <span class="help-block"><font size="1.5sp"> Hijab Syar'i mencakup semua yang menutupi aurat, lekuk tubuh dan perhiasan wanita dari ujung rambut sampai kaki</font></span>
                                 </div>
                               <div class="form-group">
                                 <label class="control-label">Kacamata</label>
@@ -331,27 +323,6 @@
                                     </div>
                                 </div>
                               </div>
-                              <!-- IKHWAN -->
-                              <div class="form-group">
-                              <label class="control-label">Merokok</label>
-                                <div class="md-radio-inline">
-                                    <div class="md-radio">
-                                        <input type="radio" id="merokok1" name="merokok" value="1" class="md-radiobtn">
-                                        <label for="merokok1">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Ya </label>
-                                    </div>
-                                    <div class="md-radio">
-                                        <input type="radio" id="merokok2" name="merokok" value="0" class="md-radiobtn">
-                                        <label for="merokok2">
-                                            <span></span>
-                                            <span class="check"></span>
-                                            <span class="box"></span> Tidak </label>
-                                    </div>
-                                </div>
-                              </div>
-                              <!-- END merokok IKHWAN -->
                              </div>                                
 
                           </div>            
@@ -365,10 +336,10 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Anak ke-</label>
-                                  <input name="anak_ke" type="number" class="form-control" /> </div>
+                                  <input name="anak_ke" type="number" min="1" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Dari saudara </label>
-                                  <input name="saudara" type="number" class="form-control" /> </div>
+                                  <input name="saudara" type="number" min="0" class="form-control" /> </div>
                               </div>
                               <br>
                                 <div class="form-group">
@@ -409,22 +380,22 @@
                               </div>    
                               <div class="form-group">
                                 <label class="control-label">Tempat Kajian</label>
-                                <input name="tempat_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
+                                <input name="tempat_kajian" type="text" class="form-control"/> </div>
                               <div class="form-group">
                                 <label class="control-label">Tema Kajian</label>
-                                <input name="tema_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                <input name="tema_kajian" type="text" class="form-control"/> </div>
                               <div class="form-group">
                                 <label class="control-label">Ustadz</label>
-                                <input name="ustadz" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                <input name="ustadz" type="text" class="form-control"/> </div>
 
                               <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Offline</label>
-                                  <input name="pengalaman_taaruf_offline" type="number" class="form-control" /> </div>
+                                  <input name="pengalaman_taaruf_offline" type="number" min="1" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Online</label>
-                                  <input name="pengalaman_taaruf_online" type="number" class="form-control" /> </div>
+                                  <input name="pengalaman_taaruf_online" type="number" min="1" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>
@@ -463,10 +434,10 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <label class="control-label">Usia dari</label>
-                                  <input name="kriteria_usia_from" type="number" class="form-control" /> </div>
+                                  <input name="kriteria_usia_from" type="number" min="8" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Usia sampai</label>
-                                  <input name="kriteria_usia_to" type="number" class="form-control" /> </div>
+                                  <input name="kriteria_usia_to" type="number" min="8" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>
@@ -476,7 +447,7 @@
                           <div class="form-actions">
                               <div class="row">
                                   <div class="col-md-offset-7 col-md-10">
-                                      <button type="button" class="btn default">Simpan & Lewati</button>
+                                      <a href="{{ url('/homeUser')}}"  class="btn default" >Simpan & Lewati</a>
                                       <button type="submit" id="lanj_4" class="btn green">Lanjutkan</button>
                                   </div>
                               </div>

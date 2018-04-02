@@ -62,11 +62,12 @@ class UserIkhwanController extends Controller
         $userIkhwan->suku = $request->suku;
         $userIkhwan->suku_ayah = $request->suku_ayah;
         $userIkhwan->suku_ibu = $request->suku_ibu;
-        $userIkhwan->kegiatan = $request->kegiatan;
+        $userIkhwan->pekerjaan = $request->pekerjaan;
         $userIkhwan->status = $request->status;
         $userIkhwan->tempat_lahir = $request->tempat_lahir;
         $userIkhwan->tanggal_lahir = $request->tanggal_lahir;
         $userIkhwan->pendidikan = $request->pendidikan;
+        $userIkhwan->ket_pendidikan_terakhir = $request->ket_pendidikan_terakhir;
         $userIkhwan->tinggi_badan = $request->tinggi_badan;
         $userIkhwan->berat_badan = $request->berat_badan;
         $userIkhwan->ngaji_sunnah = $request->ngaji_sunnah;
@@ -92,6 +93,9 @@ class UserIkhwanController extends Controller
         $userIkhwan->kacamata = $request->kacamata;
         $userIkhwan->anak_ke = $request->anak_ke;
         $userIkhwan->saudara = $request->saudara;
+        $userIkhwan->ciri_fisik = $request->ciri_fisik;
+        $userIkhwan->motivasi_menikah = $request->motivasi_menikah;
+        $userIkhwan->rencana_setelah_menikah = $request->rencana_setelah_menikah;
         $userIkhwan->proses_terakhir = 0;
 
         $userIkhwan->save();

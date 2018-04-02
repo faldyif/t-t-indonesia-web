@@ -165,6 +165,9 @@
                                         <label class="control-label">Keterangan Pendidikan</label>
                                         <input name="ket_pendidikan_terakhir" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
                                     <div class="form-group">
+                                        <label class="control-label">Pekerjaan</label>
+                                        <input name="pekerjaan" type="text" class="form-control" placeholder="contoh : Karyawan Swasta" /> </div>
+                                    <div class="form-group">
                                         <label class="control-label">Riwayat Penyakit</label>
                                         <input type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
 
@@ -191,27 +194,7 @@
                                                 <label for="status_j">
                                                     <span></span>
                                                     <span class="check"></span>
-                                                    <span class="box"></span> Janda </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Izin Ortu</label>
-                                        <div class="md-radio-inline">
-                                            <div class="md-radio">
-                                                <input type="radio" id="izin1" name="izinortu" value="1" class="md-radiobtn">
-                                                <label for="izin1">
-                                                    <span></span>
-                                                    <span class="check"></span>
-                                                    <span class="box"></span> Sudah </label>
-                                            </div>
-                                            <div class="md-radio">
-                                                <input type="radio" id="izin2" name="izinortu" value="0" class="md-radiobtn">
-                                                <label for="izin2">
-                                                    <span></span>
-                                                    <span class="check"></span>
-                                                    <span class="box"></span> Belum </label>
+                                                    <span class="box"></span> Duda </label>
                                             </div>
                                         </div>
                                     </div>
@@ -232,6 +215,11 @@
                         <div class="tab-pane" id="tab_2">
                             <div class="row">
                                 <div class="row col-md-10 col-md-offset-1">
+                                    <div class="form-group">
+                                        <label class="control-label">Ciri fisik</label>
+                                        <input name="ciri_fisik" type="text" class="form-control" placeholder="Deskripsikan ciri fisikmu..." />
+                                        <span class="help-block"><font size="1.5sp"> Jelaskan secara detail ciri fisik dirimu </font></span>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
                                         <input name="hobi" type="text" class="form-control" placeholder="Deskripsikan hobimu..." />
@@ -259,29 +247,39 @@
                                         <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "hal yang tidak kamu sukai". Jelaskan dengan lugas dan mudah dimengerti. </font></span>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Pakaian Sehari-hari</label>
-                                        <input type="text" class="form-control" name="pakaian_harian" placeholder="contoh : gamis"/>
+                                        <label class="control-label">Rencana setelah menikah</label>
+                                        <textarea class="form-control input-sm" id="fm-rencana_setelah_menikah" name="rencana_setelah_menikah" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
+                                        <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "rencana setelah menikah". Jelaskan dengan lugas dan mudah dimengerti. </font></span>
                                     </div>
-                                    <!-- AKHWAT -->
                                     <div class="form-group">
-                                        <label class="control-label">Niqob</label>
+                                        <label class="control-label">Pakaian Sehari-hari</label>
+                                        <input type="text" class="form-control" name="pakaian_harian" placeholder="contoh : kemeja atau gamis"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Celana</label>
+                                        <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                            <option value=""> Pilih salah satu... </option>
+                                            <option value="1"> Panjang </option>
+                                            <option value="2"> Cingkrang </option>
+                                        </select></div>
+                                    <div class="form-group">
+                                        <label class="control-label">Sholat</label>
                                         <div class="md-radio-inline">
                                             <div class="md-radio">
-                                                <input type="radio" id="niqob1" name="niqob" value="1" class="md-radiobtn">
-                                                <label for="niqob1">
+                                                <input type="radio" id="sholat" name="sholat" value="1" class="md-radiobtn">
+                                                <label for="sholat">
                                                     <span></span>
                                                     <span class="check"></span>
                                                     <span class="box"></span> Ya </label>
                                             </div>
                                             <div class="md-radio">
-                                                <input type="radio" id="niqob2" name="niqob" value="0" class="md-radiobtn">
-                                                <label for="niqob2">
+                                                <input type="radio" id="sholat2" name="sholat" value="0" class="md-radiobtn">
+                                                <label for="sholat2">
                                                     <span></span>
                                                     <span class="check"></span>
                                                     <span class="box"></span> Tidak </label>
                                             </div>
                                         </div>
-                                        <span class="help-block"><font size="1.5sp"> Niqob merupakan jilbab yang menutupi kepala, leher dan muka namun tetap memperlihatkan mata. </font></span>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Kacamata</label>
@@ -380,22 +378,22 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Tempat Kajian</label>
-                                        <input name="tempat_kajian" type="text" class="form-control" placeholder="contoh : Suku Jawa" /> </div>
+                                        <input name="tempat_kajian" type="text" class="form-control"/> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tema Kajian</label>
-                                        <input name="tema_kajian" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                        <input name="tema_kajian" type="number" class="form-control"/> </div>
                                     <div class="form-group">
                                         <label class="control-label">Ustadz</label>
-                                        <input name="ustadz" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                        <input name="ustadz" type="number" class="form-control"/> </div>
 
                                     <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Offline</label>
-                                            <input name="pengalaman_taaruf_offline" type="number" class="form-control" /> </div>
+                                            <input name="pengalaman_taaruf_offline" type="number" min="1" class="form-control" /> </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Online</label>
-                                            <input name="pengalaman_taaruf_online" type="number" class="form-control" /> </div>
+                                            <input name="pengalaman_taaruf_online" type="number" min="1" class="form-control" /> </div>
                                     </div>
                                     <br>
                                 </div>
@@ -447,7 +445,7 @@
                         <div class="form-actions">
                             <div class="row">
                                 <div class="col-md-offset-7 col-md-10">
-                                    <button type="button" class="btn default">Simpan & Lewati</button>
+                                    <a href="{{ url('home')}}"  class="btn default" >Simpan & Lewati</a>
                                     <button type="submit" id="lanj_4" class="btn green">Lanjutkan</button>
                                 </div>
                             </div>
