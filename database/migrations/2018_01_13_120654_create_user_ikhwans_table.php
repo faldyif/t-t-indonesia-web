@@ -19,6 +19,9 @@ class CreateUserIkhwansTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
+            $table->integer('pekerjaan_id')->unsigned()->nullable();
+            $table->foreign('pekerjaan_id')->references('id')->on('pekerjaan')->onDelete('cascade');
+
             $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
             $table->string('hal_disukai')->nullable();
