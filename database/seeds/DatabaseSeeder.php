@@ -14,15 +14,24 @@ class DatabaseSeeder extends Seeder
         $this->call(StatusSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(JenjangPendidikanSeeder::class);
-        factory(App\UserIkhwan::class, 10)->create()->each(function ($u) {
-            $user = App\User::latest()->get()->last();
-            $user->linked_id = $u->id;
-            $user->save();
-        });;
-        factory(App\UserAkhwat::class, 10)->create()->each(function ($u) {
-            $user = App\User::latest()->get()->last();
-            $user->linked_id = $u->id;
-            $user->save();
-        });;
+        $this->call(KebiasaanBaikSeeder::class);
+        $this->call(KebiasaanBurukSeeder::class);
+        $this->call(HobiSeeder::class);
+        $this->call(SukuSeeder::class);
+
+
+        // Setelah normalisasi, seeder dibawah ini perlu diperbaharui lagi
+//        factory(App\UserIkhwan::class, 10)->create()->each(function ($u) {
+//            $user = App\User::latest()->get()->last();
+//            $user->linked_id = $u->id;
+//            $user->save();
+//        });;
+//        factory(App\UserAkhwat::class, 10)->create()->each(function ($u) {
+//            $user = App\User::latest()->get()->last();
+//            $user->linked_id = $u->id;
+//            $user->save();
+//        });;
+
+
     }
 }

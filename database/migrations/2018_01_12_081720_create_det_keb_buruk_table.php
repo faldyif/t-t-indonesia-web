@@ -19,7 +19,7 @@ class CreateDetKebBurukTable extends Migration
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->integer('id_keb_buruk')->unsigned();
-            $table->foreign('id_keb_buruk')->references('id')->on('kebiasaan_buruk')->onDelete('cascade');
+            $table->foreign('id_keb_buruk')->references('id')->on('keb_buruk')->onDelete('cascade');
 
             $table->timestamps();
         });
