@@ -77,6 +77,8 @@ class UserController extends Controller
                 'kriteria_usia_to' => ''
             ]);
 
+            dd($request);
+
             $userAkhwatID = UserAkhwat::where('user_id', Auth::user()->id)->first()->id;
             $userAkhwat = UserAkhwat::find($userAkhwatID);
             $userAkhwat->domisili = $request->domisili;
@@ -89,16 +91,16 @@ class UserController extends Controller
             $userAkhwat->ket_pendidikan_terakhir = $request->pendidikan;
             $userAkhwat->tinggi_badan = $request->tinggi_badan;
             $userAkhwat->berat_badan = $request->berat_badan;
-            $userAkhwat->hobi = $request->hobi;
-            $userAkhwat->kebiasaan_baik = $request->kebiasaan_baik;
-            $userAkhwat->kebiasaan_buruk = $request->kebiasaan_buruk;
+//            $userAkhwat->hobi = $request->hobi;
+//            $userAkhwat->kebiasaan_baik = $request->kebiasaan_baik;
+//            $userAkhwat->kebiasaan_buruk = $request->kebiasaan_buruk;
             $userAkhwat->hal_disukai = $request->hal_disuka;
             $userAkhwat->hal_taksuka = $request->hal_taksuka;
             $userAkhwat->pakaian_harian = $request->pakaian_harian;
             $userAkhwat->anak_ke = $request->anak_ke;
             $userAkhwat->saudara = $request->saudara;
-            $userAkhwat->suku_ayah = $request->suku_ayah;
-            $userAkhwat->suku_ibu = $request->suku_ibu;
+//            $userAkhwat->suku_ayah = $request->suku_ayah;
+//            $userAkhwat->suku_ibu = $request->suku_ibu;
             $userAkhwat->tempat_ngaji = $request->tempat_kajian;
             $userAkhwat->tentang_ngaji = $request->tema_kajian;
             $userAkhwat->ustadz = $request->ustadz;

@@ -21,19 +21,15 @@ class CreateUserIkhwansTable extends Migration
 
             $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
-            $table->integer('kebiasaan_baik')->unsigned()->nullable();
-            $table->integer('kebiasaan_buruk')->unsigned()->nullable();
-             $table->foreign('kebiasaan_baik')->references('id')->on('det_keb_baik')->onDelete('cascade');
-
-            $table->foreign('kebiasaan_buruk')->references('id')->on('det_keb_buruk')->onDelete('cascade');
             $table->string('hal_disukai')->nullable();
             $table->string('hal_taksuka')->nullable();
             $table->string('riwayat_kesehatan')->nullable();
             $table->string('asal')->nullable();
             $table->string('domisili')->nullable();
-            $table->string('suku')->nullable();
-            $table->string('suku_ayah')->nullable();
-            $table->string('suku_ibu')->nullable();
+            $table->integer('suku_ayah_id')->unsigned()->nullable();
+            $table->foreign('suku_ayah_id')->references('id')->on('suku')->onDelete('cascade');
+            $table->integer('suku_ibu_id')->unsigned()->nullable();
+            $table->foreign('suku_ibu_id')->references('id')->on('suku')->onDelete('cascade');
             $table->string('kegiatan')->nullable();
             $table->integer('status')->nullable();
             $table->string('tempat_lahir')->nullable();

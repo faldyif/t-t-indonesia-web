@@ -16,10 +16,10 @@ class CreateDetKebBurukTable extends Migration
         Schema::create('det_keb_buruk', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('id_keb_buruk')->unsigned();
-            $table->foreign('id_keb_buruk')->references('id')->on('keb_buruk')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('keb_buruk_id')->unsigned();
+            $table->foreign('keb_buruk_id')->references('id')->on('keb_buruk')->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -16,10 +16,10 @@ class CreateDetHobiTable extends Migration
         Schema::create('det_hobi', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('id_hobi')->unsigned();
-            $table->foreign('id_hobi')->references('id')->on('hobi')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('hobi_id')->unsigned();
+            $table->foreign('hobi_id')->references('id')->on('hobi')->onDelete('cascade');
 
             $table->timestamps();
         });
