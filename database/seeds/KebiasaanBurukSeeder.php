@@ -11,7 +11,7 @@ class KebiasaanBurukSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('keb_baik')->insert(['kebiasaan' => "Turuan"]);
-        DB::table('keb_baik')->insert(['kebiasaan' => "Ngaretan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Turuan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Ngaretan"]);
     }
 }

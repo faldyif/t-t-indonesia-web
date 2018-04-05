@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\DetailHobi;
+use App\DetailKebiasaanBaik;
+use App\DetailKebiasaanBuruk;
 use App\Hobi;
 use App\KebiasaanBaik;
 use App\KebiasaanBuruk;
@@ -77,8 +80,6 @@ class UserController extends Controller
                 'kriteria_usia_to' => ''
             ]);
 
-            dd($request);
-
             $userAkhwatID = UserAkhwat::where('user_id', Auth::user()->id)->first()->id;
             $userAkhwat = UserAkhwat::find($userAkhwatID);
             $userAkhwat->domisili = $request->domisili;
@@ -86,21 +87,17 @@ class UserController extends Controller
             $userAkhwat->riwayat_kesehatan = $request->riwayat_kesehatan;
             $userAkhwat->tempat_lahir = $request->tempat_lahir;
             $userAkhwat->tanggal_lahir = Carbon::parse($request->tanggal_lahir);
-//            $userAkhwat->pekerjaan = $request->pekerjaan;
             $userAkhwat->pendidikan_terakhir_id = $request->pendidikan;
             $userAkhwat->ket_pendidikan_terakhir = $request->pendidikan;
             $userAkhwat->tinggi_badan = $request->tinggi_badan;
             $userAkhwat->berat_badan = $request->berat_badan;
-//            $userAkhwat->hobi = $request->hobi;
-//            $userAkhwat->kebiasaan_baik = $request->kebiasaan_baik;
-//            $userAkhwat->kebiasaan_buruk = $request->kebiasaan_buruk;
             $userAkhwat->hal_disukai = $request->hal_disuka;
             $userAkhwat->hal_taksuka = $request->hal_taksuka;
             $userAkhwat->pakaian_harian = $request->pakaian_harian;
             $userAkhwat->anak_ke = $request->anak_ke;
             $userAkhwat->saudara = $request->saudara;
-//            $userAkhwat->suku_ayah = $request->suku_ayah;
-//            $userAkhwat->suku_ibu = $request->suku_ibu;
+            $userAkhwat->suku_ayah_id = $request->suku_ayah;
+            $userAkhwat->suku_ibu_id = $request->suku_ibu;
             $userAkhwat->tempat_ngaji = $request->tempat_kajian;
             $userAkhwat->tentang_ngaji = $request->tema_kajian;
             $userAkhwat->ustadz = $request->ustadz;
@@ -118,7 +115,6 @@ class UserController extends Controller
             $userAkhwat->izin_ortu = $request->izinortu;
             $userAkhwat->niqob = $request->niqob;
             $userAkhwat->kacamata = $request->kacamata;
-//            $userAkhwat->sholat = $request->sholat;
             $userAkhwat->ngaji_sunnah = $request->kajian;
             $userAkhwat->status = $request->status_hubungan;
 
@@ -130,10 +126,29 @@ class UserController extends Controller
                 $userAkhwat->foto_ktp_path = $fileName;
             }
 
+            // Insert hobby
+            foreach ((array)$request->hobi as $key) {
+                DetailHobi::firstOrCreate(['user_id' => Auth::user()->id, 'hobi_id' => $key]);
+            }
+
+            // Insert kebiasaan baik
+            foreach ((array)$request->kebiasaan_baik as $key) {
+                DetailKebiasaanBaik::firstOrCreate(['user_id' => Auth::user()->id, 'keb_baik_id' => $key]);
+            }
+
+            // Insert kebiasaan buruk
+            foreach ((array)$request->kebiasaan_buruk as $key) {
+                DetailKebiasaanBuruk::firstOrCreate(['user_id' => Auth::user()->id, 'keb_buruk_id' => $key]);
+            }
+
             $userAkhwat->save();
 
+            $user = User::find(Auth::user()->id);
+            $user->first_login = true;
+            $user->save();
+
 //            dd($request);
-            return response()->json($request);
+            return redirect(route('user.dashboard'));
         }
     }
 
