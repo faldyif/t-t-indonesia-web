@@ -90,7 +90,7 @@
 							<span class="input-group-addon">
 								<i class="fa fa-user"></i>
 							</span>
-							<input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required> 
+							<input type="text" class="form-control" name="name" placeholder="Nama Lengkap" value="{{ old('name') }}" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -99,7 +99,7 @@
 							<span class="input-group-addon">
 								<i class="fa fa-envelope"></i>
 							</span>
-							<input type="text" class="form-control" placeholder="Alamat Email" name="email"> </div>
+							<input type="text" class="form-control" placeholder="Alamat Email" value="{{ old('email') }}" name="email"> </div>
 					</div>
 					<div class="form-group">
 						<!-- <label>No. Telepon</label> -->
@@ -107,7 +107,7 @@
 							<span class="input-group-addon">
 								<i class="fa fa-phone"></i>
 							</span>
-							<input type="text" name="phone_number" class="form-control" placeholder="No. Telepon"> </div>
+							<input type="text" name="phone_number" class="form-control" value="{{ old('phone_number') }}" placeholder="No. Telepon"> </div>
 					</div>
 					<div class="form-group">
 						<!-- <label>Password</label> -->
@@ -135,9 +135,9 @@
 								<i class="fa fa-venus-mars"></i>
 							</span>
 								<select name="gender" id="gender" class="form-control">
-									<option value="" disabled selected>Pilih jenis kelamin...</option>
-									<option value="I">Ikhwan</option>
-									<option value="A">Akhwat</option>
+									<option value="" disabled {{ is_null(old('gender')) ? 'selected' : '' }}>Pilih jenis kelamin...</option>
+									<option value="I" {{ old('gender') == 'I' ? 'selected' : '' }}>Ikhwan</option>
+									<option value="A" {{ old('gender') == 'A' ? 'selected' : '' }}>Akhwat</option>
 								</select>
 							</div>
 						</div>
