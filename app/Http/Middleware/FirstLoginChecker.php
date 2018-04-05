@@ -17,9 +17,6 @@ class FirstLoginChecker
     {
         if(! is_null($request->user()) && ! $request->user()->first_login) {
             return redirect('/dashboard/welcome');
-        }else{
-            return redirect('dashboard');
-      
         }
 
         return $next($request);
