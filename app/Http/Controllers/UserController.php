@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Hobi;
+use App\KebiasaanBaik;
+use App\KebiasaanBuruk;
+use App\Suku;
 use App\User;
 use App\UserAkhwat;
 use Carbon\Carbon;
@@ -15,10 +19,19 @@ class UserController extends Controller
      */
     public function welcome()
     {
+        $hobi = Hobi::all();
+        $suku = Suku::all();
+        $kebiasaanBaik = KebiasaanBaik::all();
+        $kebiasaanBuruk = KebiasaanBuruk::all();
+
         if(Auth::user()->userType() == 'ikhwan') {
             return view('user.welcome_ikhwan');
         } else if(Auth::user()->userType() == 'akhwat') {
-            return view('user.welcome_akhwat');
+            return view('user.welcome_akhwat')
+                ->with('hobi', $hobi)
+                ->with('kebiasaanBaik', $kebiasaanBaik)
+                ->with('kebiasaanBuruk', $kebiasaanBuruk)
+                ->with('suku', $suku);
         }
     }
 

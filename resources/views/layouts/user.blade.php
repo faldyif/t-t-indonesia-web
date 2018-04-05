@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
     @include('includes.head')
+
+    @yield('top')
 </head>
 <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
     <header>
@@ -28,6 +30,8 @@
 
 <footer>
         @include('includes.footer')
+
+        @yield('bottom')
 </footer>
 
 </body>
