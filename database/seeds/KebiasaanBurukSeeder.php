@@ -11,7 +11,16 @@ class KebiasaanBurukSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('keb_baik')->insert(['kebiasaan' => "Turuan"]);
-        DB::table('keb_baik')->insert(['kebiasaan' => "Ngaretan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Turuan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Ngaretan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Pulang larut malam"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Malas"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Merokok"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Berbohong"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Buang sampah sembarangan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Pelupa"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Sungkan"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Terlalu memikirkan perasaan orang lain"]);
+        DB::table('keb_buruk')->insert(['kebiasaan' => "Suka menunda pekerjaan"]);
     }
 }
