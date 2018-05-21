@@ -507,7 +507,6 @@
 @endsection
 
 @section('bottom')
-    <script src="{{ url('js/jquery.min.js') }}"></script>
     <script src="{{ url('js/select2.min.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
