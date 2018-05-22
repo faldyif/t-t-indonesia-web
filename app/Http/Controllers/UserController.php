@@ -76,7 +76,6 @@ class UserController extends Controller
                 'kajian_rutin' => '',
                 'celana' => '',
                 'ustadz' => '',
-                'hobi' => '',
                 'ket_hobi' => '',
                 'keg_harian' => '',
                 'pengalaman_taaruf_offline' => '',
