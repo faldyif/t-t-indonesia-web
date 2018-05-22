@@ -223,7 +223,7 @@
                                   <input name="tinggi_badan" type="number" min="50" class="form-control" /> </div>
                                 <div class="col-md-6">
                                   <label class="control-label">Berat badan (dalam kg)</label>
-                                  <input name="berat_badan" type="number" min="10" class="form-control" /> </div>
+                                  <input name="berat_badan" type="number" min="15" class="form-control" /> </div>
                               </div>
                               <br>
                             </div>

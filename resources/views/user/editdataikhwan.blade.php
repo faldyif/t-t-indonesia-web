@@ -44,7 +44,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BEGIN PROFILE SIDEBAR -->
-                            <div class="profile-sidebar">
+                            <div class="col-md-5">
                                 <!-- PORTLET MAIN -->
                                 <div class="portlet light bordered">
                                     <!-- BEGIN PAGE ACTIONS -->
@@ -110,6 +110,10 @@
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
                                         <input type="text" class="form-control" name="hobi" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan Hobi</label>
+                                        <input name="ket_hobi" type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Status</label>
@@ -303,13 +307,6 @@
                                                         <label class="control-label">Celana</label>
                                                         <div class="md-radio-inline">
                                                             <div class="md-radio">
-                                                                <input type="radio" id="pendek" name="radio7" value="1" class="md-radiobtn">
-                                                                <label for="pendek">
-                                                                    <span></span>
-                                                                    <span class="check"></span>
-                                                                    <span class="box"></span> Celana Pendek </label>
-                                                            </div>
-                                                            <div class="md-radio">
                                                                 <input type="radio" id="cingkrang" name="radio7" value="2" class="md-radiobtn" checked="">
                                                                 <label for="cingkrang">
                                                                     <span></span>
@@ -365,14 +362,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Target Menikah</label>
-                                                        <div class="input-group input-medium date date-picker" data-date="10/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months">
-                                                            <input type="text" class="form-control" readonly>
-                                                            <span class="input-group-btn">
-                                                                <button class="btn default" type="button">
-                                                                    <i class="fa fa-calendar"></i>
-                                                                </button>
-                                                            </span>
-                                                        </div>
+                                                            <input type="number" class="form-control" min="2018" />
                                                     </div>
                                                 </form>
                                                 <!-- END PAGE ACTIONS -->
@@ -381,8 +371,17 @@
                                                     <div class="tab-pane" id="tab_1_3">
                                                         <form action="#">
                                                             <div class="form-group">
-                                                                <label class="control-label">Anak ke-</label>
-                                                                <input type="number" class="form-control" /> </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <label class="control-label">Anak ke-</label>
+                                                                        <input type="number" class="form-control" />
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label class="control-label">Dari saudara</label>
+                                                                        <input type="number" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Asal</label>
                                                                 <input type="text" class="form-control" /> </div>

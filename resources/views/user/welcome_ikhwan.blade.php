@@ -73,7 +73,7 @@
                                                     <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
                                                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                                                 <div>
-                                                    <span class="btn green btn-file"></span>
+                                                    <span class="btn green btn-file">
                                                 <span class="fileinput-new"> Pilih foto </span>
                                                 <span class="fileinput-exists"> Ubah </span>
                                                 <input type="file" name="foto_diri"> </span>
@@ -223,10 +223,10 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Tinggi badan (dalam cm)</label>
-                                            <input name="tinggi_badan" type="number" class="form-control" /> </div>
+                                            <input name="tinggi_badan" type="number" min="50" class="form-control" /> </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Berat badan (dalam kg)</label>
-                                            <input name="berat_badan" type="number" class="form-control" /> </div>
+                                            <input name="berat_badan" type="number" min="15" class="form-control" /> </div>
                                     </div>
                                     <br>
                                 </div>
@@ -247,11 +247,11 @@
                                         <input name="hobi" type="text" class="form-control" placeholder="Deskripsikan hobimu..." />
                                         <span class="help-block"><font size="1.5sp"> Hobi apa yang anda miliki? </font></span>
                                     </div>
-                                    {{--<div class="form-group">--}}
-                                        {{--<label class="control-label">Keterangan Hobi</label>--}}
-                                        {{--<input name="ket_hobi" type="text" class="form-control" placeholder="Deskripsikan secara detail tentang hobimu..." />--}}
-                                        {{--<span class="help-block"><font size="1.5sp"> Hobi apa yang dilakukan secara rutin? </font></span>--}}
-                                    {{--</div>--}}
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan Hobi</label>
+                                        <input name="ket_hobi" type="text" class="form-control" placeholder="Deskripsikan secara detail tentang hobimu..." />
+                                        <span class="help-block"><font size="1.5sp"> Hobi apa yang dilakukan secara rutin? </font></span>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Kebiasaan baik</label>
                                         <textarea class="form-control input-sm" id="fm-kebiasaan_baik" name="kebiasaan_baik" placeholder="Deskripsikan kebiasaan baikmu..."></textarea>
@@ -275,7 +275,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Target menikah</label>
-                                        <input type="year" class="form-control input-sm" id="fm-target_menikah" name="target_menikah" placeholder="Target menikah"></input>
+                                        <input type="number" min="2018" class="form-control input-sm" id="fm-target_menikah" name="target_menikah" placeholder="Target menikah"></input>
                                         <span class="help-block"><font size="1.5sp"> Kapan target Anda menikah ?</font></span>
                                     </div>
                                     <div class="form-group">
@@ -367,18 +367,18 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Anak ke-</label>
-                                            <input name="anak_ke" type="number" class="form-control" /> </div>
+                                            <input name="anak_ke" min="1" type="number" class="form-control" /> </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Dari saudara </label>
-                                            <input name="saudara" type="number" class="form-control" /> </div>
+                                            <input name="saudara" min="1" type="number" class="form-control" /> </div>
                                     </div>
                                     <br>
                                     <div class="form-group">
                                         <label class="control-label">Suku Ayah</label>
-                                        <input name="suku_ayah" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                        <input name="suku_ayah" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                                     <div class="form-group">
                                         <label class="control-label">Suku Ibu</label>
-                                        <input name="suku_ibu" type="number" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+                                        <input name="suku_ibu" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                                 </div>
                             </div>
                             <br/>
@@ -423,7 +423,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Ustadz</label>
-                                        <input name="ustadz" type="number" class="form-control"/>
+                                        <input name="ustadz" type="text" class="form-control"/>
                                     </div>
                                     <label class="row col-md-12" for="fm-pengalaman_taaruf">Pengalaman Ta'aruf </label>
                                     <div class="row">
