@@ -11,6 +11,7 @@ use App\KebiasaanBuruk;
 use App\Suku;
 use App\User;
 use App\UserAkhwat;
+use App\UserIkhwan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Auth;
@@ -76,7 +77,6 @@ class UserController extends Controller
                 'kajian_rutin' => '',
                 'celana' => '',
                 'ustadz' => '',
-                'ket_hobi' => '',
                 'keg_harian' => '',
                 'pengalaman_taaruf_offline' => '',
                 'pengalaman_taaruf_online' => '',
@@ -187,7 +187,6 @@ class UserController extends Controller
                 'tinggi_badan' => '',
                 'berat_badan' => '',
                 'hobi' => '',
-                'ket_hobi' => '',
                 'kebiasaan_baik' => '',
                 'kebiasaan_buruk' => '',
                 'hal_disuka' => '',
@@ -247,7 +246,6 @@ class UserController extends Controller
             $userAkhwat->ustadz = $request->ustadz;
             $userAkhwat->kegiatan = $request->kegiatan;
             $userAkhwat->hobi = $request->hobi;
-            $userAkhwat->ket_hobi = $request->ket_hobi;
             $userAkhwat->pengalaman_taaruf_offline = $request->pengalaman_taaruf_offline;
             $userAkhwat->pengalaman_taaruf_online = $request->pengalaman_taaruf_online;
             $userAkhwat->target_menikah = $request->target_menikah;
