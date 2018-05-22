@@ -23,6 +23,10 @@
     <link href="{{ url('assets/global/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
     <link href="{{ url('assets/global/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
+    <!-- Data tabel -->
+    <link href="{{ url('assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <!-- End Data tabel -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <link href="{{ url('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
@@ -101,3 +105,9 @@
 <!-- END THEME LAYOUT SCRIPTS -->
 <!-- Begin Date Picker -->
 <script src="{{ url('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+<!-- Data tabel -->
+<script src="{{ url('assets/global/scripts/datatable.js') }}" type="text/javascript"></script>
+<script src="{{ url('assets/global/plugins/datatables/datatables.min.js') }}" type="text/javascript"></script>
+<script src="{{ url('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
+<script src="{{ url('assets/pages/scripts/table-datatables-managed.min.js') }}" type="text/javascript"></script> 
+<!-- End Data tabel -->

@@ -90,7 +90,7 @@ class UserController extends Controller
                 'kriteria_domisili' => '',
                 'kriteria_lainnya' => '',
                 'kriteria_usia_from' => '',
-                'kriteria_usia_to' => ''
+                'kriteria_usia_to' => '',
                 'ciri_fisik' => '',
                 'rencana_setelah_menikah' => '',
             ]);

@@ -70,5 +70,5 @@ Route::get('tes', 'UserIkhwanController@index');
 
 Route::get('detail', function()
 {
-    return View::make('user.editdataikhwan');
+    return View::make('user/data_akhwat');
 });
