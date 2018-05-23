@@ -1,4 +1,4 @@
-<?php $active ='home'; ?>
+
 
 @extends('layouts.sidebar')
 
@@ -12,7 +12,7 @@
             <div class="page-head">
                 <!-- BEGIN PAGE TITLE -->
                 <div class="page-title">
-                    <h1>Data Akhwat</h1>
+                    <h1>Permintaan Ta'aruf</h1>
                 </div>
                 <!-- END PAGE TITLE -->
                 <!-- BEGIN PAGE TOOLBAR -->
@@ -24,7 +24,7 @@
             <!-- BEGIN PAGE BREADCRUMB -->
             <ul class="page-breadcrumb breadcrumb">
                 <li>
-                    <span class="active">Home </span>
+                    <span class="active">Permintaan Ta'aruf </span>
                 </li>
             </ul>
             <!-- END PAGE BREADCRUMB -->
@@ -36,7 +36,7 @@
                         <div class="portlet-title">
                             <div class="caption font-dark">
                                 <i class=" icon-layers font-dark"></i>
-                                <span class="caption-subject bold uppercase"> Daftar Data Akhwat</span>
+                                <span class="caption-subject bold uppercase">Permintaan Ta'aruf</span>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                                         <span class="label label-sm label-success"> Belum menikah </span>
                                     </td>
                                     <td>
-                                        <a class="btn btn-success" href="#">
+                                        <a class="btn btn-success" href="{{ url('/detail_permintaan') }}">
                                             <i class="icon-eye"></i> Lihat data
                                         </a>
                                     </td>
@@ -91,7 +91,7 @@
                                         <span class="label label-sm label-warning"> Janda </span>
                                     </td>
                                     <td>
-                                        <a class="btn btn-success" href="#">
+                                        <a class="btn btn-success" href="{{ url('/detail_permintaan') }}">
                                             <i class="icon-eye"></i> Lihat data
                                         </a>
                                     </td>
