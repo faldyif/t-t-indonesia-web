@@ -13,5 +13,5 @@ class UserTableSeeder extends Seeder
     {
         //
     }
-    }
+
 }

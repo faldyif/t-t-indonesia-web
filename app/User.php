@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -40,21 +41,6 @@ class User extends Authenticatable
         }
     }
 
-    public function status() {
-        switch ($this->status) {
-            case 1:
-                return "Belum Menikah";
-            case 2:
-                return "Sudah Menikah";
-            case 3:
-                return "Janda";
-            case 4:
-                return "Duda";
-            default:
-                return null;
-        }
-    }
-
     public function childUser() {
         switch ($this->userType()) {
             case 'ikhwan':
@@ -64,5 +50,21 @@ class User extends Authenticatable
             default:
                 return null;
         }
+    }
+
+    public function scopeAkhwat($query) {
+        return $query->where('user_type', 3)->with('withAkhwat');
+    }
+
+    public function scopeIkhwan($query) {
+        return $query->where('user_type', 2)->with('withIkhwan');
+    }
+
+    public function withIkhwan() {
+        return $this->hasOne('App\UserIkhwan');
+    }
+
+    public function withAkhwat() {
+        return $this->hasOne('App\UserAkhwat');
     }
 }

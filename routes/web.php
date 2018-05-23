@@ -37,6 +37,20 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
         Route::get('/home', 'HomeController@index')->name('home'); // Home page
         Route::get('/profile', 'UserController@index')->name('user.profile'); // Halaman profil pribadi
         Route::get('/profile/edit', 'UserController@editProfile')->name('user.profile.edit'); // Halaman profil pribadi
+
+        //-- BEGIN USER IKWHAN ONLY ROUTE --//
+        Route::group(['middleware' => ['isIkhwan']], function () {
+            Route::get('/finder/akhwat', 'CariCalonController@indexAkhwat')->name('user.listakhwat.index'); // List calon akhwat
+            Route::get('/finder/akhwat/{id}', 'CariCalonController@lihatDataAkhwat')->name('list.listakhwat.show'); // Lihat data calon akhwat
+        });
+        //-- END USER IKWHAN ONLY ROUTE --//
+
+        //-- BEGIN USER AKHWAT ONLY ROUTE --//
+        Route::group(['middleware' => ['isAkhwat']], function () {
+            Route::get('/finder/ikhwan', 'CariCalonController@indexIkhwan')->name('user.listikhwan.index'); // List calon ikhwan
+            Route::get('/finder/ikhwan/{id}', 'CariCalonController@lihatDataIkhwan')->name('list.listikhwan.show'); // Lihat data calon ikhwan
+        });
+        //-- END USER IKWHAN ONLY ROUTE --//
     });
 
 });
@@ -52,10 +66,9 @@ Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespa
 });
 // Testing routes
 Route::get('tes-create', function () {
-    $userIkhwan = new \App\UserAkhwat;
-    $userIkhwan->user_id = 1;
-    $userIkhwan->save();
-    return response()->json($userIkhwan);
+    $userIkhwans = \App\User::ikhwan()->get();
+    $userAkhwats = \App\User::akhwat()->get();
+    return response()->json(['userIkhwans' => $userIkhwans, 'userAkhwats' => $userAkhwats]);
 });
 Route::get('tes-fetch', function () {
     $userIkhwan = \App\UserAkhwat::find(1);
@@ -71,4 +84,14 @@ Route::get('tes', 'UserIkhwanController@index');
 Route::get('detail', function()
 {
     return View::make('user/data_akhwat');
+});
+
+Route::get('detail_permintaan', function()
+{
+    return View::make('user/detail_permintaan');
+});
+
+Route::get('permintaan_taaruf', function()
+{
+    return View::make('user/permintaantaaruf');
 });

@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class IsAdmin
+class IsAkhwat
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(! is_null($request->user()) && $request->user()->userType() != 'admin') {
+        if($request->user()->userType() != 'akhwat') {
             return redirect('/home');
         }
 

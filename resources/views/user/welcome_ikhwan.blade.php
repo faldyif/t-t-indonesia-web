@@ -244,7 +244,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
-                                        <input name="hobi" type="text" class="form-control" placeholder="Deskripsikan hobimu..." />
+                                        <br>
+                                        <select class="select2-custom" name="hobi[]" multiple="multiple" style="width: 100%">
+                                              @foreach($hobi as $key)
+                                                <option value="{{ $key->id }}">{{ $key->hobi }}</option>
+                                              @endforeach
+                                          </select>
+                                        {{--<input name="hobi" type="text" class="form-control" placeholder="Deskripsikan hobimu..." />--}}
                                         <span class="help-block"><font size="1.5sp"> Hobi apa yang anda miliki? </font></span>
                                     </div>
                                     <div class="form-group">
@@ -254,12 +260,24 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Kebiasaan baik</label>
-                                        <textarea class="form-control input-sm" id="fm-kebiasaan_baik" name="kebiasaan_baik" placeholder="Deskripsikan kebiasaan baikmu..."></textarea>
+                                        <br>
+
+                                        <select class="select2-custom" name="kebiasaan_baik[]" multiple="multiple" style="width: 100%">
+                                            @foreach($kebiasaanBaik as $key)
+                                                <option value="{{ $key->id }}">{{ $key->kebiasaan }}</option>
+                                            @endforeach
+                                        </select>
                                         <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "kebiasaan baik". Jelaskan kebiasaan baikmu dengan lugas dan mudah dimengerti. </font></span>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Kebiasaan buruk</label>
-                                        <textarea class="form-control input-sm" id="fm-kebiasaan_baik" name="kebiasaan_buruk" placeholder="Deskripsikan kebiasaan burukmu..."></textarea>
+                                        <br>
+
+                                        <select class="select2-custom" name="kebiasaan_buruk[]" multiple="multiple" style="width: 100%">
+                                            @foreach($kebiasaanBuruk as $key)
+                                                <option value="{{ $key->id }}">{{ $key->kebiasaan }}</option>
+                                            @endforeach
+                                        </select>
                                         <span class="help-block"><font size="1.5sp"> Sekarang waktunya untuk mendeskripsikan "kebiasaan buruk". Jelaskan kebiasaan burukmu dengan lugas dan mudah dimengerti. </font></span>
                                     </div>
                                     <div class="form-group">
@@ -375,10 +393,33 @@
                                     <br>
                                     <div class="form-group">
                                         <label class="control-label">Suku Ayah</label>
+<<<<<<< HEAD
                                         <input name="suku_ayah" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
                                     <div class="form-group">
                                         <label class="control-label">Suku Ibu</label>
                                         <input name="suku_ibu" type="text" class="form-control" placeholder="contoh : Suku Jawa"/> </div>
+=======
+                                        <br>
+
+                                        <select id="suku-ayah" class="select2-custom" name="suku_ayah" style="width: 100%">
+                                          <option value="" disabled selected>Pilih salah satu...</option>
+                                            @foreach($suku as $key)
+                                                <option value="{{ $key->id }}">{{ $key->suku }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Suku Ibu</label>
+                                        <br>
+
+                                        <select id="suku-ibu" class="select2-custom" name="suku_ibu" style="width: 100%">
+                                          <option value="" disabled selected>Pilih salah satu...</option>
+                                            @foreach($suku as $key)
+                                                <option value="{{ $key->id }}">{{ $key->suku }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+>>>>>>> 94c2f99dc5e0351acb9f19752efa70e3bba70900
                                 </div>
                             </div>
                             <br/>
@@ -506,4 +547,20 @@
         </div>
     </div>
 
+@endsection
+
+@section('top')
+    <link href="{{ url('css/select2.min.css') }}" rel="stylesheet" />
+@endsection
+
+@section('bottom')
+    <script src="{{ url('js/select2.min.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.select2-custom').select2({
+                theme: "classic"
+            });
+
+        });
+    </script>
 @endsection

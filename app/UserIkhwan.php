@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class UserIkhwan extends Model
@@ -19,5 +20,45 @@ class UserIkhwan extends Model
             return true;
         else
             return false;
+    }
+
+    public function status() {
+        switch ($this->status) {
+            case 1:
+                return "Belum Menikah";
+            case 2:
+                return "Sudah Menikah";
+            case 3:
+                return "Janda";
+            case 4:
+                return "Duda";
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * Accessor for Age.
+     */
+    public function getAgeAttribute()
+    {
+        return Carbon::parse($this->attributes['tanggal_lahir'])->age;
+    }
+
+    /**
+     * Accessor for Age.
+     */
+    public function getDetailPekerjaanAttribute()
+    {
+        return $this->relPekerjaan->pekerjaan;
+    }
+
+    public function pendidikanTerakhir() {
+        return $this->hasOne('App\JenjangPendidikan', 'id', 'pendidikan_terakhir_id');
+    }
+
+    public function relPekerjaan() {
+        // TODO: change this localKey value to pendidikan after migrate
+        return $this->hasOne('App\Pekerjaan', 'id', 'pekerjaan_id');
     }
 }
