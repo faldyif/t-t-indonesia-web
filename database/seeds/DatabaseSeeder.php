@@ -21,16 +21,16 @@ class DatabaseSeeder extends Seeder
 
 
         // Setelah normalisasi, seeder dibawah ini perlu diperbaharui lagi
-//        factory(App\UserIkhwan::class, 10)->create()->each(function ($u) {
-//            $user = App\User::latest()->get()->last();
-//            $user->linked_id = $u->id;
-//            $user->save();
-//        });;
-//        factory(App\UserAkhwat::class, 10)->create()->each(function ($u) {
-//            $user = App\User::latest()->get()->last();
-//            $user->linked_id = $u->id;
-//            $user->save();
-//        });;
+        factory(App\UserIkhwan::class, 50)->create()->each(function ($u) {
+            $user = App\User::latest()->get()->last();
+            $user->linked_id = $u->id;
+            $user->save();
+        });;
+        factory(App\UserAkhwat::class, 50)->create()->each(function ($u) {
+            $user = App\User::latest()->get()->last();
+            $user->linked_id = $u->id;
+            $user->save();
+        });;
 
 
     }
