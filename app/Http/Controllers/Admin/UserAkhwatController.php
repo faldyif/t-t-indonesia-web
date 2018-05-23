@@ -16,7 +16,7 @@ class UserAkhwatController extends Controller
     public function index()
     {
         $userAkhwats = User::where('user_type', 3)->whereNotNull('linked_id')->get();
-        return view('admin.list-akhwat')->with('userAkhwats', $userAkhwats);
+        return view('admin.list_akhwat')->with('userAkhwats', $userAkhwats);
     }
 
     /**
@@ -80,7 +80,7 @@ class UserAkhwatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_user)
     {
         //
     }

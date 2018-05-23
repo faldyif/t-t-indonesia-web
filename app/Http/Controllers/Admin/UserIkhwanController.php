@@ -16,7 +16,7 @@ class UserIkhwanController extends Controller
     public function index()
     {
         $userIkhwans = User::where('user_type', 2)->whereNotNull('linked_id')->get();
-        return view('admin.list-ikhwan')->with('userIkhwans', $userIkhwans);
+        return view('admin.list_ikhwan')->with('userIkhwans', $userIkhwans);
     }
 
     /**

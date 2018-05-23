@@ -68,8 +68,20 @@ Route::get('profil', function()
 });
 Route::get('tes', 'UserIkhwanController@index');
 
+
+
 Route::get('detail', function()
 {
             $user = \App\User::where('users.id', Auth::user()->id)->join('user_akhwats', 'users.id', '=', 'user_akhwats.user_id')->get()[0];
             return view('user.detaildataakhwat')->with('user', $user);
+});
+
+// Route::get('tes', function()
+// {
+//         $userAkhwats = \App\User::where('user_type', 3)->whereNotNull('linked_id')->get();
+//         return view('admin.list_akhwat')->with('userAkhwats', $userAkhwats);
+// });
+Route::get('coba', function()
+{
+    return View::make('admin.buatartikel');
 });

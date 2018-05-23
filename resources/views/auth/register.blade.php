@@ -143,7 +143,43 @@
 						</div>
 
 							<br/>
-							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan <a href="#">syarat dan ketentuan</a> yang berlaku pada TnT Indonesia
+							<input name="syarat_ketentuan" type="checkbox" /> Saya setuju dengan 
+                                <a data-toggle="modal" data-target="#syarat_ketentuan">
+                                    syarat dan ketentuan
+                                </a> 
+                            yang berlaku pada TnT Indonesia
+                            <!-- Modal -->
+                                <div class="modal fade" id="syarat_ketentuan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Syarat untuk Mendaftar</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <ul>
+                                            <li>Beragama Islam</li>
+                                            <li>Baligh</li>
+                                            <li>Berakal Sehat</li>
+                                            <li>Baru/mau mengaji sunnah</li>
+                                            <li>Berakhlaq Baik (bukan residivis, Napi, dan semisalnya)</li>
+                                            <li>Bermanhaj lurus (bukan syi'ah dan semisalnya)</li>
+                                            <li>Sudah siap menikah</li>
+                                            <li>Sudah izin orangtua untuk ta'aruf (bagi akhwat)</li>
+                                            <li>Jujur</li>
+                                            <li>Foto KTP</li>
+                                            <li>Foto diri</li>
+                                            <li>Nomor Whatsapps mahrom</li>
+                                            <li>Surat izin ta'adud dari istri(bagi ikhwan yang sudah beristri)</li>
+                                            <li>Sabar dalam proses ta'aruf (tidak terburu-buru membatalkan ta'aruf)</li>
+                                        </ul>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 							<div style="margin:5px";>
 								<span></span>
 								<br/>
