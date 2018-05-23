@@ -46,19 +46,39 @@ class UserIkhwan extends Model
     }
 
     /**
-     * Accessor for Age.
+     * Accessor for pekerjaan.
      */
     public function getDetailPekerjaanAttribute()
     {
         return $this->relPekerjaan->pekerjaan;
     }
 
+    /**
+     * Accessor for Suku ayah.
+     */
+    public function getSukuAyahAttribute()
+    {
+        return Suku::find($this->attributes['suku_ayah_id'])->suku;
+    }
+
+    /**
+     * Accessor for suku ibu.
+     */
+    public function getSukuIbuAttribute()
+    {
+        return Suku::find($this->attributes['suku_ibu_id'])->suku;
+    }
+
     public function pendidikanTerakhir() {
         return $this->hasOne('App\JenjangPendidikan', 'id', 'pendidikan_terakhir_id');
     }
 
+    public function kriteriaPendidikanTerakhir() {
+        return $this->hasOne('App\JenjangPendidikan', 'id', 'kriteria_pendidikan_id');
+    }
+
     public function relPekerjaan() {
         // TODO: change this localKey value to pendidikan after migrate
-        return $this->hasOne('App\Pekerjaan', 'id', 'pekerjaan_id');
+        return $this->hasOne('App\Pekerjaan', 'id', 'pekerjaan');
     }
 }

@@ -65,10 +65,13 @@
                                             <i class="fa fa-graduation-cap"></i>{{ $user->withIkhwan->pendidikanTerakhir->nama_jenjang ?? '-' }} ({{ $user->withIkhwan->ket_pendidikan_terakhir ?? '-' }})
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
+                                            <i class="fa fa-briefcase"></i>{{ $user->withIkhwan->detailPekerjaan ?? '-' }}
+                                        </div>
+                                        <div class="margin-top-20 profile-desc-link">
                                             <i class="fa fa-heart"></i>{{ $user->withIkhwan->hobi ?? '-' }}
                                         </div>
                                         <div class="margin-top-20 profile-desc-link">
-                                            <i class="fa fa-star"></i>{{ $user->withIkhwan->status ?? '-' }}
+                                            <i class="fa fa-star"></i>{{ $user->withIkhwan->status() ?? '-' }}
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +110,7 @@
                                                                 </dl>   
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Riwayat Kesehatan</dt>
-                                                                    <dd>{{ $user->withIkhwan->riwayat_kesehatan ?? '-' }}</dd>
+                                                                    <dd>{{ $user->withIkhwan->riwayat_penyakit ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Kebiasaan Baik</dt>
@@ -196,16 +199,12 @@
                                                                     <dd>{{ $user->withIkhwan->asal ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
-                                                                    <dt>Suku</dt>
-                                                                    <dd>{{ $user->withIkhwan->suku ?? '-' }}</dd>
-                                                                </dl>
-                                                                <dl class="dl-horizontal">
                                                                     <dt>Suku Ayah</dt>
-                                                                    <dd>{{ $user->withIkhwan->suku_ayah ?? '-' }}</dd>
+                                                                    <dd>{{ $user->withIkhwan->sukuAyah ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Suku Ibu</dt>
-                                                                    <dd>{{ $user->withIkhwan->suku_ibu ?? '-' }}</dd>
+                                                                    <dd>{{ $user->withIkhwan->sukuIbu ?? '-' }}</dd>
                                                                 </dl>
                                                             </div>
                                                         </div>
@@ -219,7 +218,7 @@
                                                                 </div>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Pendidikan</dt>
-                                                                    <dd>{{ \App\JenjangPendidikan::find($user->withIkhwan->kriteria_pendidikan_id)->nama_jenjang ?? '-' }}</dd>
+                                                                    <dd>{{ $user->withIkhwan->kriteriaPendidikan->nama_jenjang ?? '-' }}</dd>
                                                                 </dl>
                                                                 <dl class="dl-horizontal">
                                                                     <dt>Usia</dt>
@@ -273,6 +272,10 @@
                                                     </div>
                                                     <!--end tab-pane-->
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <!-- END PAGE BASE CONTENT -->
@@ -282,3 +285,13 @@
             <!-- END CONTENT -->
         </div>
         @endsection
+
+@section('bottom')
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $('#') {
+                alert("ready!");
+            }
+        });
+    </script>
+@endsection

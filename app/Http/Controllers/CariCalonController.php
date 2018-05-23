@@ -16,7 +16,7 @@ class CariCalonController extends Controller
 
     public function lihatDataAkhwat($id) {
         $akhwat = User::akhwat()->where('id', $id)->firstOrFail();
-        return view('user.deatildataakhwat')->with('akhwat', $akhwat);
+        return view('user.detaildataakhwat')->with('user', $akhwat)->with('ownProfile', false);
     }
     //-- END AKHWAT --//
 
@@ -28,7 +28,7 @@ class CariCalonController extends Controller
 
     public function lihatDataIkhwan($id) {
         $ikhwan = User::ikhwan()->where('id', $id)->firstOrFail();
-        return view('user.detaildataikhwan')->with('ikhwan', $ikhwan);
+        return view('user.detaildataikhwan')->with('user', $ikhwan)->with('ownProfile', false);
     }
     //-- END IKHWAN --//
 }

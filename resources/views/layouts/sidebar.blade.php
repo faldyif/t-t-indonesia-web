@@ -30,6 +30,7 @@
 
 <footer>
         @include('includes.footer')
+        @yield('bottom')
 </footer>
 
 </body>

@@ -73,7 +73,7 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-success" href="#">
+                                                    <a class="btn btn-success" href="{{ route('list.listakhwat.show', $key->id)  }}">
                                                         <i class="icon-eye"></i> Lihat data
                                                     </a>
                                                 </td>
