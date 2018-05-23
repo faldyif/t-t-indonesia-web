@@ -108,6 +108,10 @@
                                         <input type="text" class="form-control" name="ket_pendidikan_terakhir" />
                                     </div>
                                     <div class="form-group">
+                                        <label class="control-label">Pekerjaan</label>
+                                        <input class="form-control" name="pekerjaan" rows="3" />
+                                    </div>
+                                    <div class="form-group">
                                         <label class="control-label">Hobi</label>
                                         <input type="text" class="form-control" name="hobi" />
                                     </div>
@@ -303,6 +307,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="form-group">
                                                         <label class="control-label">Celana</label>
                                                         <div class="md-radio-inline">
@@ -364,6 +369,11 @@
                                                         <label class="control-label">Target Menikah</label>
                                                             <input type="number" class="form-control" min="2018" />
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Rencana Setelah Menikah</label>
+                                                        <textarea type="text" class="form-control"></textarea>
+                                                    </div>
+
                                                 </form>
                                                 <!-- END PAGE ACTIONS -->
                                                 </div>                    
@@ -396,7 +406,7 @@
                                                                 <input type="text" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Usia</label>
-                                                                <input type="number" class="form-control"/> </div>
+                                                                <input type="number" min="12" class="form-control"/> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Domisili</label>
                                                                 <input type="text" class="form-control" /> </div>
@@ -405,7 +415,7 @@
                                                                 <textarea class="form-control" rows="3"></textarea>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="control-label">Ustad</label>
+                                                                <label class="control-label">Ustadz</label>
                                                                 <textarea class="form-control" rows="2"></textarea>
                                                             </div>
                                                             <div class="form-group">
