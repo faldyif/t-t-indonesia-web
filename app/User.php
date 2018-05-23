@@ -65,4 +65,20 @@ class User extends Authenticatable
                 return null;
         }
     }
+
+    public function scopeAkhwat($query) {
+        return $query->where('user_type', 3)->with('withAkhwat');
+    }
+
+    public function scopeIkhwan($query) {
+        return $query->where('user_type', 2)->with('withIkhwan');
+    }
+
+    public function withIkhwan() {
+        return $this->hasOne('App\UserIkhwan');
+    }
+
+    public function withAkhwat() {
+        return $this->hasOne('App\UserAkhwat');
+    }
 }

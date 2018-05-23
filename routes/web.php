@@ -52,10 +52,9 @@ Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin', 'namespa
 });
 // Testing routes
 Route::get('tes-create', function () {
-    $userIkhwan = new \App\UserAkhwat;
-    $userIkhwan->user_id = 1;
-    $userIkhwan->save();
-    return response()->json($userIkhwan);
+    $userIkhwans = \App\User::ikhwan()->get();
+    $userAkhwats = \App\User::akhwat()->get();
+    return response()->json(['userIkhwans' => $userIkhwans, 'userAkhwats' => $userAkhwats]);
 });
 Route::get('tes-fetch', function () {
     $userIkhwan = \App\UserAkhwat::find(1);
