@@ -37,6 +37,20 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
         Route::get('/home', 'HomeController@index')->name('home'); // Home page
         Route::get('/profile', 'UserController@index')->name('user.profile'); // Halaman profil pribadi
         Route::get('/profile/edit', 'UserController@editProfile')->name('user.profile.edit'); // Halaman profil pribadi
+
+        //-- BEGIN USER IKWHAN ONLY ROUTE --//
+        Route::group(['middleware' => ['isIkhwan']], function () {
+            Route::get('/finder/akhwat', 'CariCalonController@indexAkhwat')->name('user.listakhwat.index'); // List calon akhwat
+            Route::get('/finder/akhwat/{id}', 'CariCalonController@lihatDataAkhwat')->name('list.listakhwat.show'); // Lihat data calon akhwat
+        });
+        //-- END USER IKWHAN ONLY ROUTE --//
+
+        //-- BEGIN USER AKHWAT ONLY ROUTE --//
+        Route::group(['middleware' => ['isAkhwat']], function () {
+            Route::get('/finder/ikhwan', 'CariCalonController@indexIkhwan')->name('user.listikhwan.index'); // List calon ikhwan
+            Route::get('/finder/ikhwan/{id}', 'CariCalonController@lihatDataIkhwan')->name('list.listikhwan.show'); // Lihat data calon ikhwan
+        });
+        //-- END USER IKWHAN ONLY ROUTE --//
     });
 
 });
