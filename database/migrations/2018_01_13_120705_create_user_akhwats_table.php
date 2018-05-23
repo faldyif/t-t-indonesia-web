@@ -15,10 +15,7 @@ class CreateUserAkhwatsTable extends Migration
     {
         Schema::create('user_akhwats', function (Blueprint $table) {
             $table->increments('id');
-
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
             $table->string('goldar',2)->nullable();
             $table->string('hal_disukai')->nullable();
             $table->string('hal_taksuka')->nullable();
@@ -26,17 +23,12 @@ class CreateUserAkhwatsTable extends Migration
             $table->string('asal')->nullable();
             $table->string('domisili')->nullable();
             $table->integer('suku_ayah_id')->unsigned()->nullable();
-            $table->foreign('suku_ayah_id')->references('id')->on('suku')->onDelete('cascade');
             $table->integer('suku_ibu_id')->unsigned()->nullable();
-            $table->foreign('suku_ibu_id')->references('id')->on('suku')->onDelete('cascade');
             $table->string('kegiatan')->nullable();
             $table->integer('status')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();
-
-            $table->integer('pendidikan_terakhir_id')->unsigned()->nullable()->after('tanggal_lahir');
-            $table->foreign('pendidikan_terakhir_id')->references('id')->on('jenjang_pendidikans')->onDelete('cascade');
-
+            $table->integer('pendidikan_terakhir_id')->unsigned()->nullable();
             $table->string('ket_pendidikan_terakhir')->nullable();
             $table->double('tinggi_badan')->nullable();
             $table->double('berat_badan')->nullable();
@@ -54,10 +46,7 @@ class CreateUserAkhwatsTable extends Migration
             $table->year('target_menikah')->nullable();
             $table->boolean('siap_nikah')->nullable();
             $table->boolean('izin_ortu')->nullable();
-
-            $table->integer('kriteria_pendidikan_id')->unsigned()->nullable()->after('izin_ortu');
-            $table->foreign('kriteria_pendidikan_id')->references('id')->on('jenjang_pendidikans')->onDelete('cascade');
-
+            $table->integer('kriteria_pendidikan_id')->unsigned()->nullable();
             $table->string('ket_kriteria_pendidikan')->nullable();
             $table->integer('kriteria_usia_from')->nullable();
             $table->integer('kriteria_usia_to')->nullable();
@@ -65,23 +54,20 @@ class CreateUserAkhwatsTable extends Migration
             $table->string('harapan_pasangan')->nullable();
             $table->string('kriteria_lain')->nullable();
             $table->boolean('kacamata')->nullable();
-
             $table->integer('anak_ke')->nullable();
             $table->integer('saudara')->nullable();
-
             $table->boolean('siap_dipoligami')->nullable();
             $table->string('motivasi_menikah')->nullable();
             $table->boolean('siap_ikut_suami')->nullable();
             $table->integer('proses_terakhir')->nullable();
-
-            $table->integer('proses_terakhir_user_id')->unsigned()->nullable()->after('proses_terakhir');
-            $table->foreign('proses_terakhir_user_id')->references('id')->on('users')->onDelete('cascade');
-            
+            $table->integer('proses_terakhir_user_id')->unsigned()->nullable();
             $table->string('foto_terakhir_path')->nullable();
             $table->string('foto_ktp_path')->nullable();
             $table->boolean('is_approved')->default(0);
             $table->boolean('is_data_locked')->default(0);
-
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('suku_ayah_id')->references('id')->on('suku')->onDelete('cascade');
+            $table->foreign('suku_ibu_id')->references('id')->on('suku')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -14,7 +14,9 @@ class AddFkToUserAkhwatsTable extends Migration
     public function up()
     {
         Schema::table('user_akhwats', function (Blueprint $table) {
-            
+            $table->foreign('pendidikan_terakhir_id')->references('id')->on('jenjang_pendidikans')->onDelete('cascade');
+            $table->foreign('kriteria_pendidikan_id')->references('id')->on('jenjang_pendidikans')->onDelete('cascade');
+            $table->foreign('proses_terakhir_user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
