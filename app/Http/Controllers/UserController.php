@@ -11,6 +11,7 @@ use App\KebiasaanBuruk;
 use App\Suku;
 use App\User;
 use App\UserAkhwat;
+use App\UserIkhwan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Auth;
@@ -76,7 +77,6 @@ class UserController extends Controller
                 'kajian_rutin' => '',
                 'celana' => '',
                 'ustadz' => '',
-                'ket_hobi' => '',
                 'keg_harian' => '',
                 'pengalaman_taaruf_offline' => '',
                 'pengalaman_taaruf_online' => '',
@@ -96,8 +96,6 @@ class UserController extends Controller
 
             $userIkhwanID = UserIkhwan::where('user_id', Auth::user()->id)->first()->id;
             $userIkhwan = UserIkhwan::find($userIkhwanID);
-            $userIkhwan->kebiasaan_baik = $request->kebiasaan_baik;
-            $userIkhwan->domisili = $request->kebiasaan_buruk;
             $userIkhwan->domisili = $request->domisili;
             $userIkhwan->asal = $request->asal;
             $userIkhwan->riwayat_penyakit = $request->riwayat_penyakit;
@@ -112,8 +110,8 @@ class UserController extends Controller
             $userIkhwan->pakaian_harian = $request->pakaian_harian;
             $userIkhwan->anak_ke = $request->anak_ke;
             $userIkhwan->saudara = $request->saudara;
-            $userIkhwan->suku_ayah = $request->suku_ayah;
-            $userIkhwan->suku_ibu = $request->suku_ibu;
+            $userIkhwan->suku_ayah_id = $request->suku_ayah;
+            $userIkhwan->suku_ibu_id = $request->suku_ibu;
             $userIkhwan->pekerjaan = $request->pekerjaan;
             $userIkhwan->ngaji_sunnah = $request->ngaji_sunnah;
             $userIkhwan->tempat_ngaji = $request->tempat_ngaji;
@@ -121,8 +119,7 @@ class UserController extends Controller
             $userIkhwan->kajian_rutin = $request->kajian_rutin;
             $userIkhwan->ustadz = $request->ustadz;
             $userIkhwan->celana = $request->celana;
-            $userIkhwan->hobi = $request->hobi;
-            $userIkhwan->ke_hobi = $request->ke_hobi;
+            // $userIkhwan->hobi = $request->hobi;
             $userIkhwan->keg_harian = $request->keg_harian;
             $userIkhwan->pengalaman_taaruf_offline = $request->pengalaman_taaruf_offline;
             $userIkhwan->pengalaman_taaruf_online = $request->pengalaman_taaruf_online;
@@ -141,7 +138,6 @@ class UserController extends Controller
 
             // A bit tricky part
             $userIkhwan->goldar = $request->goldar;
-            $userIkhwan->izin_ortu = $request->izinortu;
             $userIkhwan->kacamata = $request->kacamata;
             $userIkhwan->status = $request->status_hubungan;
 
@@ -178,32 +174,31 @@ class UserController extends Controller
             return redirect(route('user.dashboard'));
         } else if(Auth::user()->userType() == 'akhwat') {
             $this->validate($request, [
-                'domisili' => '',
+                'goldar' => '',
+                'hal_disuka' => '',
+                'hal_taksuka' => '',
+                'riwayat_penyakit' => '',
                 'asal' => '',
+                'domisili' => '',
+                'suku_ayah' => '',
+                'suku_ibu' => '',
+                'kegiatan' => '',
+                'status' => '',
                 'tempat_lahir' => '',
                 'tanggal_lahir' => '',
                 'pendidikan_terakhir_id' => '',
                 'ket_pendidikan_terakhir' => '',
                 'tinggi_badan' => '',
                 'berat_badan' => '',
-                'hobi' => '',
-                'ket_hobi' => '',
-                'kebiasaan_baik' => '',
-                'kebiasaan_buruk' => '',
-                'hal_disuka' => '',
-                'hal_taksuka' => '',
-                'riwayat_penyakit' => '',
-                'pakaian_harian' => '',
-                'anak_ke' => '',
-                'saudara' => '',
-                'suku_ayah' => '',
-                'suku_ibu' => '',
                 'ngaji_sunnah' => '',
                 'tempat_kajian' => '',
                 'tentang_kajian' => '',
                 'ustadz' => '',
-                'kegiatan' => '',
-                'status' => '',
+                'kajian_rutin' => '',
+                'hijab_syari' => '',
+                'niqob' => '',
+                'pakaian_harian' => '',
+                'ket_hobi' => '',
                 'pengalaman_taaruf_offline' => '',
                 'pengalaman_taaruf_online' => '',
                 'target_menikah' => '',
@@ -211,47 +206,50 @@ class UserController extends Controller
                 'izin_ortu' => '',
                 'kriteria_pendidikan_id' => '',
                 'ket_kriteria_pendidikan' => '',
-                'kriteria_domisili' => '',
-                'kriteria_lainnya' => '',
                 'kriteria_usia_from' => '',
                 'kriteria_usia_to' => '',
+                'kriteria_domisili' => '',
                 'harapan_pasangan' => '',
+                'kriteria_lain' => '',
                 'kacamata' => '',
+                'anak_ke' => '',
+                'saudara' => '',
                 'siap_dipoligami' => '',
                 'motivasi_menikah' => '',
                 'siap_ikut_suami' => '',
+                'proses_terakhir' => '',
+                'foto_terakhir' => '',
+                'foto_ktp' => '',
             ]);
 
             $userAkhwatID = UserAkhwat::where('user_id', Auth::user()->id)->first()->id;
             $userAkhwat = UserAkhwat::find($userAkhwatID);
-            $userAkhwat->kebiasaan_baik = $request->kebiasaan_baik;
-            $userAkhwat->kebiasaan_buruk = $request->kebiasaan_buruk;
             $userAkhwat->hal_disukai = $request->hal_disuka;
             $userAkhwat->hal_taksuka = $request->hal_taksuka;
             $userAkhwat->riwayat_penyakit = $request->riwayat_penyakit;
-            $userAkhwat->domisili = $request->domisili;
             $userAkhwat->asal = $request->asal;
+            $userAkhwat->domisili = $request->domisili;
+            $userAkhwat->suku_ayah_id = $request->suku_ayah;
+            $userAkhwat->suku_ibu_id = $request->suku_ibu;
+            $userAkhwat->kegiatan = $request->kegiatan;
+            $userAkhwat->status = $request->status;
             $userAkhwat->tempat_lahir = $request->tempat_lahir;
             $userAkhwat->tanggal_lahir = Carbon::parse($request->tanggal_lahir);
             $userAkhwat->pendidikan_terakhir_id = $request->pendidikan_terakhir_id;
             $userAkhwat->ket_pendidikan_terakhir = $request->ket_pendidikan_terakhir;
             $userAkhwat->tinggi_badan = $request->tinggi_badan;
             $userAkhwat->berat_badan = $request->berat_badan;
-            $userAkhwat->pakaian_harian = $request->pakaian_harian;
-            $userAkhwat->anak_ke = $request->anak_ke;
-            $userAkhwat->saudara = $request->saudara;
-            $userAkhwat->suku_ayah = $request->suku_ayah;
-            $userAkhwat->suku_ibu = $request->suku_ibu;
             $userAkhwat->tempat_ngaji = $request->tempat_kajian;
             $userAkhwat->tentang_ngaji = $request->tentang_kajian;
             $userAkhwat->ustadz = $request->ustadz;
-            $userAkhwat->kegiatan = $request->kegiatan;
-            $userAkhwat->hobi = $request->hobi;
-            $userAkhwat->ket_hobi = $request->ket_hobi;
+            $userAkhwat->pakaian_harian = $request->pakaian_harian;
+            $userAkhwat->anak_ke = $request->anak_ke;
+            $userAkhwat->saudara = $request->saudara;
+            // $userAkhwat->ket_hobi = $request->hobi;
             $userAkhwat->pengalaman_taaruf_offline = $request->pengalaman_taaruf_offline;
             $userAkhwat->pengalaman_taaruf_online = $request->pengalaman_taaruf_online;
             $userAkhwat->target_menikah = $request->target_menikah;
-            $userAkhwat->siap_menikah = $request->siap_menikah;
+            $userAkhwat->siap_nikah = $request->siap_menikah;
             $userAkhwat->kriteria_pendidikan_id = $request->kriteria_pendidikan_id;
             $userAkhwat->ket_kriteria_pendidikan = $request->ket_kriteria_pendidikan;
             $userAkhwat->kriteria_domisili = $request->kriteria_domisili;
@@ -271,7 +269,6 @@ class UserController extends Controller
             $userAkhwat->niqob = $request->niqob;
             $userAkhwat->kacamata = $request->kacamata;
             $userAkhwat->ngaji_sunnah = $request->kajian;
-            $userAkhwat->status = $request->status_hubungan;
 
             if($request->hasFile('foto_ktp') && $request->file('foto_ktp')->isValid()) {
                 $destinationPath = 'public/uploads/ktp_akhwat';
