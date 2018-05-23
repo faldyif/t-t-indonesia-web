@@ -169,7 +169,7 @@
                                         <input name="pekerjaan" type="text" class="form-control" placeholder="contoh : Karyawan Swasta" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Riwayat Penyakit</label>
-                                        <input type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
+                                        <input type="text" name="riwayat_penyakit" class="form-control" placeholder="contoh : magh, tifus" /> </div>
 
 
                                     <div class="form-group">

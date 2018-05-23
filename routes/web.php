@@ -29,6 +29,8 @@ Route::group(['middleware' => ['auth', 'isVerified'], 'prefix' => 'dashboard'], 
     Route::get('/welcome', 'UserController@welcome')->name('user.welcome'); // Pengisian profil pertama
     Route::post('/welcome', 'UserController@welcomeStore')->name('user.welcome.store'); // Pengisian profil pertama
 
+    Route::post('/welcome', 'UserEditController@welcomeStore')->name('user.welcome.edit');
+
     // Khusus untuk yang sudah mengisi profil pertama kali
     Route::group(['middleware' => ['firstLoginChecker']], function () {
         Route::get('/', function () {
