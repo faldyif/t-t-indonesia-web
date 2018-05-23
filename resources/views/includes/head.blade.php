@@ -27,6 +27,7 @@
     <link href="{{ url('assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <!-- End Data tabel -->
+    <link href="{{ url('assets/global/plugins/bootstrap-sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" />
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <link href="{{ url('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
@@ -111,3 +112,5 @@
 <script src="{{ url('assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/pages/scripts/table-datatables-managed.min.js') }}" type="text/javascript"></script> 
 <!-- End Data tabel -->
+<script src="{{ url('assets/pages/scripts/ui-sweetalert.min.js') }}" type="text/javascript"></script>
+<script src="{{ url('assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>

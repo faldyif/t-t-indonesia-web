@@ -202,79 +202,71 @@
                 <div class="col-md-12">
                     <h3 class="section-title">Galeri</h3>
                     <div class="section-title-divider"></div>
-                    <p class="section-description">berikut adalah foto peserta yang berhasil menikah dengan berta'aruf menggunakan program ini</p>
+                    <p class="section-description">Berikut adalah foto peserta yang berhasil menikah dengan berta'aruf menggunakan program ini</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 1</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-2.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 2</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-3.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 3</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-4.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 4</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-5.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 5</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-6.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 6</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-7.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 7</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-3">
-                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-8.jpg') }});" href="">
+                    <a class="portfolio-item" style="background-image: url({{ url('img/portfolio-1.png') }});" href="">
                         <div class="details">
-                            <h4>Portfolio 8</h4>
-                            <span>Alored dono par</span>
+                            <h4>Walimah syar'i</h4>
                         </div>
                     </a>
                 </div>
@@ -302,8 +294,7 @@
             <div class="pic">
                 <img src="{{ url('img/akhwat.png') }}" class="img-responsive"  alt="" title="" />
             </div>
-            <h4>Saul Goodman</h4>
-            <span>Lawless Inc</span>
+            <h4>KNF</h4>
           </div>
         </div>
         <div class="col-md-9">
@@ -324,8 +315,7 @@
             <div class="pic">
             <img src="{{ url('img/ikhwan.png') }}" class="img-responsive"  alt="" title="" />
             </div>
-            <h4>Sara Wilsson</h4>
-            <span>Odeo Inc</span>
+            <h4>BCB</h4>
           </div>
         </div>
       </div>

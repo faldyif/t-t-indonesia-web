@@ -32,9 +32,15 @@
                     <!-- BEGIN PAGE BASE CONTENT -->
                     <div class="row">
                         <div class="col-md-12">
+                            <!-- EDIT PROFILE -->
                             <a class="btn green" href="{{route('user.profile.edit')}}">
-                                <i class="icon-pencil"></i> Edit Data
+                                <i class="icon-pencil"></i> Edit data
                             </a>
+
+                            <!-- AJUKAN TA'ARUF -->
+                            <button class="btn btn-success mt-sweetalert" data-title="Apakah anda yakin mau mengajukan ta'aruf?" data-message="Ta'aruf diproses ketika (nama yang diajukan) memberikan keputusan."
+                                data-type="info" data-show-confirm-button="true" data-confirm-button-class="btn-success" data-show-cancel-button="true" data-cancel-button-class="btn-default" data-close-on-confirm="false" data-close-on-cancel="false" data-confirm-button-text='Ya, saya yakin'
+                                data-cancel-button-text='Batal' data-popup-title-success="Terimakasih" data-popup-message-success="Pengajuan ta'aruf akan segera diproses, mohon menunggu" data-popup-title-cancel="Batal" data-popup-message-cancel="Pengajuan ta'aruf dibatalkan">Ajukan ta'aruf</button> 
                         </div>
                     </div>
                     <br>
@@ -112,10 +118,6 @@
                                                                 <dt>Riwayat Penyakit</dt>
                                                                 <dd>{{ $user->riwayat_kesehatan ?? '-' }}</dd>
                                                             </dl>
-                                                            <!-- <dl class="dl-horizontal">
-                                                                <dt>Kegiatan</dt>
-                                                                <dd>Kuliah, sembari bekerja di tempat Yang in syaa Allah terjaga dari ikhtilat</dd>
-                                                            </dl> -->
                                                             <dl class="dl-horizontal">
                                                                 <dt>Kebiasaan Baik</dt>
                                                                 <dd>{{ $user->kebiasaan_baik ?? '-' }}</dd>

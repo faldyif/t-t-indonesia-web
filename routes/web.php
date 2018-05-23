@@ -70,5 +70,6 @@ Route::get('tes', 'UserIkhwanController@index');
 
 Route::get('detail', function()
 {
-    return View::make('user/data_akhwat');
+            $user = \App\User::where('users.id', Auth::user()->id)->join('user_akhwats', 'users.id', '=', 'user_akhwats.user_id')->get()[0];
+            return view('user.detaildataakhwat')->with('user', $user);
 });
