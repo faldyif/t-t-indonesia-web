@@ -59,18 +59,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Nama</label>
-                                        <input type="text" class="form-control" /> </div>
-                                    <div class="form-group">
                                         <label class="control-label">Domisili</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" id="domisili" name="domisili" class="form-control" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tempat lahir</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal Lahir</label>
                                         <!-- <div class="col-md-8"> -->
-                                        <div class="input-group date date-picker" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+                                        <div class="input-group date date-picker" id="tanggal_lahir" name="tanggal_lahir" data-date="12-02-1995" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
                                             <input type="text" class="form-control">
                                             <span class="input-group-btn">
                                                 <button class="btn default" type="button">
@@ -99,7 +96,10 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Hobi</label>
-                                        <input type="text" class="form-control" /> </div>
+                                        <input type="text" id="hobi" name="hobi" class="form-control" /> </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Kegiatan</label>
+                                        <input type="text" id="kegiatan" name="kegiatan" class="form-control" /> </div>
                                     <div class="form-group">
                                         <label class="control-label">Status</label>
                                         <div class="md-radio-inline">
@@ -130,7 +130,7 @@
                                         <label class="control-label">Siap menikah</label>
                                         <div class="md-radio-inline">
                                             <div class="md-radio">
-                                                <input type="radio" id="siapmenikah" name="radio2" value="1" class="md-radiobtn" checked="">
+                                                <input type="radio" id="siapmenikah" name="siap_menikah" value="1" class="md-radiobtn" checked="">
                                                 <label for="siapmenikah">
                                                     <span></span>
                                                     <span class="check"></span>
@@ -164,6 +164,9 @@
                                                 <ul class="nav nav-tabs">
                                                     <li class="active">
                                                         <a href="#tab_1_1" data-toggle="tab"> Pribadi </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tab_1_2" data-toggle="tab"> Kriteria Pasangan </a>
                                                     </li>
                                                     <li>
                                                         <a href="#tab_1_3" data-toggle="tab"> Informasi tambahan </a>
@@ -210,28 +213,28 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Riwayat Penyakit</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="riwayat_penyakit" name="riwayat_penyakit" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Kebiasaan baik</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="kebiasaan_baik" name="kebiasaan_baik" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Kebiasaan buruk</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="kebiasaan_buruk" name="kebiasaan_buruk" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Hal yang disukai</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="hal_disukai" name="hal_disukai" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Hal yang tidak disukai</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="hal_taksuka" name="hal_taksuka" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Tinggi badan (dalam cm)</label>
-                                                            <input type="number" class="form-control" /> </div>
+                                                            <input type="number" id="tinggi_badan" name="tinggi_badan" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Berat badan (dalam kg)</label>
-                                                            <input type="number" class="form-control" /> </div>
+                                                            <input type="number" id="berat_badan" name="berat_badan" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Pakaian harian</label>
-                                                            <input type="text" class="form-control" /> </div>
+                                                            <input type="text" id="pakaian_harian" name="pakaian_harian" class="form-control" /> </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Kacamata</label>
                                                             <div class="md-radio-inline">
@@ -349,7 +352,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label">Target Menikah</label>
                                                             <div class="input-group input-medium date date-picker" data-date="10/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months">
-                                                                <input type="text" class="form-control" readonly>
+                                                                <input type="text" id="target_menikah" name="target_menikah" class="form-control" readonly>
                                                                 <span class="input-group-btn">
                                                                     <button class="btn default" type="button">
                                                                         <i class="fa fa-calendar"></i>
@@ -361,36 +364,133 @@
                                                 <!-- END PAGE ACTIONS -->
                                                 </div>                    
                                                     <!--tab_1_2-->
+                                                    <div class="tab-pane active" id="tab_1_2">
+                                                    <!-- BEGIN PAGE ACTIONS -->
+                                                        <form action="#">                                                        
+                                                        <div class="form-group">
+                                                            <label class="control-label">Kriteria pendidikan</label>
+                                                            <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                                            <option value="1"> SD </option>
+                                                            <option value="2"> SMP </option>
+                                                            <option value="3"> SMA </option>
+                                                            <option value="4"> D1 </option>
+                                                            <option value="5"> D3 </option>
+                                                            <option value="6"> D4 </option>
+                                                            <option value="7"> S1 </option>
+                                                            <option value="8"> S2 </option>
+                                                            <option value="9"> S3 </option>
+                                                            <option value="10"> Lain - lain </option>
+                                                          </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Kriteria domisili</label>
+                                                            <input type="text" id="kriteria_domisili" name="kriteria_domisili" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Kriteria lain</label>
+                                                            <input type="text" id="kriteria_lain" name="kriteria_lain" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Kriteria Usia dari</label>
+                                                            <input type="number" id="kriteria_usia_from" name="kriteria_usia_from" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Kriteria Usia to</label>
+                                                            <input type="text" id="kriteria_usia_to" name="kriteria_usia_to" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Harapan pasangan</label>
+                                                            <input type="text" id="harapan_pasangan" name="harapan_pasangan" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Siap dipoligami</label>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="y" name="siap_dipoligami" value="1" class="md-radiobtn">
+                                                                    <label for="y">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="n" name="siap_dipoligami" value="2" class="md-radiobtn" checked="">
+                                                                    <label for="n">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Siap menikah</label>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="yes" name="siap_nikah" value="1" class="md-radiobtn">
+                                                                    <label for="yes">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="no" name="radio6" value="2" class="md-radiobtn" checked="">
+                                                                    <label for="no">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Siap ikut suami</label>
+                                                            <div class="md-radio-inline">
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="hijab1" name="siap_ikut_suami" value="1" class="md-radiobtn" checked="">
+                                                                    <label for="hijab1">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Sudah </label>
+                                                                </div>
+                                                                <div class="md-radio">
+                                                                    <input type="radio" id="hijab2" name="siap_ikut_suami" value="2" class="md-radiobtn">
+                                                                    <label for="hijab2">
+                                                                        <span></span>
+                                                                        <span class="check"></span>
+                                                                        <span class="box"></span> Belum </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Motivasi menikah</label>
+                                                                <input type="text" id="motivasi_menikah" name="motivasi_menikah" class="form-control" /> 
+                                                        </div>
+                                                    </form>
+                                                <!-- END PAGE ACTIONS -->
+                                                </div>
                                                     <div class="tab-pane" id="tab_1_3">
                                                         <form action="#">
                                                             <div class="form-group">
                                                                 <label class="control-label">Anak ke-</label>
-                                                                <input type="number" class="form-control" /> </div>
+                                                                <input type="number" id="anak_ke" name="anak_ke" class="form-control" /> </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Saudara</label>
+                                                                <input type="number" id="saudara" name="saudara" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Asal</label>
-                                                                <input type="text" class="form-control" /> </div>
+                                                                <input type="text" id="asal" name="asal" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Suku</label>
                                                                 <input type="text" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Suku Ayah</label>
-                                                                <input type="text" class="form-control" /> </div>
+                                                                <input type="text" id="suku_ayah" name="suku_ayah" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Suku Ibu</label>
-                                                                <input type="text" class="form-control" /> </div>
+                                                                <input type="text" id="suku_ibu" name="suku_ibu" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Usia</label>
                                                                 <input type="number" class="form-control" /> </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Domisili</label>
-                                                                <input type="text" class="form-control" /> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Lain-lain</label>
                                                                 <textarea class="form-control" rows="3"></textarea>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Ustad</label>
-                                                                <textarea class="form-control" rows="2"></textarea>
+                                                                <textarea class="form-control" id="ustadz" name="ustadz" rows="2"></textarea>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Kajian rutin</label>
@@ -398,11 +498,11 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Isi kajian</label>
-                                                                <textarea class="form-control" rows="3"></textarea>
+                                                                <textarea class="form-control" id="tentang_ngaji" name="tentang_ngaji" rows="3"></textarea>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Tempat</label>
-                                                                <input type="text" class="form-control" /> </div>
+                                                                <input type="text" id="tempat_ngaji" name="tempat_ngaji" class="form-control" /> </div>
                                                         </form>
                                                     </div>
                                                     <!--end tab-pane-->

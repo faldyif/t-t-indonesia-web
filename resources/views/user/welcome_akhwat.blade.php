@@ -129,7 +129,7 @@
                                 </div>
                                 <div class="form-group">
                                   <label class="control-label">Pendidikan</label>
-                                  <select class="form-control" id="fm-pendidikan" name="pendidikan">
+                                  <select class="form-control" id="fm-pendidikan" name="kriteria_pendidikan_id">
                                   <option value=""> Pilih salah satu... </option>
                                   <option value="1"> SD </option>
                                   <option value="2"> SMP </option>
@@ -144,10 +144,10 @@
                                 </select></div>
                                 <div class="form-group">
                                     <label class="control-label">Keterangan Pendidikan</label>
-                                    <input name="ket_pendidikan_terakhir" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
+                                    <input name="ket_kriteria_pendidikan" type="text" class="form-control" placeholder="contoh : Jurusan Teknik Fisika Universitas Gadjah Mada" /> </div>
                               <div class="form-group">
                                 <label class="control-label">Riwayat Penyakit</label>
-                                <input name="riwayat_kesehatan" type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
+                                <input name="riwayat_penyakit" type="text" class="form-control" placeholder="contoh : magh, tifus" /> </div>
 
 
                                 <div class="form-group">
@@ -181,14 +181,14 @@
                                   <label class="control-label">Izin Ortu</label>
                                   <div class="md-radio-inline">
                                       <div class="md-radio">
-                                          <input type="radio" id="izin1" name="izinortu" value="1" class="md-radiobtn">
+                                          <input type="radio" id="izin1" name="izin_ortu" value="1" class="md-radiobtn">
                                           <label for="izin1">
                                               <span></span>
                                               <span class="check"></span>
                                               <span class="box"></span> Sudah </label>
                                       </div>
                                       <div class="md-radio">
-                                          <input type="radio" id="izin2" name="izinortu" value="0" class="md-radiobtn">
+                                          <input type="radio" id="izin2" name="izin_ortu" value="0" class="md-radiobtn">
                                           <label for="izin2">
                                               <span></span>
                                               <span class="check"></span>
@@ -448,7 +448,7 @@
                             <div class="row col-md-10 col-md-offset-1">                                        
                                 <div class="form-group">
                                   <label class="control-label">Pendidikan</label>
-                                  <select class="form-control" id="fm-pendidikan" name="kriteria_pendidikan">
+                                  <select class="form-control" id="fm-pendidikan" name="pendidikan_terakhir_id">
                                   <option value=""> Pilih salah satu... </option>
                                   <option value="1"> SD </option>
                                   <option value="2"> SMP </option>
