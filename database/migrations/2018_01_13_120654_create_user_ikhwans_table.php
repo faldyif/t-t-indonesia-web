@@ -18,6 +18,7 @@ class CreateUserIkhwansTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('goldar',2)->nullable();
             $table->string('keg_harian')->nullable();
+            $table->string('pekerjaan')->nullable();
             $table->string('hal_disukai')->nullable();
             $table->string('hal_taksuka')->nullable();
             $table->string('riwayat_penyakit')->nullable();
