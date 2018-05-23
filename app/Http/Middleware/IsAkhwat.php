@@ -15,7 +15,7 @@ class IsAkhwat
      */
     public function handle($request, Closure $next)
     {
-        if(! is_null($request->user()) && ! $request->user()->userType() == 'akhwat') {
+        if($request->user()->userType() != 'akhwat') {
             return redirect('/home');
         }
 

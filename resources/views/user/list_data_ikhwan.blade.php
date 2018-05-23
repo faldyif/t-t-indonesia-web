@@ -36,7 +36,7 @@
                             <div class="portlet-title">
                                 <div class="caption font-dark">
                                     <i class=" icon-layers font-dark"></i>
-                                    <span class="caption-subject bold uppercase"> Daftar Data Akhwat</span>
+                                    <span class="caption-subject bold uppercase"> Daftar Data Ikhwan</span>
                                 </div>
                             </div>
 
@@ -54,41 +54,23 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($ikhwan as $key)
                                             <tr class="odd gradeX">
-                                                <td> KNF </td>
+                                                <td>{{ $key->name }}</td>
+                                                <td>{{ $key->withIkhwan->age }} tahun</td>
+                                                <td>{{ $key->withIkhwan->domisili }}</td>
+                                                <td>{{ $key->withIkhwan->detailPekerjaan }}</td>
+                                                <td>{{ $key->withIkhwan->pendidikanTerakhir->nama_jenjang }} ({{ $key->withIkhwan->ket_pendidikan_terakhir }})</td>
                                                 <td>
-                                                    22 tahun
-                                                </td>
-                                                <td>
-                                                    Bantul
-                                                </td>
-                                                <td> Guru </td>
-                                                <td>
-                                                    S1 Teknik Geologi
-                                                </td>
-                                                <td>
-                                                    <span class="label label-sm label-success"> Belum menikah </span>
-                                                </td>
-                                                <td> 
-                                                    <a class="btn btn-success" href="#">
-                                                        <i class="icon-eye"></i> Lihat data
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td> KNF </td>
-                                                <td>
-                                                    25 tahun
-                                                </td>
-                                                <td>
-                                                    Bantul
-                                                </td>
-                                                <td> ngga kerja </td>
-                                                <td>
-                                                    S1 Kedokteran hewan
-                                                </td>
-                                                <td>
+                                                    @if($key->withIkhwan->status == '1')
+                                                    <span class="label label-sm label-success"> Belum Menikah </span>
+                                                    @elseif($key->withIkhwan->status == '2')
+                                                    <span class="label label-sm label-warning"> Sudah Menikah </span>
+                                                    @elseif($key->withIkhwan->status == '3')
                                                     <span class="label label-sm label-warning"> Janda </span>
+                                                    @elseif($key->withIkhwan->status == '4')
+                                                    <span class="label label-sm label-warning"> Duda </span>
+                                                    @endif
                                                 </td>
                                                 <td> 
                                                     <a class="btn btn-success" href="#">
@@ -96,6 +78,7 @@
                                                     </a>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

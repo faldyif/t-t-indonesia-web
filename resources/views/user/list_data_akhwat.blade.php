@@ -47,55 +47,38 @@
                                                 <th> Nama </th>
                                                 <th> Usia </th>
                                                 <th> Domisili </th>
-                                                <th> Pekerjaan </th>
+                                                <th> Kegiatan Harian </th>
                                                 <th> Pendidikan </th>
                                                 <th> Status </th>
                                                 <th> Aksi </th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($akhwat as $key)
                                             <tr class="odd gradeX">
-                                                <td> KNF </td>
+                                                <td>{{ $key->name }}</td>
+                                                <td>{{ $key->withAkhwat->age }} tahun</td>
+                                                <td>{{ $key->withAkhwat->domisili }}</td>
+                                                <td>{{ $key->withAkhwat->keg_harian }}</td>
+                                                <td>{{ $key->withAkhwat->pendidikanTerakhir->nama_jenjang }} ({{ $key->withAkhwat->ket_pendidikan_terakhir }})</td>
                                                 <td>
-                                                    22 tahun
+                                                    @if($key->withAkhwat->status == '1')
+                                                        <span class="label label-sm label-success"> Belum Menikah </span>
+                                                    @elseif($key->withAkhwat->status == '2')
+                                                        <span class="label label-sm label-warning"> Sudah Menikah </span>
+                                                    @elseif($key->withAkhwat->status == '3')
+                                                        <span class="label label-sm label-warning"> Janda </span>
+                                                    @elseif($key->withAkhwat->status == '4')
+                                                        <span class="label label-sm label-warning"> Duda </span>
+                                                    @endif
                                                 </td>
                                                 <td>
-                                                    Bantul
-                                                </td>
-                                                <td> Guru </td>
-                                                <td>
-                                                    S1 Teknik Geologi
-                                                </td>
-                                                <td>
-                                                    <span class="label label-sm label-success"> Belum menikah </span>
-                                                </td>
-                                                <td> 
                                                     <a class="btn btn-success" href="#">
                                                         <i class="icon-eye"></i> Lihat data
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <tr class="odd gradeX">
-                                                <td> KNF </td>
-                                                <td>
-                                                    25 tahun
-                                                </td>
-                                                <td>
-                                                    Bantul
-                                                </td>
-                                                <td> ngga kerja </td>
-                                                <td>
-                                                    S1 Kedokteran hewan
-                                                </td>
-                                                <td>
-                                                    <span class="label label-sm label-warning"> Janda </span>
-                                                </td>
-                                                <td> 
-                                                    <a class="btn btn-success" href="#">
-                                                        <i class="icon-eye"></i> Lihat data
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

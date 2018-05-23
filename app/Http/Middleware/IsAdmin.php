@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(! is_null($request->user()) && ! $request->user()->userType() == 'admin') {
+        if(! is_null($request->user()) && $request->user()->userType() != 'admin') {
             return redirect('/home');
         }
 

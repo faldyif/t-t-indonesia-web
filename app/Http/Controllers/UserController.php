@@ -328,11 +328,11 @@ class UserController extends Controller
     {
         if(Auth::user()->userType() == 'ikhwan') {
             $user = User::where('users.id', Auth::user()->id)->join('user_ikhwans', 'users.id', '=', 'user_ikhwans.user_id')->get()[0];
-            return view('user.detaildataikhwan')->with('user', $user);
+            return view('user.detaildataikhwan')->with('user', $user)->with('ownProfile', true);
 
         } else if(Auth::user()->userType() == 'akhwat') {
-            $user = User::where('users.id', Auth::user()->id)->join('user_akhwats', 'users.id', '=', 'user_akhwats.user_id')->get()[0];
-            return view('user.detaildataakhwat')->with('user', $user);
+            $user = User::where('users.id', Auth::user()->id)->with('withAkhwat')->firstOrFail();
+            return view('user.detaildataakhwat')->with('user', $user)->with('ownProfile', true);
         }
     }
 

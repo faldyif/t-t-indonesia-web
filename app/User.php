@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -35,21 +36,6 @@ class User extends Authenticatable
                 return "ikhwan";
             case 3:
                 return "akhwat";
-            default:
-                return null;
-        }
-    }
-
-    public function status() {
-        switch ($this->status) {
-            case 1:
-                return "Belum Menikah";
-            case 2:
-                return "Sudah Menikah";
-            case 3:
-                return "Janda";
-            case 4:
-                return "Duda";
             default:
                 return null;
         }
