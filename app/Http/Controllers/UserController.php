@@ -96,8 +96,6 @@ class UserController extends Controller
 
             $userIkhwanID = UserIkhwan::where('user_id', Auth::user()->id)->first()->id;
             $userIkhwan = UserIkhwan::find($userIkhwanID);
-            $userIkhwan->kebiasaan_baik = $request->kebiasaan_baik;
-            $userIkhwan->domisili = $request->kebiasaan_buruk;
             $userIkhwan->domisili = $request->domisili;
             $userIkhwan->asal = $request->asal;
             $userIkhwan->riwayat_penyakit = $request->riwayat_penyakit;
@@ -112,8 +110,8 @@ class UserController extends Controller
             $userIkhwan->pakaian_harian = $request->pakaian_harian;
             $userIkhwan->anak_ke = $request->anak_ke;
             $userIkhwan->saudara = $request->saudara;
-            $userIkhwan->suku_ayah = $request->suku_ayah;
-            $userIkhwan->suku_ibu = $request->suku_ibu;
+            $userIkhwan->suku_ayah_id = $request->suku_ayah;
+            $userIkhwan->suku_ibu_id = $request->suku_ibu;
             $userIkhwan->pekerjaan = $request->pekerjaan;
             $userIkhwan->ngaji_sunnah = $request->ngaji_sunnah;
             $userIkhwan->tempat_ngaji = $request->tempat_ngaji;
@@ -121,8 +119,7 @@ class UserController extends Controller
             $userIkhwan->kajian_rutin = $request->kajian_rutin;
             $userIkhwan->ustadz = $request->ustadz;
             $userIkhwan->celana = $request->celana;
-            $userIkhwan->hobi = $request->hobi;
-            $userIkhwan->ke_hobi = $request->ke_hobi;
+            // $userIkhwan->hobi = $request->hobi;
             $userIkhwan->keg_harian = $request->keg_harian;
             $userIkhwan->pengalaman_taaruf_offline = $request->pengalaman_taaruf_offline;
             $userIkhwan->pengalaman_taaruf_online = $request->pengalaman_taaruf_online;
@@ -141,7 +138,6 @@ class UserController extends Controller
 
             // A bit tricky part
             $userIkhwan->goldar = $request->goldar;
-            $userIkhwan->izin_ortu = $request->izinortu;
             $userIkhwan->kacamata = $request->kacamata;
             $userIkhwan->status = $request->status_hubungan;
 
